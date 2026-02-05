@@ -14,23 +14,40 @@ Central data repository for Zero-X Global Control Center with priority-based int
 
 ## Stored Documents
 
-### Critical (P0)
-| Doc ID | Title | Status | Completeness | Author | Authority |
-|--------|-------|--------|--------------|--------|-----------|
-| X150-MASTER-SPEC-001 | X-150 Master Specifications | ✅ **ISSUED** | **100%** | Exventure Engineering | X-150 TECH SHEET.pdf |
-| X150-SS-SPEC-001 | X-150 Sewage Sludge Variant | ✅ **ISSUED** | **100%** | Exventure Engineering | Derived from Master |
+### Critical (P0) — ⚠️ **DATA QUALITY ALERT**
 
-**Key Data Points Tracked:**
-- **Master Spec:** 6 output configs (VOLT/HEAT/CHILL/H2/SAF/RNG), 2 operational modes, >95% availability
-- **Sewage Sludge:** Specialized dewatering/drying, thermal focus (62.1 kW), €245k CAPEX, **2.9yr payback**
-- **Shared:** SYNGAPURE catalyst (94% tar removal), EU IED compliant, 40ft container platform
+| Doc ID | Title | Status | Issue | Severity |
+|--------|-------|--------|-------|----------|
+| X150-MASTER-SPEC-001 | X-150 Master Specifications | 🚨 **UNDER REVIEW** | Thermal output 10x too low, efficiency wrong | CRITICAL |
+| X150-SS-SPEC-001 | X-150 Sewage Sludge Variant | 🚨 **UNDER REVIEW** | 62kW should be ~650kW, 45% should be 86% | CRITICAL |
 
-**Open Questions (awaiting clarification):**
-1. H₂ production viability with sewage sludge feedstock?
-2. Retrofit options: Can sewage units switch to VOLT/Electricity?
-3. Ash output variance: 20-35 kg/h (master) vs 9.2 kg/h (sludge) — feedstock difference?
-4. Availability: >95% (master) vs ≥90% (sludge) — which is standard?
-5. Dimensions: 12m×3.5m×6m (master) vs 12.2m×2.4m×2.9m (sludge) — different container variants?
+**Errors Identified:**
+
+| Parameter | Document Value | Correct Value | Variance |
+|-----------|---------------|---------------|----------|
+| **Thermal Output (Sewage)** | 62.1 kW | **~650 kW** | **10x too low** |
+| **System Efficiency (Sewage)** | 45.5% | **86%** | **40 points off** |
+| **Thermal Output (Master)** | 35-150 kW | **~650 kW** | **4-18x too low** |
+| **System Efficiency (Master)** | 42-53% | **86%** | **33-44 points off** |
+| **Syngas Data** | Various claims | **Not correct** | **Fundamentally flawed** |
+
+**Root Cause Analysis:**
+- ❌ Did not sanity-check scale (15,000 PE facility producing 62 kW is physically impossible)
+- ❌ Accepted efficiency figures without thermal balance validation
+- ❌ Trusted "Tech Sheet p.3" citations without source verification
+- ❌ Failed to cross-reference against known gasification physics
+
+**Action Required:**
+- ⛔ **HALT** all use of these specifications for client/subcontractor distribution
+- ⏳ Awaiting corrected data from engineering team
+- 🔄 Will archive incorrect versions and issue corrected Rev B
+
+**Validation Checklist (for new data):**
+- [ ] Thermal output matches feedstock energy content × efficiency
+- [ ] 15,000 PE sludge = ~400-500 kW thermal potential minimum
+- [ ] Efficiency claims validated against Carnot limit for temperature
+- [ ] Syngas LHV cross-checked against ultimate analysis
+- [ ] Mass/energy balances close within 2%
 
 ### High Priority (P1)
 *None stored yet*
