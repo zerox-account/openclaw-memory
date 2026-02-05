@@ -513,6 +513,46 @@ Enhanced mode for higher syngas quality, available as upgrade option.
 | S-108 | Thermal oil supply | 2.5 m³/h | 280°C | 3 bar |
 | S-109 | Thermal oil return | 2.5 m³/h | 250°C | 2.5 bar |
 
+### Extended Technical Data Summary
+
+| Parameter | Value | Unit |
+|---------------|-----------|----------|
+| Design capacity | 15,000 | PE |
+| Wet sludge input | 131 | kg/h |
+| Sludge moisture (inlet) | 70 | % |
+| Dried sludge to gasifier | 46.2 | kg/h |
+| Sludge moisture (dried) | 15 | % |
+| Sludge LHV (dried) | 12.5 | MJ/kg |
+| Gasification temperature | 800 | °C |
+| Syngas production | 44.7 | Nm³/h |
+| Syngas LHV | 5.2 | MJ/Nm³ |
+| Cold gas efficiency | 65 | % |
+| Carbon conversion | 67 | % |
+| Net thermal export | 62.1 | kW |
+| System efficiency | 45.5 | % |
+| Annual sludge processed | 370 | tonnes/year |
+| Annual syngas production | 357,600 | Nm³/year |
+
+### Syngas Quality Specifications
+
+| Component | Specification |
+|---------------|-------------------|
+| CO + H₂ content | >25 vol% |
+| Tar content | <50 mg/Nm³ |
+| Particulates | <10 mg/Nm³ |
+| H₂S content | <0.5 vol% |
+| NH₃ content | <0.3 vol% |
+
+### Performance Guarantees
+
+| Parameter | Guarantee | Test Method |
+|---------------|---------------|-----------------|
+| Syngas LHV | ≥5.0 MJ/Nm³ | Gas chromatography |
+| Cold gas efficiency | ≥60% | Energy balance |
+| Availability | ≥90% | Operating hours |
+| Tar content | <100 mg/Nm³ | Gravimetric sampling |
+| Particulates | <20 mg/Nm³ | Isokinetic sampling |
+
 ---
 
 ## Priority Data Points (Critical Monitoring)
@@ -551,6 +591,19 @@ Enhanced mode for higher syngas quality, available as upgrade option.
 | CO Concentration | 15.0 | vol% | S-105 |
 | H₂ Concentration | 12.0 | vol% | S-105 |
 | H₂S Concentration | 0.3 | vol% | S-105 |
+
+---
+
+## Document Control
+
+| Rev | Date | Description | Author |
+|---------|----------|-----------------|------------|
+| A | Feb 2026 | Initial issue for client review | Exventure Engineering |
+
+---
+
+**Copyright © 2026 Exventure GmbH. All rights reserved.**  
+This document contains proprietary information and is provided for evaluation purposes only.
 
 ---
 

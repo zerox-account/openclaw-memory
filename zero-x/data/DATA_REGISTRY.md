@@ -17,13 +17,14 @@ Central data repository for Zero-X Global Control Center with priority-based int
 ### Critical (P0)
 | Doc ID | Title | Status | Completeness | Last Verified |
 |--------|-------|--------|--------------|---------------|
-| X150-SS-SPEC-001 | X-150 Sewage Sludge Spec | ✅ VERIFIED | 90% | 2026-02-05 |
+| X150-SS-SPEC-001 | X-150 Sewage Sludge Spec | ✅ **FINAL** | **100%** | 2026-02-05 |
 
 **Key Data Points Tracked:**
 - Equipment: 9 tagged units (T-101 through P-101)
 - Performance: 116.85 hrs validated operation
-- Economics: €245k CAPEX / €32.7k OPEX
+- Economics: €245k CAPEX / €32.7k OPEX / €116.7k revenue / **2.9yr payback**
 - Emissions: EU IED compliant (all < limits)
+- Operating: 4hr startup / 6hr shutdown / 6-7 week commissioning
 
 ### High Priority (P1)
 *None stored yet*
