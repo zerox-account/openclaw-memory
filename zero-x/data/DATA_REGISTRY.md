@@ -15,9 +15,9 @@ Central data repository for Zero-X Global Control Center with priority-based int
 ## Stored Documents
 
 ### Critical (P0)
-| Doc ID | Title | Status | Completeness | Last Verified |
-|--------|-------|--------|--------------|---------------|
-| X150-SS-SPEC-001 | X-150 Sewage Sludge Spec | ✅ **FINAL** | **100%** | 2026-02-05 |
+| Doc ID | Title | Status | Completeness | Author |
+|--------|-------|--------|--------------|--------|
+| X150-SS-SPEC-001 | X-150 Sewage Sludge Spec | ✅ **ISSUED** | **100%** | Exventure Engineering |
 
 **Key Data Points Tracked:**
 - Equipment: 9 tagged units (T-101 through P-101)
@@ -25,6 +25,7 @@ Central data repository for Zero-X Global Control Center with priority-based int
 - Economics: €245k CAPEX / €32.7k OPEX / €116.7k revenue / **2.9yr payback**
 - Emissions: EU IED compliant (all < limits)
 - Operating: 4hr startup / 6hr shutdown / 6-7 week commissioning
+- Guarantees: Syngas LHV ≥5.0 MJ/Nm³, CGE ≥60%, Availability ≥90%
 
 ### High Priority (P1)
 *None stored yet*
