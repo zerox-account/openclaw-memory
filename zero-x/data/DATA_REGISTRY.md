@@ -15,17 +15,22 @@ Central data repository for Zero-X Global Control Center with priority-based int
 ## Stored Documents
 
 ### Critical (P0)
-| Doc ID | Title | Status | Completeness | Author |
-|--------|-------|--------|--------------|--------|
-| X150-SS-SPEC-001 | X-150 Sewage Sludge Spec | ✅ **ISSUED** | **100%** | Exventure Engineering |
+| Doc ID | Title | Status | Completeness | Author | Authority |
+|--------|-------|--------|--------------|--------|-----------|
+| X150-MASTER-SPEC-001 | X-150 Master Specifications | ✅ **ISSUED** | **100%** | Exventure Engineering | X-150 TECH SHEET.pdf |
+| X150-SS-SPEC-001 | X-150 Sewage Sludge Variant | ✅ **ISSUED** | **100%** | Exventure Engineering | Derived from Master |
 
 **Key Data Points Tracked:**
-- Equipment: 9 tagged units (T-101 through P-101)
-- Performance: 116.85 hrs validated operation
-- Economics: €245k CAPEX / €32.7k OPEX / €116.7k revenue / **2.9yr payback**
-- Emissions: EU IED compliant (all < limits)
-- Operating: 4hr startup / 6hr shutdown / 6-7 week commissioning
-- Guarantees: Syngas LHV ≥5.0 MJ/Nm³, CGE ≥60%, Availability ≥90%
+- **Master Spec:** 6 output configs (VOLT/HEAT/CHILL/H2/SAF/RNG), 2 operational modes, >95% availability
+- **Sewage Sludge:** Specialized dewatering/drying, thermal focus (62.1 kW), €245k CAPEX, **2.9yr payback**
+- **Shared:** SYNGAPURE catalyst (94% tar removal), EU IED compliant, 40ft container platform
+
+**Open Questions (awaiting clarification):**
+1. H₂ production viability with sewage sludge feedstock?
+2. Retrofit options: Can sewage units switch to VOLT/Electricity?
+3. Ash output variance: 20-35 kg/h (master) vs 9.2 kg/h (sludge) — feedstock difference?
+4. Availability: >95% (master) vs ≥90% (sludge) — which is standard?
+5. Dimensions: 12m×3.5m×6m (master) vs 12.2m×2.4m×2.9m (sludge) — different container variants?
 
 ### High Priority (P1)
 *None stored yet*
