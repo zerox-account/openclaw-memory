@@ -23,7 +23,7 @@
 | **Clemens** | **Zero-X Lead** | zero-x@exventure.co | **Zero-X Labs** | **Waste gasification, CCM, X-150** |
 | Michael Hofmeister | Director MFC/Energaia | j.rosenstiel@mfc-energy.com | MFC/Energaia | Germany operations, biochar |
 | Haritherran Kesavan | Engineer | - | Zero-X | Engineering support |
-| Miguel | Engineer | - | Zero-X | NEW - Validate |
+| **Miguel** | **Lead Engineer (Full-Time)** | - | **Seraph AI** | **University partnerships, Project Seraph leadership** |
 | Arvinderpal Singh | Engineer | arvingill99@gmail.com | Seraph AI | Duckweed, AGRIP grants |
 | Abhishek Kaima Mannarath | Simulation Engineer | - | Zero-X | Process simulation |
 
@@ -37,7 +37,7 @@
 | HR | Lisette Maats | hr@exventure.co | Sophia |
 | Accounting | Sasha | accounting@exventure.co | Sahara (grants), Nicole (tax) |
 | Grants/Reports | Paola Rincón | paola@exventure.co | Grant writing, EU applications |
-| Engineering | Haritherran | engineering@exventure.co | Arvin, Miguel |
+| Engineering | Haritherran | engineering@exventure.co | Arvin |
 | Graphics | Wisnu Wijaya | graphics@exventure.co | Ashwinkumar |
 | Production | - | production@exventure.co | Media team |
 | Business Development | Hans | hans@exventure.co | Investor relations |
@@ -79,6 +79,8 @@
 ## Notes
 
 - **Zero-X Labs** and **MFC/Energaia** appear to be the core waste-to-energy operations
+- **Seraph AI** (Marco, Miguel, Arvinderpal) focuses on AI agriculture, duckweed, vertical farming
 - Team spans multiple time zones (Germany, Spain, India, etc.)
 - Mix of full-time and intern positions
 - Grant funding appears important (Paola, Sahara roles)
+- **Miguel moved to full-time leadership** in Project Seraph (university partnerships)
