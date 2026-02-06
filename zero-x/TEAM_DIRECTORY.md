@@ -46,13 +46,13 @@
 
 ## AI/Tech Team
 
-| Name | Role | Email | Status | Monthly |
-|-------------------|-----------------|-------|--------|---------|
-| Ritish | AI Cyber Security | - | Active | €700 |
-| Shruti | AI Engineer | - | UNPAID | €0 |
-| Cecilia | AI Intern | - | UNPAID | €0 |
-| Social Media Intern | - | - | UNPAID | €0 |
-| Visnu Sanker | Automation | - | Active | €650 |
+| Name | Role | Email | Status |
+|-------------------|-----------------|-------|--------|
+| Ritish | AI Cyber Security | - | Active |
+| Shruti | AI Engineer | - | Active |
+| Cecilia | AI Intern | - | Intern |
+| Social Media Intern | - | - | Intern |
+| Visnu Sanker | Automation | - | Active |
 
 ---
 
@@ -80,5 +80,5 @@
 
 - **Zero-X Labs** and **MFC/Energaia** appear to be the core waste-to-energy operations
 - Team spans multiple time zones (Germany, Spain, India, etc.)
-- Several unpaid positions (interns) suggesting cost-conscious operations
+- Mix of full-time and intern positions
 - Grant funding appears important (Paola, Sahara roles)
