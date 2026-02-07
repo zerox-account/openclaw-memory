@@ -220,28 +220,111 @@ African universities → German development agencies → Government MOUs → Com
 
 ---
 
-## 5. FINANCIAL TARGETS
+## 5. FINANCIAL TARGETS — CONTRACTED CASH FLOW MODEL
 
-### Unit Economics (150 Impact Volt)
-- **Unit CapEx:** €120,000 (gasifier) + €80,000 (integration) = €200,000
-- **Revenue per unit:** €80,000-120,000/year (power sales + biochar)
-- **Gross margin:** 60-70%
-- **Payback for customer:** 2-3 years
+**IMPORTANT:** PE investors value contracted cash flows, not EBITDA. Valuation = 0.6x total contract value.
 
-### Company Financials (Projected)
-| Year | Units | Revenue | EBITDA | Employees | Markets |
-|------|-------|---------|--------|-----------|---------|
-| **Year 1** | 10 | €1M | -€500K | 15 | 2 (Nigeria, Kenya) |
-| **Year 2** | 50 | €5M | €1M | 35 | 5 (add TZ, SA, Ghana) |
-| **Year 3** | 100 | €12M | €4M | 60 | 7 (add India, Indonesia) |
-| **Year 5** | 500 | €60M | €20M | 200 | 15+ countries |
+---
 
-### Funding Roadmap
-- **Series A (Now):** $15-25M at $40-60M pre-money
-  - Use: Manufacturing scale-up, 50 pilots, team expansion
-- **Series B (Year 2):** $50M+ at $150M+ pre-money
-  - Use: Global expansion, 1,000 units, regional manufacturing
-- **Series C/Growth (Year 3-4):** $100M+ or strategic M&A
+### Unit Economics (Per X-150 Unit)
+
+**CapEx (Project Level):**
+- X-150 unit + integration: €300,000
+- **Financed via project finance:** 75% debt, 25% equity
+
+**Contracted Revenue (15-year PPA):**
+- Waste tipping fees: €96,000/year (1,200 tons × €80/ton)
+- Power/cooling sales: €240,000/year (150kW × 8,000 hrs × €0.20/kWh)
+- **Total annual revenue:** €336,000
+- **With 2.5% annual escalation:** €6.0M over 15 years
+
+**OpEx:** €31,000/year
+
+**Contract Value per Unit:** €6.0M (15-year total)
+
+---
+
+### Portfolio Contract Value
+
+| Year | Units | Annual Revenue | Contract Value (15-yr) | Cumulative Portfolio Value |
+|------|-------|----------------|------------------------|---------------------------|
+| **1** | 20 | €6.7M | €120M | €120M |
+| **2** | 50 | €16.8M | €300M | €420M |
+| **3** | 75 | €25.2M | €450M | €870M |
+| **4** | 90 | €30.2M | €540M | €1.41B |
+| **5** | 100 | €33.6M | €600M | €2.01B |
+
+**At Year 5 exit:** €600M total contract value signed
+
+---
+
+### PE Exit Valuation (Contract Value Basis)
+
+**At Year 5:**
+- Remaining contract value: €470M (10-12 years avg. remaining)
+- Discount rate: 8%
+- **PV of contracts:** €350-400M
+- **EV/Contract multiple:** 0.6-0.7x
+- **Target Enterprise Value:** €280-330M
+
+**Entry:** €5M Series A (Zero-X equity)
+**Exit:** €300M (60x return on platform value)
+
+**Note:** Zero-X doesn't own the machines. Zero-X develops projects, signs contracts, takes development fees + equity promote. PE buys the contracted cash flows in project SPVs.
+
+---
+
+### Funding Structure
+
+**Zero-X (Platform) — Venture Capital:**
+- **Series A:** $5-8M at $20-30M pre-money
+- **Use:** Team (BD, project dev, engineering), early pilots (2-3 units), IP, certifications
+- **NOT for buying 50 machines**
+
+**Project SPVs — Project Finance:**
+- **Per 10-unit SPV:** €3M total
+  - Debt (75%): €2.25M from infrastructure debt funds/development banks
+  - Equity (25%): €750K (Zero-X 15%, project equity 10%)
+- **Requirements:** 10-year+ PPAs, creditworthy offtakers, DSCR >1.3x
+
+---
+
+### Revenue Model for Zero-X (Platform)
+
+| Stream | Amount | Timing |
+|--------|--------|--------|
+| **Development fees** | €50K/unit | At financial close |
+| **EPC margin** | 15% of CapEx | During construction |
+| **Management fees** | €10K/unit/year | Ongoing (20 years) |
+| **Equity distributions** | 15% of project cash flow | Quarterly |
+| **Asset management fees** | 1% of AUM | Ongoing |
+
+**Example (10-unit SPV):**
+- Development fee: €500K
+- EPC margin: €450K
+- Annual management: €100K/year
+- 20-year total: €500K + €450K + €2M = **€2.95M**
+
+---
+
+### Key Metric: Contracted Revenue
+
+**What PE values:**
+✅ Total contract value: €600M at Year 5
+✅ Contract duration: 15 years average
+✅ Creditworthy offtakers: 90% investment-grade
+✅ Escalators: 2.5% annually (inflation protection)
+✅ Take-or-pay: Minimum 80% capacity payments
+
+**What PE ignores:**
+❌ EBITDA (backward-looking)
+❌ Equipment sales margins
+❌ One-time development fees
+
+**Valuation formula:**
+```
+Enterprise Value = 0.6 × Total Contracted Revenue
+```
 
 ---
 
