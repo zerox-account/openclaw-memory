@@ -1,0 +1,106 @@
+{
+  "validation_update": "2026-03-11T11:50:00+08:00",
+  "total_contacts": 35,
+  "validated_count": 15,
+  "inferred_count": 20,
+  "invalid_count": 0,
+  "new_validations": [
+    {
+      "email": "thomas.schaef@giz.de",
+      "name": "Thomas Schaef",
+      "role": "Country Director South Africa",
+      "status": "valid",
+      "region": "Southern Africa",
+      "priority": "high"
+    },
+    {
+      "email": "petra.warnecke@giz.de",
+      "name": "Petra Warnecke",
+      "role": "Head of Africa Department",
+      "status": "valid",
+      "region": "HQ - Africa Strategy",
+      "priority": "high"
+    },
+    {
+      "email": "ralf.sanftenberg@giz.de",
+      "name": "Ralf Sanftenberg",
+      "role": "Head of Rural Development & Agriculture",
+      "status": "valid",
+      "region": "HQ - Agriculture",
+      "priority": "high"
+    },
+    {
+      "email": "ella.schieber@giz.de",
+      "name": "Ella Schieber",
+      "role": "Head of Africa Supraregional Programs",
+      "status": "valid",
+      "region": "HQ - Africa",
+      "priority": "high"
+    },
+    {
+      "email": "matthias.rompel@giz.de",
+      "name": "Matthias Rompel",
+      "role": "Director Eastern Africa & Horn",
+      "status": "valid",
+      "region": "East Africa",
+      "priority": "high"
+    },
+    {
+      "email": "elke.huettner@giz.de",
+      "name": "Elke Hüttner",
+      "role": "Head of Climate & Infrastructure",
+      "status": "valid",
+      "region": "HQ - Climate",
+      "priority": "high"
+    },
+    {
+      "email": "jochen.renger@giz.de",
+      "name": "Jochen Renger",
+      "role": "Director Sectoral Department",
+      "status": "valid",
+      "region": "HQ - Sectoral",
+      "priority": "medium"
+    },
+    {
+      "email": "helmut.hauschild@giz.de",
+      "name": "Helmut Hauschild",
+      "role": "Director Western Africa 2",
+      "status": "valid",
+      "region": "West Africa",
+      "priority": "medium"
+    },
+    {
+      "email": "angelika.friedrich@giz.de",
+      "name": "Angelika Friedrich",
+      "role": "Director Southern Africa",
+      "status": "valid",
+      "region": "Southern Africa",
+      "priority": "medium"
+    }
+  ],
+  "rejected_emails": [
+    "greenpeople.energy.ghana@giz.de - invalid",
+    "greenpeople.energy.uganda@giz.de - invalid",
+    "develoPPP.indonesia@giz.de - invalid",
+    "energy.nigeria@giz.de - invalid",
+    "agriculture.indonesia@giz.de - invalid",
+    "friederike.vonstieglitz@giz.de - invalid"
+  ],
+  "all_validated": [
+    "frauke.neumann-silkow@giz.de",
+    "dirk.walther@giz.de",
+    "philipp.schukat@giz.de",
+    "martina.gaebler@giz.de",
+    "elisabeth.gager@giz.de",
+    "develoPPP@giz.de",
+    "thomas.schaef@giz.de",
+    "petra.warnecke@giz.de",
+    "ralf.sanftenberg@giz.de",
+    "ella.schieber@giz.de",
+    "matthias.rompel@giz.de",
+    "elke.huettner@giz.de",
+    "jochen.renger@giz.de",
+    "helmut.hauschild@giz.de",
+    "angelika.friedrich@giz.de"
+  ]
+}

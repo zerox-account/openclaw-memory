@@ -1,0 +1,26 @@
+Subject: Re: Research Collaboration – Biomass Gasification & Energy Systems
+
+Dear Professor Malmquist,
+
+Thank you for your response and for raising this excellent question.
+
+You are absolutely right to reference GoBiGas – it remains a landmark project that significantly advanced the understanding of biomass-to-SNG via dual fluidized bed gasification in Sweden. The operational experience and data from GoBiGas are invaluable for the entire field.
+
+Rather than competing with GoBiGas's impressive large-scale approach, the X-150 explores a different innovation path for distributed applications:
+
+**GoBiGas:** A landmark demonstration of industrial-scale SNG production via dual fluidized bed gasification. The project's lessons on process integration and system scale-up are foundational for the entire field.
+
+**X-150:** A compact, modular approach focusing on deployment simplicity for industrial CHP rather than grid-scale SNG. Our innovation lies in system architecture – a single fixed-bed reactor with direct steam/O₂ gasification eliminates the need for the dual fluidized bed configuration, separate combustor, and complex heat transfer loops required at demonstration scale. This architectural simplicity aims to reduce both CAPEX and maintenance requirements for smaller-scale applications.
+
+Both approaches serve different markets: GoBiGas targeted centralized SNG injection, while we focus on distributed industrial heat and power where deployment flexibility matters.
+
+Your expertise in gasification systems at KTH – particularly your insights into what worked and what proved challenging in Swedish biomass projects – would be genuinely valuable for us as we navigate these design trade-offs.
+
+Would you be open to a brief conversation? We would welcome the opportunity to learn from your perspective on biomass energy systems in the Swedish context.
+
+Best regards
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290

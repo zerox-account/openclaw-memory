@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-X Labs - Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --background: #0A0F0A;
+            --card: #121A12;
+            --border: #1F3D1F;
+            --primary: #22C55E;
+            --primary-hover: #4ADE80;
+            --secondary: #06B6D4;
+        }
+        
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        
+        .glass {
+            background: rgba(18, 26, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+        }
+        
+        .nav-item:hover {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .nav-item.active {
+            background: rgba(34, 197, 94, 0.15);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 48px 24px;
+            color: #64748B;
+        }
+        
+        .empty-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: rgba(31, 61, 31, 0.5);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                
+                <a href="index.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="flame" class="w-5 h-5"></i>
+                    <span>X-150 System</span>
+                </a>
+                
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="factory" class="w-5 h-5"></i>
+                    <span>CCM Projects</span>
+                </a>
+                
+                <a href="rd.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="flask-conical" class="w-5 h-5"></i>
+                    <span>R&D</span>
+                </a>
+                
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    <span>Sales Pipeline</span>
+                </a>
+                
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="wrench" class="w-5 h-5"></i>
+                    <span>Installations</span>
+                </a>
+                
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="handshake" class="w-5 h-5"></i>
+                    <span>Partners</span>
+                </a>
+                
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">System</div>
+                
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a><a href="memory.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="brain" class="w-5 h-5"></i>
+                    <span>Memory System</span>
+                </a>
+                <a href="documents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="folder-open" class="w-5 h-5"></i>
+                    <span>Documents</span>
+                </a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold">Dashboard</h2>
+                    <p class="text-gray-400 text-sm mt-1">Real-time overview of all Zero-X operations</p>
+                </div>
+                <div class="text-right">
+                    <div class="text-2xl font-light font-mono" id="clock">--:--:--</div>
+                    <div class="text-sm text-gray-400">--</div>
+                </div>
+            </header>
+            
+            <!-- Stats Grid - Empty State -->
+            <div class="grid grid-cols-4 gap-6 mb-8">
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center">
+                            <i data-lucide="zap" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">--</div>
+                    <div class="text-sm text-gray-400">X-150 Systems Active</div>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                            <i data-lucide="factory" class="w-6 h-6 text-cyan-400"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">--</div>
+                    <div class="text-sm text-gray-400">CCM Projects Running</div>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                            <i data-lucide="euro" class="w-6 h-6 text-amber-400"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">--</div>
+                    <div class="text-sm text-gray-400">Sales Pipeline</div>
+                </div>
+                
+                <div class="glass rounded-xl p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                            <i data-lucide="microscope" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                    </div>
+                    <div class="text-3xl font-bold mb-1">--</div>
+                    <div class="text-sm text-gray-400">R&D Experiments</div>
+                </div>
+            </div>
+            
+            <!-- CO2 Impact Counter - Empty -->
+            <div class="glass rounded-xl p-6 mb-8 border border-[#1F3D1F]">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i data-lucide="leaf" class="w-8 h-8 text-gray-500"></i>
+                    </div>
+                    <h3 class="text-lg font-medium mb-2">No CO2 Data Available</h3>
+                    <p class="text-sm">Connect X-150 systems to track carbon capture metrics</p>
+                </div>
+            </div>
+            
+            <!-- Main Grid - Empty States -->
+            <div class="grid grid-cols-3 gap-6">
+                <!-- X-150 System Status -->
+                <div class="glass rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-[#1F3D1F]">
+                        <h3 class="font-semibold flex items-center gap-2">
+                            <i data-lucide="flame" class="w-5 h-5 text-orange-400"></i>
+                            X-150 System Status
+                        </h3>
+                    </div>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="cpu" class="w-8 h-8 text-gray-500"></i>
+                        </div>
+                        <p class="text-sm">No X-150 systems connected</p>
+                    </div>
+                </div>
+                
+                <!-- Active CCM Projects -->
+                <div class="glass rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-[#1F3D1F]">
+                        <h3 class="font-semibold flex items-center gap-2">
+                            <i data-lucide="factory" class="w-5 h-5 text-cyan-400"></i>
+                            Active CCM Projects
+                        </h3>
+                    </div>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="factory" class="w-8 h-8 text-gray-500"></i>
+                        </div>
+                        <p class="text-sm">No CCM projects registered</p>
+                    </div>
+                </div>
+                
+                <!-- Sales Pipeline -->
+                <div class="glass rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-[#1F3D1F]">
+                        <h3 class="font-semibold flex items-center gap-2">
+                            <i data-lucide="trending-up" class="w-5 h-5 text-amber-400"></i>
+                            Research Outreach Pipeline
+                        </h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-400">Today's Emails Sent</span>
+                                <span class="text-green-400 font-semibold">5</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-400">Ready for Tomorrow</span>
+                                <span class="text-amber-400 font-semibold">16</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-2">
+                                <div class="bg-amber-500 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center gap-2 text-gray-300">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span>TU Wien - Prof. Hofbauer</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-300">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span>Chalmers - Prof. Thunman</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-300">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span>KIT - Dr. Dahmen</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-300">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span>ECN.TNO - Dr. van der Drift</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-300">
+                                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span>Fraunhofer - Dr. Schüßler</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-[#1F3D1F]">
+                            <div class="text-xs text-amber-400 font-semibold mb-2">🎯 TOMORROW'S CAMPAIGN</div>
+                            <div class="space-y-1 text-xs text-gray-400">
+                                <div>🇬🇷 CERTH Greece (4 contacts)</div>
+                                <div>🇩🇪 German Institutes (1 contact)</div>
+                                <div>🇮🇹 Italian Network (3 contacts)</div>
+                                <div>🇳🇴 Nordic Partners (1 contact)</div>
+                                <div>🇫🇷 French Schools (3 contacts)</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-[#1F3D1F] text-xs text-gray-500">
+                            Last updated: March 11, 2026 02:41 SGT<br>
+                            Database: contact_database.json (25 total)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Section - Empty States -->
+            <div class="grid grid-cols-2 gap-6 mt-6">
+                <!-- R&D Highlights -->
+                <div class="glass rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-[#1F3D1F]">
+                        <h3 class="font-semibold flex items-center gap-2">
+                            <i data-lucide="flask-conical" class="w-5 h-5 text-purple-400"></i>
+                            R&D Highlights
+                        </h3>
+                    </div>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="flask-conical" class="w-8 h-8 text-gray-500"></i>
+                        </div>
+                        <p class="text-sm">No experiments recorded</p>
+                    </div>
+                </div>
+                
+                <!-- Alerts -->
+                <div class="glass rounded-xl overflow-hidden">
+                    <div class="p-4 border-b border-[#1F3D1F]">
+                        <h3 class="font-semibold flex items-center gap-2">
+                            <i data-lucide="alert-triangle" class="w-5 h-5 text-red-400"></i>
+                            Alerts & Notifications
+                        </h3>
+                    </div>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-green-500"></i>
+                        </div>
+                        <p class="text-sm">No active alerts</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        lucide.createIcons();
+        
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', { 
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

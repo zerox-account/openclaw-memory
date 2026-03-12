@@ -1,0 +1,187 @@
+╔══════════════════════════════════════════════════════════════════╗
+║     ZERO-X WEBSITE REBUILD v2.0 - DESIGN GUIDE APPLIED           ║
+║                    Dark Mode First Design                        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🎨 DESIGN SYSTEM v2.0 - APPLIED
+
+COLOR PALETTE:
+  ✅ Carbon Black (#0A0A0A) - Primary backgrounds
+  ✅ Zero-X Green (#00D26A) - Primary accent/CTAs
+  ✅ Syngas Orange (#FF6B35) - Secondary accent
+  ✅ Platinum (#F5F5F7) - Text on dark
+
+TYPOGRAPHY:
+  ✅ Inter - Primary font (modern, clean)
+  ✅ JetBrains Mono - Technical data
+  ✅ Complete type scale (Hero 72px to Small 14px)
+
+LAYOUT:
+  ✅ 12-column grid system
+  ✅ 9 homepage sections
+  ✅ Dark mode first approach
+  ✅ Responsive breakpoints
+
+═══════════════════════════════════════════════════════════════════
+
+📁 FILES CREATED/UPDATED:
+
+1. DESIGN_GUIDE_IMPLEMENTATION.md (12,490 bytes)
+   → Complete design system specs for Base44
+   → Component styling (buttons, cards, nav)
+   → All 9 section specifications
+   → Animation & interaction guidelines
+   → Base44 CSS variables
+
+2. BLOG_POSTS_CONTENT.md (9,398 bytes)
+   → 6 blog posts with full content
+
+3. POSTS_7_AND_8.md (7,536 bytes)
+   → Post 7: Mining diesel replacement (MINEBASE)
+   → Post 8: Data center cooling (COOLSTACK)
+
+4. JSON Blog Posts (8 files)
+   → post1-german-research.json
+   → post2-cometha.json
+   → post3-verkoso.json
+   → post7-mining.json
+   → post8-datacenter.json
+   → (Plus 3 more in full package)
+
+5. PREVIOUS FILES (still valid)
+   → REBUILD_CONTENT_PACKAGE.md
+   → IMPLEMENTATION_GUIDE.md
+   → IMAGE_GENERATION_COMMANDS.md
+
+═══════════════════════════════════════════════════════════════════
+
+🏠 HOMEPAGE SECTIONS (9 Total):
+
+1. HERO (100vh)
+   → Label: "WASTE TO ENERGY"
+   → Headline: "Transforming Waste into Clean Energy"
+   → Subhead: "Zero-X Group: Advanced modular gasification"
+   → CTAs: Primary + Secondary buttons
+   → Animated particles, green glow
+
+2. STATS BAR
+   → 1,000+ Operating Hours
+   → 86% Thermal Efficiency
+   → ~650kW Power Output
+   → Multi-fuel Capable
+
+3. TECHNOLOGY OVERVIEW
+   → The X-150 System
+   → 6 feature cards (3x2 grid)
+   → Specifications table
+   → X-150 container image
+
+4. FEATURED PROJECTS
+   → Cométha (1,000+ hrs, completed)
+   → Verkoso (SOFC, active)
+   → MINEBASE (Mining, active)
+   → 3-column card grid
+
+5. IMPACT SECTION
+   → 2.8M Tonnes CO₂ potential reduction
+   → Environmental / Economic / Social pillars
+   → Full-width background
+
+6. PARTNERS
+   → 5 partner logos
+   → Zero-X Labs, MFC Energy, Equation Labs
+   → MFC Germany, Zero-Labs Germany
+
+7. NEWS/INSIGHTS
+   → 3 latest blog posts
+   → Newsletter signup
+   → Dark card backgrounds
+
+8. CONTACT CTA
+   → "Ready to Transform Waste into Energy?"
+   → Large CTA button
+   → Contact methods
+   → Green glow decoration
+
+9. FOOTER
+   → 4-column layout
+   → Social links
+   → Legal pages
+   → Carbon black background
+
+═══════════════════════════════════════════════════════════════════
+
+📝 BLOG POSTS READY (8 Total):
+
+Published Date | Title | Category
+---------------|-------|----------
+2026-02-09 | 21 German Research Institutions Join Zero-X Network | Partnerships
+2026-02-08 | X-150 vs. Diesel: Transforming Mining Operations | Industry
+2026-02-07 | Data Centers Meet Sustainability | Technology
+2026-01-15 | Cométha Project: 1,000 Hours Validated | Projects
+2025-12-20 | Verkoso: SOFC Integration Progress Update | Technology
+2025-11-10 | X-150 Technical Specifications Released | Technology
+2025-10-05 | Partner Spotlight: Equation Labs | Partners
+2025-09-15 | Horizon Europe Opportunities | Research
+
+═══════════════════════════════════════════════════════════════════
+
+🔧 BASE44 SETUP INSTRUCTIONS:
+
+1. Open Editor:
+   https://app.base44.com/apps/6989df145d41eebf80a51614/editor/preview
+
+2. Configure Theme:
+   → Primary: #00D26A (Zero-X Green)
+   → Secondary: #FF6B35 (Syngas Orange)
+   → Background: #0A0A0A (Carbon Black)
+   → Text: #F5F5F7 (Platinum)
+   → Import fonts: Inter, JetBrains Mono
+
+3. Add Custom CSS:
+   (Copy from DESIGN_GUIDE_IMPLEMENTATION.md)
+
+4. Build Sections (in order):
+   → Hero (100vh, animated)
+   → Stats Bar
+   → Technology
+   → Projects
+   → Impact
+   → Partners
+   → News
+   → Contact CTA
+   → Footer
+
+5. Upload Blog Posts:
+   → Use JSON files or manual entry
+   → 8 posts total
+
+6. Add Images:
+   → Generate 6 hero/feature images
+   → Upload partner logos
+   → Add project photos
+
+7. Test & Deploy:
+   → Responsive check
+   → Animation testing
+   → Performance check
+   → Deploy to production
+
+═══════════════════════════════════════════════════════════════════
+
+⏱️ ESTIMATED BUILD TIME: 120-150 minutes
+
+═══════════════════════════════════════════════════════════════════
+
+🔗 QUICK ACCESS:
+
+Editor: https://app.base44.com/apps/6989df145d41eebf80a51614/editor/preview
+Live: https://zero-x-speed.base44.app
+API Key: 8e72cea1a5da495b8a54016a261abbc2
+
+═══════════════════════════════════════════════════════════════════
+
+📧 SUPPORT:
+zerox@exventure.co | +49 341 92881290
+
+═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,12 @@
+{
+  "title": "Verkoso: SOFC Integration Progress Update",
+  "slug": "verkoso-sofc-integration-update",
+  "category": "Technology",
+  "tags": ["Verkoso", "SOFC", "Fraunhofer IKTS", "syngas", "fuel cells"],
+  "author": "Clemens Grosjean",
+  "date": "2025-12-20",
+  "status": "published",
+  "excerpt": "Fraunhofer IKTS collaboration advances syngas-to-power conversion efficiency through solid oxide fuel cell integration.",
+  "content": "Project Verkoso continues to make progress in integrating our X-150 syngas output with solid oxide fuel cell (SOFC) technology for combined heat and power applications.\n\nProject Partners:\n- Fraunhofer Institute for Ceramic Technologies and Systems (IKTS)\n- Dr. Mihails Kusnezoff\n\nTechnical Focus:\n- Syngas quality optimization for SOFC compatibility\n- Methane and hydrogen-rich syngas production\n- Integration architecture development\n- Efficiency measurements\n\nCurrent Status:\nActive development phase with regular testing at Fraunhofer IKTS facilities in Dresden.\n\nGoals:\n- Demonstrate SOFC integration with X-150 output\n- Achieve combined heat and power efficiencies above 80%\n- Validate long-term operational stability\n- Create blueprint for commercial CHP deployments",
+  "featured_image": "verkoso-lab.png"
+}

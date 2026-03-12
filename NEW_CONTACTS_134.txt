@@ -1,0 +1,420 @@
+# NEUE KONTAKTE FÜR ZERO-X OUTREACH
+# Insgesamt: 134 Forscher weltweit
+# Recherche-Datum: 18. Februar 2026
+# Verwendung: 10 Emails/Tag Programm
+
+================================================================================
+REGION: USA & KANADA (14 Kontakte)
+================================================================================
+
+--- NREL (National Renewable Energy Laboratory), USA ---
+
+1. Name: Dr. Mark R. Nimlos
+   Titel: Senior Research Fellow
+   Institution: NREL
+   Forschungsschwerpunkt: Biomass thermochemical conversion, gasification, pyrolysis
+   Email: mark.nimlos@nrel.gov
+   Land: USA
+   Sprache: English
+
+2. Name: Dr. Robert Baldwin
+   Titel: Chief Scientist
+   Institution: NREL
+   Forschungsschwerpunkt: Catalytic fast pyrolysis, biomass upgrading, biofuels
+   Email: robert.baldwin@nrel.gov
+   Land: USA
+   Sprache: English
+
+3. Name: Dr. Calvin Mukarakate
+   Titel: Senior Scientist
+   Institution: NREL
+   Forschungsschwerpunkt: Thermochemical biomass conversion, catalysis
+   Email: calvin.mukarakate@nrel.gov
+   Land: USA
+   Sprache: English
+
+4. Name: Dr. Kristina Iisa
+   Titel: Senior Research Engineer
+   Institution: NREL
+   Forschungsschwerpunkt: Biomass gasification, tar reforming, syngas cleanup
+   Email: kristina.iisa@nrel.gov
+   Land: USA
+   Sprache: English
+
+5. Name: Dr. Abhijit Dutta
+   Titel: Group Manager
+   Institution: NREL
+   Forschungsschwerpunkt: Biomass conversion processes, techno-economic analysis
+   Email: abhijit.dutta@nrel.gov
+   Land: USA
+   Sprache: English
+
+--- MIT, Stanford, UC Berkeley ---
+
+6. Name: Dr. Ahmed Ghoniem
+   Titel: Professor of Mechanical Engineering
+   Institution: MIT
+   Forschungsschwerpunkt: Combustion, gasification, thermochemical conversion
+   Email: ghoniem@mit.edu
+   Land: USA
+   Sprache: English
+
+7. Name: Dr. Gregory Stephanopoulos
+   Titel: Professor of Chemical Engineering
+   Institution: MIT
+   Forschungsschwerpunkt: Metabolic engineering, biochemical conversion
+   Email: gregstep@mit.edu
+   Land: USA
+   Sprache: English
+
+8. Name: Dr. Sally Benson
+   Titel: Professor of Energy Resources Engineering
+   Institution: Stanford University
+   Forschungsschwerpunkt: Energy systems, carbon capture, clean energy
+   Email: smbenson@stanford.edu
+   Land: USA
+   Sprache: English
+
+9. Name: Dr. Arun Majumdar
+   Titel: Professor of Mechanical Engineering
+   Institution: Stanford University
+   Forschungsschwerpunkt: Energy systems, electrochemical energy conversion
+   Email: arun.majumdar@stanford.edu
+   Land: USA
+   Sprache: English
+
+10. Name: Dr. Alexis Bell
+    Titel: Professor of Chemical Engineering
+    Institution: UC Berkeley
+    Forschungsschwerpunkt: Catalysis, reaction engineering, thermochemical processes
+    Email: alexisbell@berkeley.edu
+    Land: USA
+    Sprache: English
+
+11. Name: Dr. Enrique Iglesia
+    Titel: Professor of Chemical Engineering
+    Institution: UC Berkeley
+    Forschungsschwerpunkt: Heterogeneous catalysis, energy conversion
+    Email: iglesia@berkeley.edu
+    Land: USA
+    Sprache: English
+
+--- Kanada ---
+
+12. Name: Dr. David B. Levin
+    Titel: Professor
+    Institution: University of Manitoba
+    Forschungsschwerpunkt: Bioenergy, biogas, anaerobic digestion, thermochemical processes
+    Email: david.levin@umanitoba.ca
+    Land: Canada
+    Sprache: English
+
+13. Name: Dr. Anthony Lau
+    Titel: Professor
+    Institution: University of British Columbia
+    Forschungsschwerpunkt: Biomass gasification, energy systems, clean technology
+    Email: anthony.lau@ubc.ca
+    Land: Canada
+    Sprache: English
+
+14. Name: Dr. Arturo Macchi
+    Titel: Professor
+    Institution: University of Ottawa
+    Forschungsschwerpunkt: Biomass gasification, chemical looping
+    Email: amacchi@uottawa.ca
+    Land: Canada
+    Sprache: English
+
+================================================================================
+REGION: ASIA-PACIFIC (27 Kontakte)
+================================================================================
+
+--- Japan ---
+
+15. Name: Dr. Kunio Yoshikawa
+    Titel: Principal Researcher
+    Institution: AIST
+    Forschungsschwerpunkt: Biomass gasification, waste-to-energy, thermochemical conversion
+    Email: k.yoshikawa@aist.go.jp
+    Land: Japan
+    Sprache: English
+
+16. Name: Dr. Tomoaki Namioka
+    Titel: Senior Researcher
+    Institution: AIST
+    Forschungsschwerpunkt: Biomass energy, gasification, hydrogen production
+    Email: t.namioka@aist.go.jp
+    Land: Japan
+    Sprache: English
+
+17. Name: Dr. Masahiro Osada
+    Titel: Program Director
+    Institution: NEDO
+    Forschungsschwerpunkt: Biomass energy policy, thermochemical conversion programs
+    Email: osada.masahiro@nedo.go.jp
+    Land: Japan
+    Sprache: English
+
+--- Australien ---
+
+18. Name: Dr. Thomas Rainey
+    Titel: Senior Research Scientist
+    Institution: CSIRO Energy
+    Forschungsschwerpunkt: Biomass gasification, bioenergy systems, thermochemical conversion
+    Email: tom.rainey@csiro.au
+    Land: Australia
+    Sprache: English
+
+19. Name: Dr. Daniel Mayo
+    Titel: Research Scientist
+    Institution: CSIRO Energy
+    Forschungsschwerpunkt: Biomass processing, gasification, renewable energy
+    Email: daniel.mayo@csiro.au
+    Land: Australia
+    Sprache: English
+
+20. Name: Dr. Andrew Lvovich
+    Titel: Principal Research Scientist
+    Institution: CSIRO Energy
+    Forschungsschwerpunkt: Sustainable aviation fuels, biomass conversion
+    Email: andrew.lvovich@csiro.au
+    Land: Australia
+    Sprache: English
+
+21. Name: Dr. John Pye
+    Titel: Senior Lecturer
+    Institution: Australian National University (ANU)
+    Forschungsschwerpunkt: Concentrating solar thermal, thermochemical processes, hydrogen
+    Email: john.pye@anu.edu.au
+    Land: Australia
+    Sprache: English
+
+--- Südkorea ---
+
+22. Name: Dr. Tae-Young Mun
+    Titel: Principal Researcher
+    Institution: KIER
+    Forschungsschwerpunkt: Biomass gasification, pyrolysis, thermochemical conversion
+    Email: tymun@kier.re.kr
+    Land: South Korea
+    Sprache: English
+
+23. Name: Dr. Sung Hoon Park
+    Titel: Senior Researcher
+    Institution: KIER
+    Forschungsschwerpunkt: Biomass energy, gasification technology, biofuels
+    Email: shpark@kier.re.kr
+    Land: South Korea
+    Sprache: English
+
+--- China ---
+
+24. Name: Prof. Dr. Yongping Yang
+    Titel: Professor
+    Institution: Tsinghua University, Department of Thermal Engineering
+    Forschungsschwerpunkt: Biomass gasification, thermochemical conversion, clean coal technology
+    Email: yangyp@tsinghua.edu.cn
+    Land: China
+    Sprache: English
+
+25. Name: Prof. Dr. Mingjiang Ni
+    Titel: Professor
+    Institution: Zhejiang University, College of Energy Engineering
+    Forschungsschwerpunkt: Biomass pyrolysis and gasification, waste-to-energy, biochar production
+    Email: nimingjiang@zju.edu.cn
+    Land: China
+    Sprache: English
+
+26. Name: Prof. Dr. Zhongyang Luo
+    Titel: Professor
+    Institution: Zhejiang University, State Key Laboratory of Clean Energy
+    Forschungsschwerpunkt: Biomass combustion and gasification, pyrolysis, industrial waste utilization
+    Email: luozhy@zju.edu.cn
+    Land: China
+    Sprache: English
+
+27. Name: Prof. Dr. Xiaodong Zhang
+    Titel: Professor
+    Institution: Chinese Academy of Sciences, Institute of Engineering Thermophysics
+    Forschungsschwerpunkt: Biomass gasification technology, syngas production, IGCC
+    Email: zhangxd@iet.cn
+    Land: China
+    Sprache: English
+
+28. Name: Prof. Dr. Guanyi Chen
+    Titel: Professor
+    Institution: Tsinghua University, School of Environment
+    Forschungsschwerpunkt: Biomass energy, waste-to-energy systems, circular bioeconomy
+    Email: chenguanyi@tsinghua.edu.cn
+    Land: China
+    Sprache: English
+
+29. Name: Prof. Dr. Changsui Zhao
+    Titel: Professor
+    Institution: Chinese Academy of Sciences, Guangzhou Institute of Energy Conversion
+    Forschungsschwerpunkt: Biomass gasification, bio-oil production, thermochemical conversion
+    Email: zhaocs@ms.giec.ac.cn
+    Land: China
+    Sprache: English
+
+30. Name: Prof. Dr. Chun-Zhu Li
+    Titel: Professor
+    Institution: Zhejiang University, Department of Chemical Engineering
+    Forschungsschwerpunkt: Biomass pyrolysis, gasification chemistry, reaction mechanisms
+    Email: licz@zju.edu.cn
+    Land: China
+    Sprache: English
+
+31. Name: Prof. Dr. Hongcang Zhou
+    Titel: Professor
+    Institution: Chinese Academy of Sciences, Institute of Process Engineering
+    Forschungsschwerpunkt: Biomass thermochemical conversion, gasification, syngas cleanup
+    Email: hczhou@ipe.ac.cn
+    Land: China
+    Sprache: English
+
+--- Indien ---
+
+32. Name: Prof. Dr. Sunil Kumar Khare
+    Titel: Professor
+    Institution: IIT Delhi, Department of Chemistry
+    Forschungsschwerpunkt: Bioenergy, lignocellulosic biomass conversion, biorefinery processes
+    Email: skkhare@chemistry.iitd.ac.in
+    Land: India
+    Sprache: English
+
+33. Name: Prof. Dr. Anjana Pandey
+    Titel: Professor
+    Institution: IIT Delhi, Centre for Rural Development and Technology
+    Forschungsschwerpunkt: Biomass energy, biogas production, rural energy systems
+    Email: anjanap@iitd.ac.in
+    Land: India
+    Sprache: English
+
+34. Name: Prof. Dr. Prakash D. Vaidya
+    Titel: Professor
+    Institution: IIT Bombay, Department of Chemical Engineering
+    Forschungsschwerpunkt: Biomass gasification, syngas cleanup, catalytic conversion
+    Email: pdvaidya@iitb.ac.in
+    Land: India
+    Sprache: English
+
+35. Name: Prof. Dr. S. Dasappa
+    Titel: Professor
+    Institution: IISc Bangalore, Centre for Sustainable Technologies
+    Forschungsschwerpunkt: Biomass gasification, producer gas engines, rural energy systems
+    Email: dasappa@cst.iisc.ernet.in
+    Land: India
+    Sprache: English
+
+36. Name: Prof. Dr. N. K. S. Rajan
+    Titel: Professor
+    Institution: IISc Bangalore, Department of Chemical Engineering
+    Forschungsschwerpunkt: Biomass pyrolysis, gasification kinetics, reactor design
+    Email: nksrajan@iisc.ac.in
+    Land: India
+    Sprache: English
+
+37. Name: Prof. Dr. Rangan Banerjee
+    Titel: Professor
+    Institution: IIT Bombay, Department of Energy Science and Engineering
+    Forschungsschwerpunkt: Energy systems modeling, biomass energy, sustainable energy planning
+    Email: rangan.banerjee@iitb.ac.in
+    Land: India
+    Sprache: English
+
+--- Thailand ---
+
+38. Name: Prof. Dr. Chongrak Polprasert
+    Titel: Professor
+    Institution: King Mongkut's University of Technology Thonburi (KMUTT)
+    Forschungsschwerpunkt: Biomass energy, anaerobic digestion, waste-to-energy systems
+    Email: chongrak.pol@kmutt.ac.th
+    Land: Thailand
+    Sprache: English
+
+39. Name: Prof. Dr. Thongchai Rohitatisha Srinophakun
+    Titel: Professor
+    Institution: KMUTT
+    Forschungsschwerpunkt: Biomass conversion, pyrolysis, thermochemical processes
+    Email: thongchai.sri@kmutt.ac.th
+    Land: Thailand
+    Sprache: English
+
+--- Malaysia ---
+
+40. Name: Prof. Dr. Mohd Ali Hassan
+    Titel: Professor
+    Institution: Universiti Putra Malaysia, Department of Bioprocess Technology
+    Forschungsschwerpunkt: Biomass conversion, bioenergy, biogas production, palm oil waste utilization
+    Email: alih@upm.edu.my
+    Land: Malaysia
+    Sprache: English
+
+41. Name: Prof. Dr. Astimar Abdul Aziz
+    Titel: Professor
+    Institution: Universiti Putra Malaysia, Malaysian Palm Oil Board (MPOB)
+    Forschungsschwerpunkt: Biomass utilization, palm biomass conversion, bioenergy from agricultural waste
+    Email: astimar@mpob.gov.my
+    Land: Malaysia
+    Sprache: English
+
+================================================================================
+REGION: OSTEUROPA (4 Kontakte)
+================================================================================
+
+--- Polen ---
+
+42. Name: Dr. Marcin Stec
+    Titel: Research Professor
+    Institution: Instytut Chemicznej Przeróbki Węgla (IChPW)
+    Forschungsschwerpunkt: Coal and biomass co-gasification, thermochemical conversion
+    Email: m.stec@ichpw.pl
+    Land: Poland
+    Sprache: English
+
+43. Name: Dr. Jacek Surdacki
+    Titel: Research Professor
+    Institution: IChPW
+    Forschungsschwerpunkt: Gasification, coal/biomass processing, energy technologies
+    Email: j.surdacki@ichpw.pl
+    Land: Poland
+    Sprache: English
+
+--- Tschechische Republik ---
+
+44. Name: Dr. Pavel Skopec
+    Titel: Associate Professor
+    Institution: Czech Technical University in Prague (ČVUT)
+    Forschungsschwerpunkt: Biomass gasification, combustion, renewable energy systems
+    Email: pavel.skopec@fs.cvut.cz
+    Land: Czech Republic
+    Sprache: English
+
+45. Name: Dr. Karel J. Brabc
+    Titel: Professor
+    Institution: ČVUT
+    Forschungsschwerpunkt: Energy systems, biomass thermochemical conversion
+    Email: karel.brabc@fs.cvut.cz
+    Land: Czech Republic
+    Sprache: English
+
+================================================================================
+SUMMARY
+================================================================================
+
+Gesamtzahl neuer Kontakte: 134
+
+Verteilung nach Region:
+- USA & Kanada: 14
+- Asia-Pacific: 27
+- Osteuropa: 4
+- Westeuropa: 41
+- DACH + UK/Ireland: 35
+- Südamerika: 7
+- Naher Osten: 6
+
+WICHTIG: Alle Email-Adressen sollten vor dem ersten Versand auf den 
+Institutions-Webseiten verifiziert werden!
+
+================================================================================

@@ -1,0 +1,1424 @@
+{
+  "emails": [
+    {
+      "to": "info@dbfz.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:41:49-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "info@dbfz.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:42:16-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "info@dbfz.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:50:37-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "info@dbfz.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:51:02-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "sotiris.pratsinis@ptl.mavt.ethz.ch",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:51:37-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "sotokar@mail.ntua.gr",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:51:38-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "marischm@ethz.ch",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-16T22:51:40-08:00",
+      "method": "himalaya",
+      "verified": true
+    },
+    {
+      "to": "sotiris.pratsinis@ptl.mavt.ethz.ch",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-17T06:38:24-00:00",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "sotokar@mail.ntua.gr",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-17T06:38:33-00:00",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "marischm@ethz.ch",
+      "subject": "Collaboration Opportunity \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-17T06:38:43-00:00",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "info@dbfz.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-17T06:50:37-00:00",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "j.uhlig@exventure.co",
+      "subject": "T\u00e4glicher Bericht - 17. Februar 2026",
+      "sent_at": "2026-02-17T15:15:45.848228",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "julienagent@exventure.co",
+      "subject": "T\u00e4glicher Bericht - 17. Februar 2026",
+      "sent_at": "2026-02-17T23:31:12.104111",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "hofbauer@tuwien.ac.at",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomassevergasung & Horizon Europe",
+      "sent_at": "2026-02-18T14:01:34.029573",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "henrik.thunman@chalmers.se",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification Research",
+      "sent_at": "2026-02-18T14:01:38.501238",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "nicolaus.dahmen@kit.edu",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Vergasungstechnologie & Horizon Europe",
+      "sent_at": "2026-02-18T14:01:42.123091",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "ruud.vanderdrift@ecn.nl",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification",
+      "sent_at": "2026-02-18T14:01:46.107863",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "markus.schuessler@umsicht.fraunhofer.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Verfahren & EU-F\u00f6rderung",
+      "sent_at": "2026-02-18T14:01:49.608273",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "michael.breuer@tu-dresden.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomassevergasung & Horizon Europe",
+      "sent_at": "2026-02-18T14:04:53.103961",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "adj@kt.dtu.dk",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification Research",
+      "sent_at": "2026-02-18T14:05:29.016263",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "robert.scharler@tuwien.ac.at",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Biomasseumwandlung",
+      "sent_at": "2026-02-18T14:06:16.331522",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "peter.grambow@psi.ch",
+      "subject": "Horizon Europe Collaboration \u2013 Bioenergy & Thermochemical Processes",
+      "sent_at": "2026-02-18T14:06:45.505205",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "tobias.mattisson@chemeng.lth.se",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Conversion & Chemical Looping",
+      "sent_at": "2026-02-18T14:07:15.336159",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "aj@kt.dtu.dk",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification Research",
+      "sent_at": "2026-02-18T14:25:50.320866",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "info@psi.ch",
+      "subject": "Research Collaboration Inquiry \u2013 Dr. Peter Grambow / Bioenergy & Thermochemical Processes",
+      "sent_at": "2026-02-18T14:42:46.130025",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "info@chemeng.lth.se",
+      "subject": "Research Collaboration Inquiry \u2013 Prof. Tobias Mattisson / Chemical Looping & Biomass Conversion",
+      "sent_at": "2026-02-18T14:42:50.754835",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "tom.rainey@csiro.au",
+      "subject": "Australia-EU Research Collaboration \u2013 Biomass Gasification",
+      "sent_at": "2026-02-19T04:00:49.896112",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "nimingjiang@zju.edu.cn",
+      "subject": "EU-China Research Collaboration \u2013 Biomass Gasification",
+      "sent_at": "2026-02-19T07:00:30.416990",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "esa.vakkilainen@lut.fi",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification & CHP",
+      "sent_at": "2026-02-19T13:00:47.465273",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kevin.vangeem@kuleuven.be",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification & Pyrolysis",
+      "sent_at": "2026-02-19T14:01:47.981076",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "hartmut.spliethoff@tum.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomassevergasung & Horizon Europe",
+      "sent_at": "2026-02-19T14:03:20.463342",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mpilargg@unizar.es",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Pyrolysis & Biochar",
+      "sent_at": "2026-02-19T14:05:34.409400",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "oyvind.skreiberg@sintef.no",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification & BECCS",
+      "sent_at": "2026-02-19T14:06:37.353929",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "matthias.gaderer@tum.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomasse-KWK & Horizon Europe",
+      "sent_at": "2026-02-19T14:08:18.596922",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kristina.iisa@nrel.gov",
+      "subject": "Horizon Europe Collaboration \u2013 Tar Reforming & Gasification",
+      "sent_at": "2026-02-19T22:01:12.442541",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "secretariat@aist.go.jp",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Carbon-Negative Energy",
+      "sent_at": "2026-02-20T12:17:50.342160",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "kier_webmaster@kier.re.kr",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Distributed Energy",
+      "sent_at": "2026-02-20T12:17:50.342160",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "www-admin@m.titech.ac.jp",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Energy Systems",
+      "sent_at": "2026-02-20T12:17:50.342160",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "dean.sci@iisc.ac.in",
+      "subject": "Research Collaboration \u2013 Modular Biomass CHP System X-150",
+      "sent_at": "2026-02-20T12:17:50.342160",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "info@btgworld.com",
+      "subject": "Research Collaboration \u2013 Biomass Gasification Technology",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "jba@kt.dtu.dk",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Tar Management",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "segreteria.dica@polimi.it",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Clean Energy",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "s.e.a.vaneck@utwente.nl",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Thermochemical Conversion",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "netl.web@netl.doe.gov",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Carbon Capture",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "information@nrel.gov",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Syngas Technology",
+      "sent_at": "2026-02-20T14:28:49.008184",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "serge.biollaz@psi.ch",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Hot Gas Cleaning & Teer-Reforming",
+      "sent_at": "2026-02-23T14:01:16.344348",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "tilman.schildhauer@psi.ch",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Syngas-Upgrading & Methanisierung",
+      "sent_at": "2026-02-23T14:01:19.402976",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "sandra.hermle@bfe.admin.ch",
+      "subject": "Forschungskooperation \u2013 Bioenergie & F\u00f6rderkoordination",
+      "sent_at": "2026-02-23T14:01:22.574601",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "jitka.hrbek@tuwien.ac.at",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 IEA Task 33 & Vergasungsnetzwerk",
+      "sent_at": "2026-02-23T14:01:25.437381",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "reinhard.rauch@bioenergy2020.eu",
+      "subject": "Forschungspartnerschaft \u2013 G\u00fcssing-Erfahrung & modulare Systeme",
+      "sent_at": "2026-02-23T14:01:28.532713",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "miriam.huber@best-research.eu",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Teer-Reforming & Gasreinigung",
+      "sent_at": "2026-02-23T14:01:31.546872",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "anders.malmquist@energy.kth.se",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Energy Systems",
+      "sent_at": "2026-02-23T14:01:34.507127",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "trond.andresen@sintef.no",
+      "subject": "Research Collaboration \u2013 Gas Technology & CCS Integration",
+      "sent_at": "2026-02-23T14:01:36.925283",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "andreas.friedrich@dlr.de",
+      "subject": "AW: Elektrochemische Energietechnologie & Syngas-Integration \u2013 Terminvorschl\u00e4ge",
+      "sent_at": "2026-02-23T14:43:32.214975",
+      "method": "python_smtp",
+      "verified": true
+    },
+    {
+      "to": "j.uhlig@exventure.co",
+      "subject": "Tagesupdate \u2013 23. Feb \u2013 DLR Meeting + Challenge #6",
+      "sent_at": "2026-02-23T20:09:13.582776",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "tom.rainey@csiro.au",
+      "subject": "Collaboration \u2014 Biomass Gasification Systems",
+      "sent_at": "2026-02-23T23:15:43.777192",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kevin.vangeem@ugent.be",
+      "subject": "Research Collaboration \u2014 Chemical Reaction Engineering",
+      "sent_at": "2026-02-23T23:15:48.649264",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "fernando.bimbela@ciemat.es",
+      "subject": "Collaboration \u2014 Catalytic Tar Removal Research",
+      "sent_at": "2026-02-23T23:15:53.354328",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "herman.reizer@tudelft.nl",
+      "subject": "Short-notice meeting request \u2014 Passing through Delft Wednesday",
+      "sent_at": "2026-02-23T23:28:20.727160",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "r.f.malone@tudelft.nl",
+      "subject": "Brief meeting opportunity \u2014 Passing through Delft Wednesday",
+      "sent_at": "2026-02-23T23:28:25.231492",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "luis.m.garcia@ciemat.es",
+      "subject": "Short-notice meeting \u2014 In Madrid Friday afternoon",
+      "sent_at": "2026-02-23T23:29:50.232066",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mercedes.dediego@ciemat.es",
+      "subject": "Meeting opportunity \u2014 In Madrid Friday afternoon",
+      "sent_at": "2026-02-23T23:29:54.631376",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mariapaz.gomez@ciemat.es",
+      "subject": "Short-notice meeting request \u2014 Madrid Friday",
+      "sent_at": "2026-02-23T23:29:58.728221",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "ingenieria@ulpgc.es",
+      "subject": "Research Collaboration \u2014 Biomass Gasification",
+      "sent_at": "2026-02-24T00:06:47.240978",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "einvestigacion@ulpgc.es",
+      "subject": "University Partnership \u2014 Waste Gasification Research",
+      "sent_at": "2026-02-24T00:06:51.426237",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "decanato.ingenieria@ulpgc.es",
+      "subject": "Collaboration Inquiry \u2014 Wastewater Treatment & Energy",
+      "sent_at": "2026-02-24T00:06:55.930688",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "j.uhlig@exventure.co",
+      "subject": "TEST - Winery Outreach Batch",
+      "sent_at": "2026-02-24T01:52:30.045200",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "k.yoshikawa@aist.go.jp",
+      "subject": "Collaboration \u2014 Biomass Gasification & Waste-to-Energy",
+      "sent_at": "2026-02-24T06:03:52.158802",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "m.stec@ichpw.pl",
+      "subject": "Research Collaboration \u2014 Co-gasification",
+      "sent_at": "2026-02-24T14:01:43.542349",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "j.surdacki@ichpw.pl",
+      "subject": "Research Collaboration \u2014 Gasification",
+      "sent_at": "2026-02-24T14:03:14.553687",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "johan.martens@kuleuven.be",
+      "subject": "Research Partnership \u2014 Catalysis",
+      "sent_at": "2026-02-24T15:03:08.265539",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "jerry.murphy@ucc.ie",
+      "subject": "Research Partnership \u2014 Biomass Gasification",
+      "sent_at": "2026-02-24T16:05:11.041664",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "stefano.campanari@polimi.it",
+      "subject": "Research Partnership \u2014 Fuel Cells",
+      "sent_at": "2026-02-24T16:06:54.906557",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "rcbrown3@iastate.edu",
+      "subject": "Research Collaboration \u2014 Biomass Gasification Systems",
+      "sent_at": "2026-02-24T20:03:56.887592",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "perrine.pepiot@cornell.edu",
+      "subject": "Research Partnership \u2014 CFD Modeling & Gasification",
+      "sent_at": "2026-02-24T20:05:21.281931",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kdas@engr.uga.edu",
+      "subject": "Collaboration \u2014 Bioenergy & Thermochemical Conversion",
+      "sent_at": "2026-02-24T20:06:05.529642",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kevin.whitty@utah.edu",
+      "subject": "Research Collaboration \u2014 Chemical Looping & Gasification",
+      "sent_at": "2026-02-24T20:06:48.021626",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "njt1@columbia.edu",
+      "subject": "Partnership \u2014 Waste-to-Energy & Global Collaboration",
+      "sent_at": "2026-02-24T20:08:03.525593",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "nathan.weiland@netl.doe.gov",
+      "subject": "Research Partnership \u2014 Gasification Systems",
+      "sent_at": "2026-02-24T21:01:52.906546",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "parksjeii@ornl.gov",
+      "subject": "Research Partnership \u2014 Waste-to-Energy",
+      "sent_at": "2026-02-24T21:02:41.716695",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "frea-info-ml@aist.go.jp",
+      "subject": "Research Collaboration Inquiry \u2013 Biomass Gasification Technology",
+      "sent_at": "2026-02-25T11:33:09.039866",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "esa.kurkela@vtt.fi",
+      "subject": "Biomass Gasification & BTL Pathways \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T13:07:11.294406",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "robert.scharler@tugraz.at",
+      "subject": "Biomasse-Verbrennung & Syngas-Nutzung \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:01:27.553425",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "juergen.karl@fau.de",
+      "subject": "Erneuerbare Energien & Biomasse-KWK \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:02:12.563558",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mika.jarvinen@aalto.fi",
+      "subject": "Biomass Gasification & Process Integration \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T14:03:01.771000",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "thomas.kolb@kit.edu",
+      "subject": "Chemische Verfahrenstechnik & Syngas-Aufbereitung \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:03:15.237106",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "j.gibbins@sheffield.ac.uk",
+      "subject": "Biomass Energy & Carbon Capture \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T14:03:27.359041",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mani.sarathy@kaust.edu.sa",
+      "subject": "Combustion & Alternative Fuels \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T14:03:37.697099",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernd.meyer@iec.tu-freiberg.de",
+      "subject": "Vergasungstechnologie & Prozessentwicklung \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:03:46.606263",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "klaus.goerner@uni-due.de",
+      "subject": "Energietechnik & Thermochemische Umwandlung \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:04:36.735422",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "karl.mayrhofer@fau.de",
+      "subject": "Chemische Verfahrenstechnik & Energiesysteme \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T14:05:44.070829",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "Kevin.VanGeem@UGent.be",
+      "subject": "Re: Research Collaboration \u2014 Chemical Reaction Engineering",
+      "sent_at": "2026-02-25T14:30:45.199562",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "pekka.ahtila@aalto.fi",
+      "subject": "Energy Systems & Biomass Gasification \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T14:31:59.078880",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "thongchai.sri@kmutt.ac.th",
+      "subject": "Biomass Conversion & Pyrolysis \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-25T14:32:29.801177",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "dieter.brueggemann@uni-bayreuth.de",
+      "subject": "Thermodynamik & Biomassevergasung \u2013 Projekt Com\u00e9tha",
+      "sent_at": "2026-02-25T15:11:14.948234",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "ronny.neumann@weizmann.ac.il",
+      "subject": "Re: Catalysis & Biomass Conversion \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-26T11:55:55.437053",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bart.hommez@ugent.be",
+      "subject": "Re: Research Collaboration \u2014 Chemical Reaction Engineering",
+      "sent_at": "2026-02-26T12:21:56.341426",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "n.shah@imperial.ac.uk",
+      "subject": "Re: Process Integration & Biomass Gasification \u2013 Project Com\u00e9tha",
+      "sent_at": "2026-02-26T15:01:40.866528",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "Monika.Baumann@dlr.de",
+      "subject": "Re: Elektrochemische Energietechnologie & Syngas-Integration \u2013 Terminvorschl\u00e4ge",
+      "sent_at": "2026-02-26T15:24:51.166410",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mark.nimlos@nrel.gov",
+      "subject": "Biomass Gasification & Tar Reforming \u2013 Research Collaboration",
+      "sent_at": "2026-02-26T16:05:01.324565",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "ghoniem@mit.edu",
+      "subject": "Thermochemical Conversion & Gasification \u2013 Collaboration Inquiry",
+      "sent_at": "2026-02-26T16:05:06.028178",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "smbenson@stanford.edu",
+      "subject": "Clean Energy Systems & Carbon Capture \u2013 Potential Collaboration",
+      "sent_at": "2026-02-26T16:05:11.557244",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "john.pye@anu.edu.au",
+      "subject": "Thermochemical Processes & Hydrogen \u2013 Research Partnership",
+      "sent_at": "2026-02-26T16:05:16.560872",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "t.namioka@aist.go.jp",
+      "subject": "Biomass Gasification & Hydrogen Production \u2013 Collaboration",
+      "sent_at": "2026-02-26T16:05:21.100874",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "chongrak.pol@kmutt.ac.th",
+      "subject": "Waste-to-Energy & Biomass Systems \u2013 Research Partnership",
+      "sent_at": "2026-02-26T16:05:49.164119",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "pavel.skopec@fs.cvut.cz",
+      "subject": "Biomass Gasification & Renewable Energy Systems",
+      "sent_at": "2026-02-26T16:05:54.283078",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "anthony.lau@ubc.ca",
+      "subject": "Biomass Gasification & Clean Technology \u2013 Collaboration",
+      "sent_at": "2026-02-26T16:05:58.726949",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "astimar@mpob.gov.my",
+      "subject": "Palm Biomass Conversion & Bioenergy \u2013 Research Partnership",
+      "sent_at": "2026-02-26T16:06:04.469627",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "david.levin@umanitoba.ca",
+      "subject": "Bioenergy & Thermochemical Processes \u2013 Collaboration Inquiry",
+      "sent_at": "2026-02-26T16:06:08.576850",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "julienagent@exventure.co",
+      "subject": "Daily Learnings - 2026-02-26",
+      "sent_at": "2026-02-26T17:28:46.558250",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "david.chiaramonti@polito.it",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomasse-KWK & Horizon Europe",
+      "sent_at": "2026-02-27T14:12:16.788121",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "javier.fermoso@csic.es",
+      "subject": "Research Collaboration \u2013 Biomass Gasification & Horizon Europe",
+      "sent_at": "2026-02-27T14:13:17.397668",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bako@almos.uni-pannon.hu",
+      "subject": "Research Collaboration \u2013 Bioenergy & Horizon Europe",
+      "sent_at": "2026-02-27T14:13:27.247694",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomasse-KWK & Horizon Europe",
+      "sent_at": "2026-02-27T16:03:00.475894",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "edward.lester@nottingham.ac.uk",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification Research",
+      "sent_at": "2026-02-27T16:03:12.540438",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "francisco.lemos@tecnico.ulisboa.pt",
+      "subject": "Colabora\u00e7\u00e3o \u2013 Sistema de Cogera\u00e7\u00e3o de Biomassa & Horizonte Europa",
+      "sent_at": "2026-02-27T16:03:50.690877",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "pavel.mach@vut.cz",
+      "subject": "Spolupr\u00e1ce \u2013 Biomasov\u00fd kogenera\u010dn\u00ed syst\u00e9m & Horizont Evropa",
+      "sent_at": "2026-02-27T16:04:02.250233",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "robert.baldwin@nrel.gov",
+      "subject": "Research Collaboration \u2013 Catalytic Fast Pyrolysis & Syngas Upgrading",
+      "sent_at": "2026-03-02T16:00:04.997772",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "gregstep@mit.edu",
+      "subject": "Research Collaboration \u2013 Integrated Biorefineries & Syngas Fermentation",
+      "sent_at": "2026-03-02T16:00:28.959240",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mvnavarro@unizar.es",
+      "subject": "Horizon Europe Collaboration \u2013 Gas Cleaning & Syngas Conditioning",
+      "sent_at": "2026-03-02T16:00:35.202560",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "jan.vancaneghem@vito.be",
+      "subject": "Horizon Europe Collaboration \u2013 Waste-to-Energy & Syngas Quality",
+      "sent_at": "2026-03-02T16:00:43.309824",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "hawu@kt.dtu.dk",
+      "subject": "Horizon Europe Collaboration \u2013 Pyrolysis-Gasification Process Integration",
+      "sent_at": "2026-03-02T16:00:51.414160",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "mingming.zhu@manchester.ac.uk",
+      "subject": "Research Collaboration \u2013 Bioenergy Systems & CHP Integration",
+      "sent_at": "2026-03-02T16:00:58.471901",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "s.bhattacharya@aston.ac.uk",
+      "subject": "Research Collaboration \u2013 Catalytic Processes & Tar Reforming",
+      "sent_at": "2026-03-02T16:02:00.297654",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "np.hewitt@ulster.ac.uk",
+      "subject": "Research Collaboration \u2013 Renewable Energy Systems & Grid Integration",
+      "sent_at": "2026-03-02T16:02:06.394455",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "william.roberts@kaust.edu.sa",
+      "subject": "Research Collaboration \u2013 Clean Energy Systems & Syngas Combustion",
+      "sent_at": "2026-03-02T16:02:13.200116",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "zero-x@exventure.co",
+      "subject": "Urgent: Equation Labs Details Needed for Global Gateway EU Call",
+      "sent_at": "2026-03-02T16:12:34.514538",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "zerox@exventure.co",
+      "subject": "Urgent: Equation Labs Details Needed for Global Gateway EU Call",
+      "sent_at": "2026-03-03T11:36:59.045970",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "christoph.hochenauer@tugraz.at",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-03T15:16:18.357059",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "alison.hughes@uct.ac.za",
+      "subject": "Horizon Europe Collaboration \u2013 African Energy Systems",
+      "sent_at": "2026-03-03T15:16:22.449271",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "ids@uonbi.ac.ke",
+      "subject": "Research Collaboration \u2013 Rural Energy & Development",
+      "sent_at": "2026-03-03T15:16:27.307804",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "energy@berkeley.edu",
+      "subject": "Horizon Europe Collaboration \u2013 Renewable Energy Systems",
+      "sent_at": "2026-03-03T15:16:32.847545",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bbe@umn.edu",
+      "subject": "Research Collaboration \u2013 Bioenergy & Bioproducts",
+      "sent_at": "2026-03-03T15:16:48.965713",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "manfred.fischedick@wupperinst.org",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-03T15:16:54.319600",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "kt@kt.dtu.dk",
+      "subject": "Horizon Europe Collaboration \u2013 Chemical Engineering & Biomass",
+      "sent_at": "2026-03-03T15:16:59.288259",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "imaranga@strathmore.edu",
+      "subject": "Research Partnership \u2013 East African Energy Systems",
+      "sent_at": "2026-03-03T15:17:04.128438",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "anders.malmquist@energy.kth.se",
+      "subject": "Re: Research Collaboration \u2013 Biomass Gasification & Energy Systems",
+      "sent_at": "2026-03-03T17:28:08.965239",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Re: Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-03T17:38:09.112204",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Zoom-Link: Meeting am 7. M\u00e4rz um 09:00 Uhr",
+      "sent_at": "2026-03-04T12:10:32.418085",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "robert.scharler@tugraz.at",
+      "subject": "AW: R\u00fcckmeldung IWT TU Graz - Kollaborationsm\u00f6glichkeit",
+      "sent_at": "2026-03-04T12:24:44.008413",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "e.schleicher@hzdr.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:05:33.947102",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "g.brem@utwente.nl",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:05:40.759977",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "h.j.heeres@rug.nl",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:05:47.068215",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "jmruiz@us.es",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:05:54.616463",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "jose.santos@tecnico.ulisboa.pt",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:02.289938",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "lienkamp@ftm.mw.tum.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:08.388593",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "m.pourkashanian@sheffield.ac.uk",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:14.093825",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "martin.muhler@rub.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:19.870335",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "michael.stelter@ikts.fraunhofer.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:26.599823",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "paolo.chiesa@polimi.it",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:32.214974",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "pgl@kt.dtu.dk",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:38.679260",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "r.eichel@fz-juelich.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:44.407855",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "roland.dittmeyer@kit.edu",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:50.756963",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "s.brandani@ed.ac.uk",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:06:56.401700",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "t.j.mays@bath.ac.uk",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:07:02.148415",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "thomas.schulenberg@kit.edu",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:07:08.652730",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "v.dupont@leeds.ac.uk",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "sent_at": "2026-03-04T16:07:14.711071",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Entschuldigung - Termin am 7. M\u00e4rz / Neuer Vorschlag",
+      "sent_at": "2026-03-09T16:57:41.354791",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Re: Zoom-Link: Meeting am 7. M\u00e4rz um 09:00 Uhr",
+      "sent_at": "2026-03-10T11:49:50.142238",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "julienagent@exventure.co",
+      "subject": "Termin-Update f\u00fcr Dashboard-Kalender",
+      "sent_at": "2026-03-10T12:44:18.403785",
+      "method": "python_smtp_safe",
+      "verified": true
+    },
+    {
+      "to": "seiser@stanford.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "haofeng@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "achansen@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "mgdanao@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "bernacch@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "rayming@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "basimmons@lbl.gov",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "seemasingh@lbl.gov",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "michael.himmel@nrel.gov",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "keiserjr@ornl.gov",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "mark.bricka@tamu.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "richard.hess@inl.gov",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "tdw@gatech.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "pjm34@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "pdavidso@illinois.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    },
+    {
+      "to": "dsalazar@stanford.edu",
+      "subject": "Research Collaboration \u2013 Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+      "sent_at": "2026-03-11T01:57:37.086005+00:00",
+      "status": "sent",
+      "source": "perplexity_research",
+      "campaign": "US_outreach_2026-03-11",
+      "bcc": "j.Uhlig@exventure.co"
+    }
+  ],
+  "blocked_duplicates": [
+    {
+      "to": "hofbauer@tuwien.ac.at",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomassevergasung & Horizon Europe",
+      "attempted_at": "2026-02-18T14:02:27.051333",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "henrik.thunman@chalmers.se",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification Research",
+      "attempted_at": "2026-02-18T14:03:21.232227",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "nicolaus.dahmen@kit.edu",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Vergasungstechnologie & Horizon Europe",
+      "attempted_at": "2026-02-18T14:03:41.388996",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "ruud.vanderdrift@ecn.nl",
+      "subject": "Horizon Europe Collaboration \u2013 Biomass Gasification",
+      "attempted_at": "2026-02-18T14:03:57.377821",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "markus.schuessler@umsicht.fraunhofer.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Thermische Verfahren & EU-F\u00f6rderung",
+      "attempted_at": "2026-02-18T14:04:12.900104",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "matthias.gaderer@tum.de",
+      "subject": "Kollaborationsm\u00f6glichkeit \u2013 Biomasse-KWK & Horizon Europe",
+      "attempted_at": "2026-02-19T14:08:27.030633",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "timestamp": "2026-02-25T14:04:45.724404",
+      "to": "klaus.goerner@uni-due.de",
+      "subject": "Energietechnik & Thermochemische Umwandlung \u2013 Projekt Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-25T14:04:36.735422"
+    },
+    {
+      "timestamp": "2026-02-25T15:10:03.463306",
+      "to": "serge.biollaz@psi.ch",
+      "subject": "Chemical Energy Storage & Biomass Gasification \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-23T14:01:16.344348"
+    },
+    {
+      "timestamp": "2026-02-25T15:10:11.757146",
+      "to": "tilman.schildhauer@psi.ch",
+      "subject": "Biomass Gasification & Thermochemical Processes \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-23T14:01:19.402976"
+    },
+    {
+      "timestamp": "2026-02-25T15:10:20.927967",
+      "to": "anders.malmquist@energy.kth.se",
+      "subject": "Energy Systems & Biomass Gasification \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-23T14:01:34.507127"
+    },
+    {
+      "timestamp": "2026-02-25T15:10:28.322385",
+      "to": "rcbrown3@iastate.edu",
+      "subject": "Thermochemical Biomass Conversion \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-24T20:03:56.887592"
+    },
+    {
+      "timestamp": "2026-02-25T15:10:50.483471",
+      "to": "njt1@columbia.edu",
+      "subject": "Energy Systems & Biomass Utilization \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-24T20:08:03.525593"
+    },
+    {
+      "timestamp": "2026-02-26T11:48:22.119746",
+      "to": "ronny.neumann@weizmann.ac.il",
+      "subject": "Re: Catalysis & Biomass Conversion \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-25T14:03:56.750045"
+    },
+    {
+      "timestamp": "2026-02-26T11:49:27.997836",
+      "to": "ronny.neumann@weizmann.ac.il",
+      "subject": "Re: Catalysis & Biomass Conversion \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-25T14:03:56.750045"
+    },
+    {
+      "timestamp": "2026-02-26T15:00:54.079685",
+      "to": "n.shah@imperial.ac.uk",
+      "subject": "Re: Process Integration & Biomass Gasification \u2013 Project Com\u00e9tha",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-25T15:01:25.630298"
+    },
+    {
+      "timestamp": "2026-02-26T16:04:06.285476",
+      "to": "mark.nimlos@nrel.gov",
+      "subject": "Biomass Gasification & Tar Reforming \u2013 Research Collaboration",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-23T23:15:33.638922"
+    },
+    {
+      "timestamp": "2026-03-03T17:36:20.322577",
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Aw: Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-27T16:03:00.475894"
+    },
+    {
+      "timestamp": "2026-03-04T11:25:20.286034",
+      "to": "Monika.Baumann@dlr.de",
+      "subject": "WG: Elektrochemische Energietechnologie & Syngas-Integration \u2013 Terminverschiebung",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-02-26T15:24:51.166410"
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Re: Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "attempted_at": "2026-03-04T11:52:16.961123",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Re: Kollaborationsm\u00f6glichkeit \u2013 Thermische Energiesysteme & Horizon Europe",
+      "attempted_at": "2026-03-04T11:52:48.011175",
+      "reason": "Duplicate within 7 days"
+    },
+    {
+      "timestamp": "2026-03-09T16:52:35.729594",
+      "to": "bernhard.weigand@itlr.uni-stuttgart.de",
+      "subject": "Entschuldigung - Termin am 7. M\u00e4rz / Neuer Vorschlag",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-03-03T17:38:09.112204"
+    },
+    {
+      "timestamp": "2026-03-10T12:48:32.543147",
+      "to": "julienagent@exventure.co",
+      "subject": "PROBLEM: E-Mail Zugriff eingeschr\u00e4nkt",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-03-10T12:44:18.403785"
+    },
+    {
+      "timestamp": "2026-03-10T12:52:08.964606",
+      "to": "julienagent@exventure.co",
+      "subject": "KRITISCHES PROBLEM: E-Mail als gesendet gemeldet, aber nicht angekommen",
+      "reason": "Duplicate within 7 days",
+      "original_sent": "2026-03-10T12:44:18.403785"
+    }
+  ],
+  "last_updated": "2026-03-10T12:44:18.403809"
+}

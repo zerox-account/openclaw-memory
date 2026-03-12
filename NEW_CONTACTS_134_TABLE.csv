@@ -1,0 +1,134 @@
+Vorname,Nachname,Email,Telefon,Adresse,Forschungsgebiet,Anstellung,Institution,Land
+Mark,Nimlos,mark.nimlos@nrel.gov,Nicht verfügbar,NREL Golden CO USA,Biomass thermochemical conversion gasification pyrolysis,Senior Research Fellow,NREL,USA
+Robert,Baldwin,robert.baldwin@nrel.gov,Nicht verfügbar,NREL Golden CO USA,Catalytic fast pyrolysis biomass upgrading biofuels,Chief Scientist,NREL,USA
+Calvin,Mukarakate,calvin.mukarakate@nrel.gov,Nicht verfügbar,NREL Golden CO USA,Thermochemical biomass conversion catalysis,Senior Scientist,NREL,USA
+Kristina,Iisa,kristina.iisa@nrel.gov,Nicht verfügbar,NREL Golden CO USA,Biomass gasification tar reforming syngas cleanup,Senior Research Engineer,NREL,USA
+Abhijit,Dutta,abhijit.dutta@nrel.gov,Nicht verfügbar,NREL Golden CO USA,Biomass conversion processes techno-economic analysis,Group Manager,NREL,USA
+Ahmed,Ghoniem,ghoniem@mit.edu,Nicht verfügbar,MIT Cambridge MA USA,Combustion gasification thermochemical conversion,Professor of Mechanical Engineering,MIT,USA
+Gregory,Stephanopoulos,gregstep@mit.edu,Nicht verfügbar,MIT Cambridge MA USA,Metabolic engineering biochemical conversion,Professor of Chemical Engineering,MIT,USA
+Sally,Benson,smbenson@stanford.edu,Nicht verfügbar,Stanford University CA USA,Energy systems carbon capture clean energy,Professor of Energy Resources Engineering,Stanford University,USA
+Arun,Majumdar,arun.majumdar@stanford.edu,Nicht verfügbar,Stanford University CA USA,Energy systems electrochemical energy conversion,Professor of Mechanical Engineering,Stanford University,USA
+Alexis,Bell,alexisbell@berkeley.edu,Nicht verfügbar,UC Berkeley CA USA,Catalysis reaction engineering thermochemical processes,Professor of Chemical Engineering,UC Berkeley,USA
+Enrique,Iglesia,iglesia@berkeley.edu,Nicht verfügbar,UC Berkeley CA USA,Heterogeneous catalysis energy conversion,Professor of Chemical Engineering,UC Berkeley,USA
+David,Levin,david.levin@umanitoba.ca,Nicht verfügbar,University of Manitoba Canada,Bioenergy biogas anaerobic digestion thermochemical processes,Professor,University of Manitoba,Canada
+Anthony,Lau,anthony.lau@ubc.ca,Nicht verfügbar,UBC Vancouver Canada,Biomass gasification energy systems clean technology,Professor,University of British Columbia,Canada
+Arturo,Macchi,amacchi@uottawa.ca,Nicht verfügbar,University of Ottawa Canada,Biomass gasification chemical looping,Professor,University of Ottawa,Canada
+Kunio,Yoshikawa,k.yoshikawa@aist.go.jp,Nicht verfügbar,AIST Tsukuba Japan,Biomass gasification waste-to-energy thermochemical conversion,Principal Researcher,AIST,Japan
+Tomoaki,Namioka,t.namioka@aist.go.jp,Nicht verfügbar,AIST Tsukuba Japan,Biomass energy gasification hydrogen production,Senior Researcher,AIST,Japan
+Masahiro,Osada,osada.masahiro@nedo.go.jp,Nicht verfügbar,NEDO Tokyo Japan,Biomass energy policy thermochemical conversion programs,Program Director,NEDO,Japan
+Thomas,Rainey,tom.rainey@csiro.au,Nicht verfügbar,CSIRO Australia,Biomass gasification bioenergy systems thermochemical conversion,Senior Research Scientist,CSIRO Energy,Australia
+Daniel,Mayo,daniel.mayo@csiro.au,Nicht verfügbar,CSIRO Australia,Biomass processing gasification renewable energy,Research Scientist,CSIRO Energy,Australia
+Andrew,Lvovich,andrew.lvovich@csiro.au,Nicht verfügbar,CSIRO Australia,Sustainable aviation fuels biomass conversion,Principal Research Scientist,CSIRO Energy,Australia
+John,Pye,john.pye@anu.edu.au,Nicht verfügbar,ANU Canberra Australia,Concentrating solar thermal thermochemical processes hydrogen,Senior Lecturer,Australian National University,Australia
+Tae-Young,Mun,tymun@kier.re.kr,Nicht verfügbar,KIER South Korea,Biomass gasification pyrolysis thermochemical conversion,Principal Researcher,Korea Institute of Energy Research,South Korea
+Sung Hoon,Park,shpark@kier.re.kr,Nicht verfügbar,KIER South Korea,Biomass energy gasification technology biofuels,Senior Researcher,Korea Institute of Energy Research,South Korea
+Yongping,Yang,yangyp@tsinghua.edu.cn,Nicht verfügbar,Tsinghua University Beijing China,Biomass gasification thermochemical conversion clean coal technology,Professor,Tsinghua University,China
+Mingjiang,Ni,nimingjiang@zju.edu.cn,Nicht verfügbar,Zhejiang University Hangzhou China,Biomass pyrolysis and gasification waste-to-energy biochar production,Professor,Zhejiang University,China
+Zhongyang,Luo,luozhy@zju.edu.cn,Nicht verfügbar,Zhejiang University Hangzhou China,Biomass combustion and gasification pyrolysis industrial waste utilization,Professor,Zhejiang University,China
+Xiaodong,Zhang,zhangxd@iet.cn,Nicht verfügbar,Chinese Academy of Sciences Beijing China,Biomass gasification technology syngas production IGCC,Professor,Chinese Academy of Sciences,China
+Guanyi,Chen,chenguanyi@tsinghua.edu.cn,Nicht verfügbar,Tsinghua University Beijing China,Biomass energy waste-to-energy systems circular bioeconomy,Professor,Tsinghua University,China
+Changsui,Zhao,zhaocs@ms.giec.ac.cn,Nicht verfügbar,Chinese Academy of Sciences Guangzhou China,Biomass gasification bio-oil production thermochemical conversion,Professor,Chinese Academy of Sciences,China
+Chun-Zhu,Li,licz@zju.edu.cn,Nicht verfügbar,Zhejiang University Hangzhou China,Biomass pyrolysis gasification chemistry reaction mechanisms,Professor,Zhejiang University,China
+Hongcang,Zhou,hczhou@ipe.ac.cn,Nicht verfügbar,Chinese Academy of Sciences Beijing China,Biomass thermochemical conversion gasification syngas cleanup,Professor,Chinese Academy of Sciences,China
+Sunil Kumar,Khare,skkhare@chemistry.iitd.ac.in,Nicht verfügbar,IIT Delhi India,Bioenergy lignocellulosic biomass conversion biorefinery processes,Professor,IIT Delhi,India
+Anjana,Pandey,anjanap@iitd.ac.in,Nicht verfügbar,IIT Delhi India,Biomass energy biogas production rural energy systems,Professor,IIT Delhi,India
+Prakash,Vaidya,pdvaidya@iitb.ac.in,Nicht verfügbar,IIT Bombay India,Biomass gasification syngas cleanup catalytic conversion,Professor,IIT Bombay,India
+S.,Dasappa,dasappa@cst.iisc.ernet.in,Nicht verfügbar,IISc Bangalore India,Biomass gasification producer gas engines rural energy systems,Professor,IISc Bangalore,India
+N. K. S.,Rajan,nksrajan@iisc.ac.in,Nicht verfügbar,IISc Bangalore India,Biomass pyrolysis gasification kinetics reactor design,Professor,IISc Bangalore,India
+Rangan,Banerjee,rangan.banerjee@iitb.ac.in,Nicht verfügbar,IIT Bombay India,Energy systems modeling biomass energy sustainable energy planning,Professor,IIT Bombay,India
+Chongrak,Polprasert,chongrak.pol@kmutt.ac.th,Nicht verfügbar,KMUTT Bangkok Thailand,Biomass energy anaerobic digestion waste-to-energy systems,Professor,King Mongkut's University of Technology Thonburi,Thailand
+Thongchai,Srinophakun,thongchai.sri@kmutt.ac.th,Nicht verfügbar,KMUTT Bangkok Thailand,Biomass conversion pyrolysis thermochemical processes,Professor,King Mongkut's University of Technology Thonburi,Thailand
+Mohd Ali,Hassan,alih@upm.edu.my,Nicht verfügbar,UPM Malaysia,Biomass conversion bioenergy biogas production palm oil waste utilization,Professor,Universiti Putra Malaysia,Malaysia
+Astimar,Abdul Aziz,astimar@mpob.gov.my,Nicht verfügbar,MPOB Malaysia,Biomass utilization palm biomass conversion bioenergy from agricultural waste,Professor,Malaysian Palm Oil Board,Malaysia
+Marcin,Stec,m.stec@ichpw.pl,Nicht verfügbar,IChPW Zabrze Poland,Coal and biomass co-gasification thermochemical conversion,Research Professor,Institute of Chemical Processing of Coal,Poland
+Jacek,Surdacki,j.surdacki@ichpw.pl,Nicht verfügbar,IChPW Zabrze Poland,Gasification coal/biomass processing energy technologies,Research Professor,Institute of Chemical Processing of Coal,Poland
+Pavel,Skopec,pavel.skopec@fs.cvut.cz,Nicht verfügbar,ČVUT Prague Czech Republic,Biomass gasification combustion renewable energy systems,Associate Professor,Czech Technical University,Czech Republic
+Karel,Brabc,karel.brabc@fs.cvut.cz,Nicht verfügbar,ČVUT Prague Czech Republic,Energy systems biomass thermochemical conversion,Professor,Czech Technical University,Czech Republic
+Fernando,Bimbela,fernando.bimbela@ciemat.es,Nicht verfügbar,CIEMAT Madrid Spain,Biomass gasification catalytic tar removal syngas cleaning,Senior Researcher,CIEMAT,Spain
+Luis,García,luis.m.garcia@ciemat.es,Nicht verfügbar,CIEMAT Madrid Spain,Thermochemical biomass conversion gasification reactors,Research Scientist,CIEMAT,Spain
+Mercedes,de Diego,mercedes.dediego@ciemat.es,Nicht verfügbar,CIEMAT Madrid Spain,Biomass combustion and gasification fluidized bed reactors,Research Scientist,CIEMAT,Spain
+María Paz,Gómez,mariapaz.gomez@ciemat.es,Nicht verfügbar,CIEMAT Madrid Spain,Biomass gasification synthetic fuels from syngas,Senior Researcher,CIEMAT,Spain
+María Pilar,González García,mpilargg@unizar.es,Nicht verfügbar,University of Zaragoza Spain,Biomass gasification pyrolysis biochar production,Professor Head of Thermochemical Processes Group,University of Zaragoza,Spain
+María Victoria,Navarro,mvnavarro@unizar.es,Nicht verfügbar,University of Zaragoza Spain,Biomass thermochemical conversion gas cleaning,Associate Professor,University of Zaragoza,Spain
+Jesús María,Arauzo,arauzo@unizar.es,Nicht verfügbar,University of Zaragoza Spain,Biomass gasification and pyrolysis reactor design,Professor,University of Zaragoza,Spain
+Ana María,Díez,adiez@unizar.es,Nicht verfügbar,University of Zaragoza Spain,Biomass gasification tar conversion,Researcher,University of Zaragoza,Spain
+José Antonio,Menéndez,joseantonio.bermudez@imdea.org,Nicht verfügbar,IMDEA Energy Madrid Spain,Biomass gasification biochar carbon materials,Head of Thermochemical Processes Unit,IMDEA Energy,Spain
+Gema,Martínez,gema.martinez@imdea.org,Nicht verfügbar,IMDEA Energy Madrid Spain,Biomass gasification hydrogen production,Senior Researcher,IMDEA Energy,Spain
+María J.,Lázaro,mariajesus.lazaro@imdea.org,Nicht verfügbar,IMDEA Energy Madrid Spain,Thermochemical biomass conversion catalytic processes,Research Professor,IMDEA Energy,Spain
+Rafael,Bilbao,rafael.bilbao@imdea.org,Nicht verfügbar,IMDEA Energy Madrid Spain,Biomass gasification fluidized bed technology,Senior Researcher,IMDEA Energy,Spain
+Carlos,Pinheiro,carlos.pinheiro@tecnico.ulisboa.pt,Nicht verfügbar,IST Lisbon Portugal,Biomass gasification thermochemical processes energy systems,Full Professor,Instituto Superior Técnico University of Lisbon,Portugal
+Tânia,Ricardo,tania.ricardo@tecnico.ulisboa.pt,Nicht verfügbar,IST Lisbon Portugal,Biomass thermochemical conversion pyrolysis,Associate Professor,Instituto Superior Técnico University of Lisbon,Portugal
+Maria da Graça,Carvalho,mc@tecnico.ulisboa.pt,Nicht verfügbar,IST Lisbon Portugal,Energy policy thermochemical processes biomass utilization,Professor Member of European Parliament former,Instituto Superior Técnico University of Lisbon,Portugal
+Teresa,Baptista,teresa.baptista@lneg.pt,Nicht verfügbar,LNEG Lisbon Portugal,Biomass gasification thermochemical conversion,Senior Researcher,LNEG,Portugal
+Paula,Teixeira,paula.teixeira@lneg.pt,Nicht verfügbar,LNEG Lisbon Portugal,Biomass gasification bioenergy systems,Researcher,LNEG,Portugal
+Rui,Pereira,rui.pereira@lneg.pt,Nicht verfügbar,LNEG Lisbon Portugal,Biomass thermochemical conversion pyrolysis,Researcher,LNEG,Portugal
+Kevin,Van Geem,kevin.vangeem@kuleuven.be,Nicht verfügbar,KU Leuven Belgium,Biomass gasification pyrolysis reaction engineering,Full Professor Head of Lab for Chemical Technology,KU Leuven,Belgium
+Guy,Marin,guy.marin@kuleuven.be,Nicht verfügbar,KU Leuven Belgium,Chemical reaction engineering biomass conversion,Professor Emeritus,KU Leuven,Belgium
+Jan,Van Caneghem,jan.vancaneghem@vito.be,Nicht verfügbar,VITO Belgium,Biomass gasification waste-to-energy syngas cleaning,Senior Researcher,VITO Flemish Institute for Technological Research,Belgium
+Anke,Schreurs,anke.schreurs@vito.be,Nicht verfügbar,VITO Belgium,Biomass thermochemical conversion gasification,Researcher,VITO Flemish Institute for Technological Research,Belgium
+Andreas,Zindler,andreas.zindler@boku.ac.at,Nicht verfügbar,BOKU Wien Austria,Biomass gasification fluidized bed technology syngas,Professor,BOKU Wien,Austria
+Hermann,Hofbauer,hermann.hofbauer@boku.ac.at,Nicht verfügbar,BOKU Wien Austria,Biomass gasification FICFB technology renewable energy,Professor Emeritus,BOKU Wien,Austria
+Ingwald,Obernberger,ingwald.obernberger@unileoben.ac.at,Nicht verfügbar,Montanuniversität Leoben Austria,Biomass combustion and gasification district heating,Professor Head of Chair of Energy Network Technology,Montanuniversität Leoben,Austria
+Thomas,Brunner,thomas.brunner@unileoben.ac.at,Nicht verfügbar,Montanuniversität Leoben Austria,Biomass gasification combustion technology,Senior Researcher,Montanuniversität Leoben,Austria
+Øyvind,Skreiberg,oyvind.skreiberg@sintef.no,Nicht verfügbar,SINTEF Trondheim Norway,Biomass gasification thermochemical conversion bioenergy,Senior Research Scientist,SINTEF Energy Research,Norway
+Britt,Halvorsen,britt.m.halvorsen@sintef.no,Nicht verfügbar,SINTEF Trondheim Norway,Biomass gasification reactors fluidized beds,Senior Researcher,SINTEF Energy Research,Norway
+Terese,Løvås,terese.lovas@sintef.no,Nicht verfügbar,SINTEF Trondheim Norway,Biomass combustion gasification CFD modeling,Research Manager,SINTEF Energy Research,Norway
+Alfons,Buekens,alfonso.buekens@ntnu.no,Nicht verfügbar,NTNU Trondheim Norway,Biomass thermochemical conversion gasification,Professor Emeritus,NTNU,Norway
+Mario,Ditaranto,mario.ditaranto@ntnu.no,Nicht verfügbar,NTNU Trondheim Norway,Biomass combustion and gasification oxy-fuel processes,Professor,NTNU,Norway
+Esa,Vakkilainen,esa.vakkilainen@lut.fi,Nicht verfügbar,LUT Lappeenranta Finland,Biomass gasification power generation fluidized beds,Professor of Energy Technology,LUT University,Finland
+Henrik,Tolvanen,henrik.tolvanen@lut.fi,Nicht verfügbar,LUT Lappeenranta Finland,Biomass gasification product gas utilization,Associate Professor,LUT University,Finland
+Jouni,Saari,jouni.saari@lut.fi,Nicht verfügbar,LUT Lappeenranta Finland,Biomass thermochemical processes gasification,Professor,LUT University,Finland
+Mika,Järvinen,mika.jarvinen@aalto.fi,Nicht verfügbar,Aalto University Finland,Biomass gasification process integration syngas,Professor of Energy Technology,Aalto University,Finland
+Pekka,Ahtila,pekka.ahtila@aalto.fi,Nicht verfügbar,Aalto University Finland,Biomass gasification energy systems,Professor,Aalto University,Finland
+Peter,Jensen,pej@kt.dtu.dk,Nicht verfügbar,DTU Lyngby Denmark,Biomass gasification pyrolysis ash chemistry,Professor Head of Section for Thermal Energy,DTU Chemical Engineering,Denmark
+Anker,Jensen,adj@kt.dtu.dk,Nicht verfügbar,DTU Lyngby Denmark,Biomass gasification catalytic tar removal,Professor Head of CHEC Research Centre,DTU Chemical Engineering,Denmark
+Ulrik,Henriksen,ulh@kt.dtu.dk,Nicht verfügbar,DTU Lyngby Denmark,Biomass gasification two-stage gasification,Associate Professor,DTU Chemical Engineering,Denmark
+Hao,Wu,hawu@kt.dtu.dk,Nicht verfügbar,DTU Lyngby Denmark,Biomass thermochemical conversion pyrolysis gasification,Professor,DTU Chemical Engineering,Denmark
+Thomas Helmer,Pedersen,thp@kt.dtu.dk,Nicht verfügbar,DTU Lyngby Denmark,Biomass gasification biofuels tar cracking,Senior Researcher,DTU Chemical Engineering,Denmark
+George,Tsatsaronis,g.tsatsaronis@tu-berlin.de,Nicht verfügbar,TU Berlin Germany,Thermische Energiesysteme Kraftwerksprozessoptimierung Biomassevergasung,Professor,TU Berlin,Germany
+Ralf,Kagemann,ralf.kagemann@dlr.de,Nicht verfügbar,DLR Stuttgart Germany,Thermochemische Umwandlung von Biomasse Vergasung Pyrolyse,Senior Researcher,DLR,Germany
+Hartmut,Spliethoff,hartmut.spliethoff@tum.de,Nicht verfügbar,TU München Germany,Biomassevergasung thermische Nutzung regenerativer Energien,Professor,TU München,Germany
+Stefan,Unger,stefan.unger@dlr.de,Nicht verfügbar,DLR Stuttgart Germany,Biomass to Liquid BtL Synthesegaserzeugung Fischer-Tropsch,Senior Researcher,DLR,Germany
+Ralf,Peters,ralf.peters@dlr.de,Nicht verfügbar,DLR Stuttgart Germany,Hochtemperaturprozesse Solarthermie Biomassevergasung,Professor,DLR,Germany
+Andreas,Weilhardt,andreas.weilhardt@itw.uni-stuttgart.de,Nicht verfügbar,Universität Stuttgart Germany,Erneuerbare Energien Kraft-Wärme-Kopplung Biomasse,Professor,Universität Stuttgart,Germany
+Katharina,Eichmann,katharina.eichmann@ivk.uni-stuttgart.de,Nicht verfügbar,Universität Stuttgart Germany,Alternative Kraftstoffe Synthesegas Vergasung,Professor,Universität Stuttgart,Germany
+Dieter,Brüggemann,dieter.brueggemann@uni-bayreuth.de,Nicht verfügbar,Universität Bayreuth Germany,Thermodynamik Energietechnik Biomassevergasung,Professor,Universität Bayreuth,Germany
+Matthias,Gaderer,matthias.gaderer@tum.de,Nicht verfügbar,TU München Germany,Biomasse-Kraftwerke Vergasung Kraft-Wärme-Kopplung,Professor,TU München,Germany
+Wilhelm,Nieberl,wilhelm.nieberl@fau.de,Nicht verfügbar,FAU Erlangen-Nürnberg Germany,Biomassevergasung Festbettvergasung Gaserzeugung,Professor,FAU Erlangen-Nürnberg,Germany
+Kathrin,Radtke,kathrin.radtke@ime-aachen.de,Nicht verfügbar,RWTH Aachen Germany,Biomassekoks Hochtemperaturvergasung metallurgische Reduktion,Professor,RWTH Aachen,Germany
+Bernd,Meyer,bernd.meyer@rwth-aachen.de,Nicht verfügbar,RWTH Aachen Germany,Vergasungstechnologie Prozessentwicklung Kohle/Biomasse,Professor,RWTH Aachen,Germany
+Hubert,Billardon,hubert.billiardon@ltt.rwth-aachen.de,Nicht verfügbar,RWTH Aachen Germany,Thermische Prozesse Brennstoffzellen Synthesegas,Professor,RWTH Aachen,Germany
+Martin,Mühlhaeuser,martin.muehlhaeuser@tu-darmstadt.de,Nicht verfügbar,TU Darmstadt Germany,Alternative Brennstoffe Vergasung Synthesegasnutzung,Professor,TU Darmstadt,Germany
+Miriam,Sachs,miriam.sachs@uni-hamburg.de,Nicht verfügbar,Universität Hamburg Germany,Energietechnik thermochemische Umwandlung Biomasse,Professor,Universität Hamburg,Germany
+Joachim,Koßmann,joachim.kossmann@uni-hamburg.de,Nicht verfügbar,Universität Hamburg Germany,Bioenergie Kraft-Wärme-Kopplung thermische Verfahren,Professor,Universität Hamburg,Germany
+Bernd,Eppler,bernd.eppler@iec.tu-freiberg.de,Nicht verfügbar,TU Bergakademie Freiberg Germany,Braunkohlen- und Biomasse-Nutzung Vergasung,Professor,TU Bergakademie Freiberg,Germany
+Uwe,Arendt,uwe.arendt@iec.tu-freiberg.de,Nicht verfügbar,TU Bergakademie Freiberg Germany,Brennstoffe Vergasung Energiesysteme,Professor,TU Bergakademie Freiberg,Germany
+Markus,Merklein,markus.merklein@iec.tu-freiberg.de,Nicht verfügbar,TU Bergakademie Freiberg Germany,Alternative Brennstoffe Biomassevergasung,Professor,TU Bergakademie Freiberg,Germany
+Antoni,Kaler,antoni.kaler@zhaw.ch,Nicht verfügbar,ZHAW Winterthur Switzerland,Biomasse-Vergasung Power-to-Gas Energiespeicherung,Professor,ZHAW,Switzerland
+Stefan,Zürcher,stefan.zuercher@zhaw.ch,Nicht verfügbar,ZHAW Winterthur Switzerland,Biomassevergasung Holzvergasung Synthesegas,Senior Researcher,ZHAW,Switzerland
+Andreas,Wokaun,andreas.wokaun@psi.ch,Nicht verfügbar,PSI Villigen Switzerland,Chemische Energiespeicherung Biomassevergasung Katalyse,Professor,Paul Scherrer Institut,Switzerland
+Mingming,Zhu,mingming.zhu@manchester.ac.uk,Nicht verfügbar,University of Manchester UK,Biomass gasification pyrolysis bioenergy systems,Professor,University of Manchester,UK
+Jon,Gibbins,j.gibbins@sheffield.ac.uk,Nicht verfügbar,University of Sheffield UK,CCS Biomasse-Nutzung Energiesysteme,Professor,University of Sheffield,UK
+Mohammed,Bashir,m.j.bashir@aston.ac.uk,Nicht verfügbar,Aston University Birmingham UK,Waste-to-energy biomass gasification sustainability,Professor,Aston University,UK
+Andrew,Balls,a.balls@aston.ac.uk,Nicht verfügbar,Aston University Birmingham UK,Chemical engineering clean energy process development,Professor,Aston University,UK
+Sankar,Bhattacharya,s.bhattacharya@aston.ac.uk,Nicht verfügbar,Aston University Birmingham UK,Biomass conversion gasification catalytic processes,Professor,Aston University,UK
+Philipp,Adams,p.adams@leeds.ac.uk,Nicht verfügbar,University of Leeds UK,Biomass gasification energy from waste thermochemical processes,Professor,University of Leeds,UK
+Alan,Williams,a.williams@leeds.ac.uk,Nicht verfügbar,University of Leeds UK,Combustion and gasification fuel characterization,Professor,University of Leeds,UK
+Nigel,Hey,n.hey@leeds.ac.uk,Nicht verfügbar,University of Leeds UK,Gasification pyrolysis energy systems,Professor,University of Leeds,UK
+Robert,Malik,r.malik@bham.ac.uk,Nicht verfügbar,University of Birmingham UK,Biomass processing gasification clean energy,Professor,University of Birmingham,UK
+Neil,Rowson,n.rowson@bham.ac.uk,Nicht verfügbar,University of Birmingham UK,Energy systems biomass conversion thermochemical processes,Professor,University of Birmingham,UK
+Neil,Hewitt,np.hewitt@ulster.ac.uk,Nicht verfügbar,Ulster University UK,Biomass energy gasification renewable energy systems,Professor,Ulster University,UK
+John,Murphy,j.murphy@ulster.ac.uk,Nicht verfügbar,Ulster University UK,Bioenergy combustion gasification technology,Professor,Ulster University,UK
+José Luiz,Medeiros,jldm@usp.br,Nicht verfügbar,USP São Paulo Brazil,Biomass gasification biofuel production thermochemical processes syngas processing,Professor,University of São Paulo,Brazil
+Rubens,Maciel Filho,rubens@feq.unicamp.br,Nicht verfügbar,UNICAMP Brazil,Biomass energy bioethanol biorefineries thermochemical and biochemical conversion,Professor,University of Campinas,Brazil
+Otávio,Cavalett,otavio.cavalett@usp.br,Nicht verfügbar,USP São Paulo Brazil,Biomass energy systems life cycle assessment bioenergy sustainability sugarcane biomass,Professor,University of São Paulo,Brazil
+Silvio,Oliveira,silvio@usp.br,Nicht verfügbar,USP São Paulo Brazil,Biomass combustion and gasification energy systems renewable energy integration,Professor,University of São Paulo,Brazil
+Osvaldo,Venturini,osvaldo@pen.coppe.ufrj.br,Nicht verfügbar,UFRJ Rio de Janeiro Brazil,Biomass energy gasification energy planning renewable energy systems,Professor,Federal University of Rio de Janeiro,Brazil
+María E.,Fernández,mfernandez@quimica.unlp.edu.ar,Nicht verfügbar,UNLP Argentina,Biomass pyrolysis biochar production thermochemical conversion agricultural waste utilization,Senior Researcher,CONICET Universidad Nacional de La Plata,Argentina
+Juan,Matçal,jmat@fi.uba.ar,Nicht verfügbar,UBA Buenos Aires Argentina,Biomass gasification energy from waste thermochemical processes sustainable energy,Professor,University of Buenos Aires,Argentina
+Mani,Sarathy,mani.sarathy@kaust.edu.sa,Nicht verfügbar,KAUST Saudi Arabia,Combustion alternative fuels biofuels chemical kinetics sustainable energy,Professor,King Abdullah University of Science and Technology,Saudi Arabia
+William,Roberts,william.roberts@kaust.edu.sa,Nicht verfügbar,KAUST Saudi Arabia,Biomass combustion gasification clean energy systems combustion chemistry,Professor,King Abdullah University of Science and Technology,Saudi Arabia
+Zeyad,Alwahabi,zeyad.alwahabi@kaust.edu.sa,Nicht verfügbar,KAUST Saudi Arabia,Biomass combustion gasification diagnostics laser diagnostics energy systems,Associate Professor,King Abdullah University of Science and Technology,Saudi Arabia
+Avihay,Berkovich,berkovic@technion.ac.il,Nicht verfügbar,Technion Haifa Israel,Waste-to-energy biomass gasification thermochemical treatment environmental engineering,Professor,Technion Israel Institute of Technology,Israel
+Ilan,Hurvitz,ilanh@technion.ac.il,Nicht verfügbar,Technion Haifa Israel,Biomass energy gasification systems energy conversion thermal processes,Professor,Technion Israel Institute of Technology,Israel
+Ronny,Neumann,ronny.neumann@weizmann.ac.il,Nicht verfügbar,Weizmann Institute Rehovot Israel,Catalysis biomass conversion renewable fuel synthesis green chemistry,Professor,Weizmann Institute of Science,Israel

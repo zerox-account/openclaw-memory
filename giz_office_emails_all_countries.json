@@ -1,0 +1,40 @@
+{
+  "search_date": "2026-03-11",
+  "total_countries_checked": 26,
+  "validated_office_emails": [
+    {"country": "Ghana", "email": "ghana@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Nigeria", "email": "nigeria@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Kenya", "email": "kenya@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "South Africa", "email": "southafrica@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Ethiopia", "email": "ethiopia@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Tanzania", "email": "tanzania@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Uganda", "email": "uganda@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Egypt", "email": "egypt@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Morocco", "email": "morocco@giz.de", "region": "Africa", "status": "valid"},
+    {"country": "Indonesia", "email": "indonesia@giz.de", "region": "Asia", "status": "valid"},
+    {"country": "Vietnam", "email": "vietnam@giz.de", "region": "Asia", "status": "valid"},
+    {"country": "Peru", "email": "peru@giz.de", "region": "Latin America", "status": "valid"},
+    {"country": "Brazil", "email": "brazil@giz.de", "region": "Latin America", "status": "valid"},
+    {"country": "Ukraine", "email": "ukraine@giz.de", "region": "Europe", "status": "valid"},
+    {"country": "Serbia", "email": "serbia@giz.de", "region": "Europe", "status": "valid"}
+  ],
+  "rejected_emails": [
+    {"country": "India", "email": "india@giz.de", "status": "do_not_mail"},
+    {"country": "Thailand", "email": "thailand@giz.de", "status": "do_not_mail"},
+    {"country": "Philippines", "email": "philippines@giz.de", "status": "invalid"},
+    {"country": "Mexico", "email": "mexico@giz.de", "status": "do_not_mail"},
+    {"country": "Colombia", "email": "colombia@giz.de", "status": "invalid"},
+    {"country": "Poland", "email": "poland@giz.de", "status": "invalid"}
+  ],
+  "summary": {
+    "total_validated": 15,
+    "total_rejected": 6,
+    "success_rate": "58%",
+    "regions_covered": {
+      "africa": 9,
+      "asia": 2,
+      "latin_america": 2,
+      "europe": 2
+    }
+  }
+}

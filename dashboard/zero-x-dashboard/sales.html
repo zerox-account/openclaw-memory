@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Pipeline - Zero-X Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root { --background: #0A0F0A; --card: #121A12; --border: #1F3D1F; --primary: #22C55E; }
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        .glass { background: rgba(18, 26, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+        .nav-item:hover { background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--primary); }
+        .nav-item.active { background: rgba(34, 197, 94, 0.15); border-left: 3px solid var(--primary); }
+        .pipeline-column { background: rgba(18, 26, 18, 0.6); border: 1px solid var(--border); border-radius: 12px; min-height: 500px; }
+        .lead-card { background: linear-gradient(135deg, rgba(31, 61, 31, 0.4) 0%, rgba(18, 26, 18, 0.8) 100%); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; cursor: grab; transition: all 0.2s; position: relative; }
+        .lead-card.dragging { opacity: 0.5; }
+        .lead-card .delete-btn { position: absolute; top: 8px; right: 8px; opacity: 0; transition: opacity 0.2s; background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 4px; padding: 4px; cursor: pointer; }
+        .lead-card:hover .delete-btn { opacity: 1; }
+        .pipeline-column.drag-over { background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.5); }
+        .lead-card:hover { border-color: rgba(34, 197, 94, 0.3); transform: translateY(-2px); }
+        .stage-badge { font-size: 10px; padding: 3px 8px; border-radius: 20px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+        .value-tag { font-size: 16px; font-weight: 700; color: #22C55E; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 100; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .modal-content { background: var(--card); border: 1px solid var(--border); border-radius: 12px; width: 90%; max-width: 600px; max-height: 90vh; overflow-y: auto; }
+        .form-input { width: 100%; background: var(--background); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: #F8FAFC; font-size: 14px; margin-top: 6px; }
+        .form-input:focus { outline: none; border-color: var(--primary); }
+        .stats-card { background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.2); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="layout-dashboard" class="w-5 h-5"></i><span>Dashboard</span></a>
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flame" class="w-5 h-5"></i><span>X-150 System</span></a>
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="factory" class="w-5 h-5"></i><span>CCM Projects</span></a>
+                <a href="rd.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flask-conical" class="w-5 h-5"></i><span>R&D</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                <a href="sales.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"><i data-lucide="trending-up" class="w-5 h-5"></i><span>Sales Pipeline</span></a>
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="wrench" class="w-5 h-5"></i><span>Installations</span></a>
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="handshake" class="w-5 h-5"></i><span>Partners</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Intelligence</div>
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a>
+                <a href="memory.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="brain" class="w-5 h-5"></i><span>Memory System</span></a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-3xl font-bold">Sales Pipeline</h2>
+                    <p class="text-gray-400 text-sm mt-1">Active opportunities and deal flow</p>
+                </div>
+                <button onclick="openModal()" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition font-medium">
+                    <i data-lucide="plus" class="w-5 h-5"></i><span>Add Opportunity</span>
+                </button>
+            </header>
+            
+            <!-- Stats Row -->
+            <div class="grid grid-cols-4 gap-4 mb-8">
+                <div class="stats-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Total Pipeline</div>
+                    <div class="text-2xl font-bold text-green-400" id="totalValue">€0</div>
+                    <div class="text-xs text-gray-500 mt-1">Across all stages</div>
+                </div>
+                <div class="glass rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Active Opportunities</div>
+                    <div class="text-2xl font-bold text-white" id="totalDeals">0</div>
+                    <div class="text-xs text-gray-500 mt-1">In progress</div>
+                </div>
+                <div class="glass rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Weighted Forecast</div>
+                    <div class="text-2xl font-bold text-cyan-400" id="weightedValue">€0</div>
+                    <div class="text-xs text-gray-500 mt-1">Probability adjusted</div>
+                </div>
+                <div class="glass rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Approved</div>
+                    <div class="text-2xl font-bold text-purple-400" id="approvedValue">€0</div>
+                    <div class="text-xs text-gray-500 mt-1">Closed deals</div>
+                </div>
+            </div>
+            
+            <!-- Pipeline Board - 7 Columns -->
+            <div class="grid grid-cols-7 gap-3">
+                <!-- Prospect Column -->
+                <div class="pipeline-column p-3" data-stage="prospect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-gray-300 text-sm">Prospect</h3>
+                        <span class="text-xs bg-gray-700 px-2 py-1 rounded" id="count-prospect">0</span>
+                    </div>
+                    <div id="column-prospect" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Contacted Column -->
+                <div class="pipeline-column p-3" data-stage="contacted" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-blue-400 text-sm">Contacted</h3>
+                        <span class="text-xs bg-blue-900/50 px-2 py-1 rounded text-blue-400" id="count-contacted">0</span>
+                    </div>
+                    <div id="column-contacted" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Replied Column -->
+                <div class="pipeline-column p-3" data-stage="replied" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-cyan-400 text-sm">Replied</h3>
+                        <span class="text-xs bg-cyan-900/50 px-2 py-1 rounded text-cyan-400" id="count-replied">0</span>
+                    </div>
+                    <div id="column-replied" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Meeting Column -->
+                <div class="pipeline-column p-3" data-stage="meeting" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-amber-400 text-sm">Meeting</h3>
+                        <span class="text-xs bg-amber-900/50 px-2 py-1 rounded text-amber-400" id="count-meeting">0</span>
+                    </div>
+                    <div id="column-meeting" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Qualified Column -->
+                <div class="pipeline-column p-3" data-stage="qualified" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-green-400 text-sm">Qualified</h3>
+                        <span class="text-xs bg-green-900/50 px-2 py-1 rounded text-green-400" id="count-qualified">0</span>
+                    </div>
+                    <div id="column-qualified" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Proposal Column -->
+                <div class="pipeline-column p-3" data-stage="proposal" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-purple-400 text-sm">Proposal</h3>
+                        <span class="text-xs bg-purple-900/50 px-2 py-1 rounded text-purple-400" id="count-proposal">0</span>
+                    </div>
+                    <div id="column-proposal" class="space-y-2 min-h-[100px]"></div>
+                </div>
+                
+                <!-- Approved Column -->
+                <div class="pipeline-column p-3 border-purple-500/30" data-stage="approved" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-purple-300 text-sm">Approved</h3>
+                        <span class="text-xs bg-purple-500/30 px-2 py-1 rounded text-purple-300" id="count-approved">0</span>
+                    </div>
+                    <div id="column-approved" class="space-y-2 min-h-[100px]"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Add Lead Modal -->
+    <div id="addLeadModal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-[#1F3D1F] flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Add Sales Opportunity</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <form id="addLeadForm" class="p-6 space-y-4">
+                <div>
+                    <label class="text-sm text-gray-400">Company/Organization</label>
+                    <input type="text" name="company" class="form-input" placeholder="e.g., Anaergia Africa" required>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Contact Person</label>
+                    <input type="text" name="contact" class="form-input" placeholder="e.g., Alberto Borello" required>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-sm text-gray-400">Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="email@company.com">
+                    </div>
+                    <div>
+                        <label class="text-sm text-gray-400">Phone</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+49 ...">
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-sm text-gray-400">Deal Value (€)</label>
+                        <input type="number" name="value" class="form-input" placeholder="1200000">
+                    </div>
+                    <div>
+                        <label class="text-sm text-gray-400">Stage</label>
+                        <select name="stage" class="form-input">
+                            <option value="prospect">Prospect</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="replied">Replied</option>
+                            <option value="meeting">Meeting</option>
+                            <option value="qualified">Qualified</option>
+                            <option value="proposal">Proposal</option>
+                            <option value="approved">Approved</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Source</label>
+                    <select name="source" class="form-input">
+                        <option value="outreach">Cold Outreach</option>
+                        <option value="referral">Referral</option>
+                        <option value="conference">Conference</option>
+                        <option value="website">Website</option>
+                        <option value="partner">Partner</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Notes</label>
+                    <textarea name="notes" class="form-input" rows="3" placeholder="Key details about this opportunity..."></textarea>
+                </div>
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeModal()" class="flex-1 px-4 py-2 rounded-lg border border-[#1F3D1F] text-gray-400 hover:bg-[#1F3D1F] transition">Cancel</button>
+                    <button type="submit" class="flex-1 px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition font-medium">Add Opportunity</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Pre-loaded opportunities with CORRECT status based on email responses
+        const defaultLeads = [
+            // === KONTAKTE MIT ANTWORTEN / MEETINGS ===
+            
+            // Bernhard Weigand - Hat geantwortet (Termin verpasst), neue Termine vorgeschlagen
+            { id: 'weigand', company: "Uni Stuttgart - Bernhard Weigand", contact: "Prof. Bernhard Weigand", email: "bernhard.weigand@itlr.uni-stuttgart.de", value: 600000, stage: "replied", source: "outreach", phone: "", notes: "⚠️ Hat am 6.3. geantwortet (Termin verpasst). Entschuldigung gesendet. Neue Termine: 11.3. 08:00, 12.3. 09:00, 13.3. 09:00. Warte auf Antwort." },
+            
+            // DLR Stuttgart - Meeting erledigt
+            { id: 'dlr', company: "DLR Stuttgart - SOFC Integration", contact: "Dr. Rémi Costa", email: "remi.costa@dlr.de", value: 800000, stage: "approved", source: "referral", phone: "", notes: "✅ Meeting am 4.3.2026 erledigt. Horizon Europe Konsortium approved. Nächste Schritte: Proposal-Entwicklung." },
+            
+            // DBFZ Leipzig - Zoom Call erledigt
+            { id: 'dbfz', company: "DBFZ Leipzig - Horizon Europe", contact: "Karen Deprie", email: "", value: 600000, stage: "proposal", source: "outreach", phone: "", notes: "✅ Zoom Call am 10.2. erledigt. Wird an alle Forscher weiterleiten. Proposal-Stage." },
+            
+            // === KONTAKTE OHNE ANTWORT (FOLLOW-UP NÖTIG) ===
+            
+            // Anaergia Africa - Keine Antwort
+            { id: 'anaergia', company: "Anaergia Africa - Ghana", contact: "Alberto Borello", email: "", value: 1200000, stage: "contacted", source: "outreach", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. GIZ Green People's Energy." },
+            
+            // REA Nigeria - Keine Antwort
+            { id: 'rea', company: "REA Nigeria - DARES Program", contact: "Dr. Abba Aliyu", email: "a@rea.gov.ng", value: 5000000, stage: "contacted", source: "outreach", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. $750M Fonds." },
+            
+            // Kenya REREC - Keine Antwort
+            { id: 'rerec', company: "Kenya REREC", contact: "Alex Kamau Wachira", email: "psenergy@energy.go.ke", value: 2000000, stage: "contacted", source: "outreach", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. KfW GET FiT." },
+            
+            // NEOM - Keine Antwort
+            { id: 'neom', company: "NEOM - CleanTech", contact: "Peter Hlavnicka (Intermediary)", email: "peterhlavnicka@gmail.com", value: 10000000, stage: "contacted", source: "referral", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. $10M Opportunity." },
+            
+            // PSI Switzerland - Keine Antwort
+            { id: 'psi', company: "PSI Switzerland - Syngas", contact: "Dr. Tilman Schildhauer", email: "", value: 750000, stage: "contacted", source: "outreach", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. Same-day response am 10.2. erwartet." },
+            
+            // TUM Ledendecker - Keine Antwort
+            { id: 'tum', company: "TUM - Catalyst", contact: "Prof. Marc Ledendecker", email: "", value: 500000, stage: "contacted", source: "outreach", phone: "", notes: "📧 E-Mail gesendet (Feb 2026). ❌ Keine Antwort. FOLLOW-UP NÖTIG. Interesse an Katalysator-Kollaboration." },
+            
+            // === WEITERE KONTAKTE (PROSPECT) ===
+            
+            { id: 'giz', company: "GIZ develoPPP Indonesia", contact: "develoPPP", email: "", value: 500000, stage: "prospect", source: "partner", phone: "", notes: "Spring Round 2026. Deadline: 31. März 2026. Noch nicht kontaktiert." },
+            { id: 'meta', company: "Meta - Prometheus", contact: "", email: "", value: 5000000, stage: "prospect", source: "outreach", phone: "", notes: "1 GW Supercluster Ohio. Noch nicht kontaktiert." },
+            { id: 'google', company: "Google Singapore", contact: "", email: "", value: 3000000, stage: "prospect", source: "outreach", phone: "", notes: "Tropical Cooling. Noch nicht kontaktiert." },
+            { id: 'atnorth', company: "atNorth - District Heating", contact: "", email: "", value: 2000000, stage: "prospect", source: "outreach", phone: "", notes: "Nordics. DEN01. Noch nicht kontaktiert." },
+            { id: 'indonesia', company: "Indonesia Palm Oil", contact: "", email: "", value: 5000000, stage: "prospect", source: "outreach", phone: "", notes: "800+ Mills. 250-300 Mt EFB. Noch nicht kontaktiert." },
+            { id: 'puro', company: "Puro.earth - CORC", contact: "", email: "", value: 150000, stage: "prospect", source: "partner", phone: "", notes: "Carbon Credits. Noch nicht kontaktiert." },
+            { id: 'microsoft', company: "Microsoft - Carbon Removal", contact: "", email: "", value: 500000, stage: "prospect", source: "partner", phone: "", notes: "Long-term offtake. Noch nicht kontaktiert." },
+            { id: 'planet', company: "PlanET Biogas", contact: "", email: "", value: 2000000, stage: "prospect", source: "partner", phone: "", notes: "9,500 German plants. Noch nicht kontaktiert." },
+            { id: 'host', company: "HoSt - Co-Marketing", contact: "", email: "", value: 1500000, stage: "prospect", source: "partner", phone: "", notes: "DIGEST+ Horizon. Noch nicht kontaktiert." },
+            { id: 'caribbean', company: "Caribbean Energy Consortium", contact: "", email: "", value: 2000000, stage: "prospect", source: "outreach", phone: "", notes: "4 GW needed. Noch nicht kontaktiert." },
+            
+            // APPROVED
+            { company: "DLR Stuttgart - SOFC Integration", contact: "Dr. Rémi Costa", email: "remi.costa@dlr.de", value: 800000, stage: "approved", source: "referral", phone: "", notes: "Meeting completed March 4. Approved for Horizon Europe consortium. Electrochemical energy + syngas integration." },
+            
+            // PROPOSAL
+            { company: "DBFZ Leipzig - Horizon Europe", contact: "Karen Deprie", email: "", value: 600000, stage: "proposal", source: "outreach", phone: "", notes: "Zoom call completed Feb 10. Proposal stage for consortium coordination. Will circulate to all researchers." },
+            { company: "Anaergia Africa - Ghana Golden Foods", contact: "Alberto Borello", email: "", value: 1200000, stage: "proposal", source: "outreach", phone: "", notes: "Active lead. Palm kernel shells + EFB feedstock. GIZ Green People's Energy funding. Proposal submitted." },
+            
+            // QUALIFIED
+            { company: "PSI Switzerland - Syngas Upgrading", contact: "Dr. Tilman Schildhauer", email: "", value: 750000, stage: "qualified", source: "outreach", phone: "", notes: "Same-day response Feb 10. HIGH PRIORITY. Syngas upgrading expert. Qualified for partnership." },
+            { company: "TUM - Catalyst Characterization", contact: "Prof. Marc Ledendecker", email: "", value: 500000, stage: "qualified", source: "outreach", phone: "", notes: "INTERESTED in catalyst collaboration. Zoom call proposed. Qualified lead." },
+            { company: "GIZ develoPPP - Indonesia EFB", contact: "develoPPP@giz.de", email: "", value: 500000, stage: "qualified", source: "partner", phone: "+49 6196 796555", notes: "Spring Round 2026. €250K grant + €250K private. PT PMA partner needed. Deadline: March 31, 2026." },
+            
+            // MEETING
+            { company: "Edinburgh - UK Biochar Centre", contact: "Prof. Ondrej Masek", email: "", value: 450000, stage: "meeting", source: "outreach", phone: "", notes: "Meeting scheduled. Biochar research partnership." },
+            { company: "Sheffield - WtE Partnership", contact: "Prof. Bill Nimmo", email: "", value: 550000, stage: "meeting", source: "outreach", phone: "", notes: "Meeting proposed. Waste-to-energy collaboration." },
+            
+            // REPLIED
+            { company: "Leeds - Bioenergy Research", contact: "Dr. Daya Pandey", email: "", value: 400000, stage: "replied", source: "outreach", phone: "", notes: "Positive reply received. Bioenergy research alignment confirmed." },
+            { company: "Glasgow - ML Gasification", contact: "Dr. Siming You", email: "", value: 350000, stage: "replied", source: "outreach", phone: "", notes: "Replied with interest. Machine learning for gasification optimization." },
+            { company: "Strathmore University Kenya", contact: "Dr. Maranga", email: "", value: 500000, stage: "replied", source: "outreach", phone: "", notes: "Reply received. Research partnership + potential pilot." },
+            
+            // CONTACTED
+            { company: "US Researcher Outreach Batch - 16 Contacts", contact: "Multiple US Institutions", email: "Various .edu/.gov", value: 2400000, stage: "contacted", source: "outreach", phone: "", notes: "🏆 ACHIEVEMENT: 16 emails sent March 11, 2026. Stanford(2), UIUC(6), LBNL(2), NREL, ORNL, Texas A&M, INL, Georgia Tech. USDA grant angle. BCC: j.Uhlig@exventure.co" },
+            { company: "REA Nigeria - DARES Program", contact: "Dr. Abba Aliyu", email: "a@rea.gov.ng", value: 5000000, stage: "contacted", source: "outreach", phone: "", notes: "$750M rural electrification fund. 39% electrification rate. Contacted, awaiting reply." },
+            { company: "Kenya Rural Electrification (REREC)", contact: "Alex Kamau Wachira", email: "psenergy@energy.go.ke", value: 2000000, stage: "contacted", source: "outreach", phone: "", notes: "KfW GET FiT program. Strong mobile money ecosystem (M-Pesa). Contacted." },
+            { company: "NEOM - CleanTech/Sustainability", contact: "Peter Hlavnicka", email: "peterhlavnicka@gmail.com", value: 10000000, stage: "contacted", source: "referral", phone: "", notes: "Peter is intermediary. Email sent Feb 10. Zero waste, circular economy focus." },
+            { company: "Meta - Prometheus Supercluster", contact: "", email: "", value: 5000000, stage: "contacted", source: "outreach", phone: "", notes: "Ohio. 1 GW supercluster. Trigeneration opportunity. Contacted." },
+            
+            // PROSPECT
+            { company: "Puro.earth - CORC Certification", contact: "", email: "", value: 150000, stage: "prospect", source: "partner", phone: "", notes: "€140-160/tCO2e. 500-1,000 tCO2e/year per unit. Certification pathway. Prospect stage." },
+            { company: "Microsoft - Carbon Removal", contact: "", email: "", value: 500000, stage: "prospect", source: "partner", phone: "", notes: "Long-term offtake agreement target. Prospect." },
+            { company: "Shopify - Carbon Credits", contact: "", email: "", value: 300000, stage: "prospect", source: "partner", phone: "", notes: "Target buyer for biochar carbon credits. Prospect." },
+            { company: "atNorth - District Heating", contact: "", email: "", value: 2000000, stage: "prospect", source: "outreach", phone: "", notes: "Nordics. DEN01 heats 8,000+ homes. PUE <1.2. Prospect." },
+            { company: "Google Singapore - Tropical Cooling", contact: "", email: "", value: 3000000, stage: "prospect", source: "outreach", phone: "", notes: "Tropical cooling challenge. Absorption chiller integration. Prospect." },
+            { company: "Agricultural Consortium - Soil Amendment", contact: "", email: "", value: 800000, stage: "prospect", source: "outreach", phone: "", notes: "EBC-certified biochar. >75% carbon content. 500-1,000 tonnes/year. Prospect." },
+            { company: "African Mining Consortium", contact: "", email: "", value: 3000000, stage: "prospect", source: "outreach", phone: "", notes: "Diesel replacement. $0.08-0.12/kWh vs $0.85-1.20/liter diesel. Prospect." },
+            { company: "PlanET Biogas - Partnership", contact: "", email: "", value: 2000000, stage: "prospect", source: "partner", phone: "", notes: "Co-marketing agreement. 9,500 German biogas plants. €350M retrofit market. Prospect." },
+            { company: "HoSt - Co-Marketing", contact: "", email: "", value: 1500000, stage: "prospect", source: "partner", phone: "", notes: "DIGEST+ Horizon Call €2.5M. +15-25% methane capture. Prospect." },
+            { company: "GIZ Green People's Energy - Uganda", contact: "", email: "", value: 125000, stage: "prospect", source: "partner", phone: "", notes: "Golden Foods Uganda. €125K typical funding. Prospect." },
+            { company: "GIZ Powering Agriculture - Nigeria", contact: "Katharina Meder", email: "", value: 500000, stage: "prospect", source: "partner", phone: "", notes: "€100M+ program. Nigerian Breweries target. Prospect." },
+            { company: "Horizon Europe EIC Accelerator", contact: "", email: "", value: 2500000, stage: "prospect", source: "partner", phone: "", notes: "€2.5M for European scale-up. Consortium building. Prospect." },
+            { company: "EU Innovation Fund - Data Centers", contact: "", email: "", value: 3000000, stage: "prospect", source: "partner", phone: "", notes: "60% CAPEX for data center pilots. Prospect." },
+            { company: "Caribbean Energy Consortium", contact: "", email: "", value: 2000000, stage: "prospect", source: "outreach", phone: "", notes: "4 GW needed by 2027. $9B market. 1.4-2.4 year payback vs diesel. Prospect." },
+            { company: "Pacific Islands - World Bank", contact: "", email: "", value: 1500000, stage: "prospect", source: "partner", phone: "", notes: "1.8 GW needed. $5.9B investment. Green Climate Fund $10B+. Prospect." },
+            { company: "Indonesia Palm Oil Mill Consortium", contact: "", email: "", value: 5000000, stage: "prospect", source: "outreach", phone: "", notes: "800+ mills. 250-300 Mt EFB/year. 70% underutilized. $400K-800K/year per mill. Prospect." },
+            { company: "Malaysia MSPO Certification", contact: "", email: "", value: 3000000, stage: "prospect", source: "outreach", phone: "", notes: "450+ mills. B20 biodiesel mandate. MSPO certification mandatory. Prospect." }
+        ];
+        
+        // Load leads from localStorage or use defaults
+        let leads = JSON.parse(localStorage.getItem('zerox_sales_leads_v2') || 'null');
+        if (!leads || leads.length === 0) {
+            leads = defaultLeads;
+            localStorage.setItem('zerox_sales_leads_v2', JSON.stringify(leads));
+        }
+        
+        const stageColors = {
+            prospect: 'bg-gray-500/20 text-gray-400 border-gray-500/30',
+            contacted: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+            replied: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
+            meeting: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+            qualified: 'bg-green-500/20 text-green-400 border-green-500/30',
+            proposal: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+            approved: 'bg-purple-600/30 text-purple-300 border-purple-500/50'
+        };
+        
+        const stageProbabilities = {
+            prospect: 0.05,
+            contacted: 0.1,
+            replied: 0.2,
+            meeting: 0.35,
+            qualified: 0.5,
+            proposal: 0.75,
+            approved: 1.0
+        };
+        
+        function renderPipeline() {
+            // Clear all columns
+            ['prospect', 'contacted', 'replied', 'meeting', 'qualified', 'proposal', 'approved'].forEach(stage => {
+                document.getElementById(`column-${stage}`).innerHTML = '';
+                document.getElementById(`count-${stage}`).textContent = '0';
+            });
+            
+            // Drag and Drop Functions
+            window.draggedLead = null;
+            
+            window.dragStart = function(event, leadId) {
+                window.draggedLead = leadId;
+                event.target.classList.add('dragging');
+                event.dataTransfer.effectAllowed = 'move';
+            };
+            
+            window.dragEnd = function(event) {
+                event.target.classList.remove('dragging');
+                document.querySelectorAll('.pipeline-column').forEach(col => col.classList.remove('drag-over'));
+            };
+            
+            window.allowDrop = function(event) {
+                event.preventDefault();
+                event.currentTarget.classList.add('drag-over');
+            };
+            
+            window.dragLeave = function(event) {
+                event.currentTarget.classList.remove('drag-over');
+            };
+            
+            window.drop = function(event) {
+                event.preventDefault();
+                event.currentTarget.classList.remove('drag-over');
+                const newStage = event.currentTarget.closest('.pipeline-column').dataset.stage;
+                if (window.draggedLead && newStage) {
+                    const lead = leads.find(l => l.company === window.draggedLead);
+                    if (lead) {
+                        lead.stage = newStage;
+                        localStorage.setItem('zerox_sales_leads_v2', JSON.stringify(leads));
+                        renderPipeline();
+                    }
+                }
+                window.draggedLead = null;
+            };
+            
+            // Group leads by stage
+            const leadsByStage = {};
+            leads.forEach(lead => {
+                if (!leadsByStage[lead.stage]) leadsByStage[lead.stage] = [];
+                leadsByStage[lead.stage].push(lead);
+            });
+            
+            // Render each column
+            let totalValue = 0;
+            let weightedValue = 0;
+            let approvedValue = 0;
+            
+            Object.keys(leadsByStage).forEach(stage => {
+                const column = document.getElementById(`column-${stage}`);
+                const count = leadsByStage[stage].length;
+                document.getElementById(`count-${stage}`).textContent = count;
+                
+                leadsByStage[stage].forEach((lead, index) => {
+                    const val = parseInt(lead.value || 0);
+                    totalValue += val;
+                    weightedValue += val * stageProbabilities[stage];
+                    if (stage === 'approved') approvedValue += val;
+                    
+                    const card = document.createElement('div');
+                    card.className = 'lead-card';
+                    card.draggable = true;
+                    card.ondragstart = (e) => window.dragStart(e, lead.company);
+                    card.ondragend = window.dragEnd;
+                    card.innerHTML = `
+                        <div class="delete-btn" onclick="deleteLead(${leads.indexOf(lead)})">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <i data-lucide="grip-vertical" class="w-4 h-4 text-gray-500"></i>
+                            <span class="stage-badge ${stageColors[stage]}">${stage}</span>
+                        </div>
+                        <h4 class="font-semibold text-white text-sm mb-1 pr-6">${lead.company}</h4>
+                        <p class="text-xs text-gray-400 mb-2">${lead.contact}</p>
+                        <div class="value-tag">€${(val / 1000000).toFixed(1)}M</div>
+                        ${lead.notes ? `<p class="text-xs text-gray-500 mt-2 line-clamp-2">${lead.notes}</p>` : ''}
+                    `;
+                    column.appendChild(card);
+                });
+            });
+            
+            // Update stats
+            document.getElementById('totalValue').textContent = '€' + (totalValue / 1000000).toFixed(1) + 'M';
+            document.getElementById('weightedValue').textContent = '€' + (weightedValue / 1000000).toFixed(1) + 'M';
+            document.getElementById('approvedValue').textContent = '€' + (approvedValue / 1000000).toFixed(1) + 'M';
+            document.getElementById('totalDeals').textContent = leads.length;
+            
+            lucide.createIcons();
+        }
+        
+        function openModal() { document.getElementById('addLeadModal').classList.add('active'); }
+        function closeModal() { document.getElementById('addLeadModal').classList.remove('active'); document.getElementById('addLeadForm').reset(); }
+        
+        function deleteLead(index) {
+            if (confirm('Remove this opportunity?')) {
+                leads.splice(index, 1);
+                localStorage.setItem('zerox_sales_leads_v2', JSON.stringify(leads));
+                renderPipeline();
+            }
+        }
+        
+        document.getElementById('addLeadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            leads.push({
+                company: formData.get('company'),
+                contact: formData.get('contact'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                value: formData.get('value'),
+                stage: formData.get('stage'),
+                source: formData.get('source'),
+                notes: formData.get('notes')
+            });
+            localStorage.setItem('zerox_sales_leads_v2', JSON.stringify(leads));
+            closeModal();
+            renderPipeline();
+        });
+        
+        document.getElementById('addLeadModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        // Initial render
+        renderPipeline();
+    </script>
+</body>
+</html>

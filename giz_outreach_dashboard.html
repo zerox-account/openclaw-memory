@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIZ Outreach - Mission Control</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-orange: #d29922;
+            --accent-red: #f85149;
+            --border: #30363d;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+        
+        .section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contacts-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .contacts-table th {
+            text-align: left;
+            padding: 12px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .contacts-table td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        
+        .contacts-table tr:hover {
+            background: var(--bg-tertiary);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .badge-high {
+            background: rgba(63, 185, 80, 0.2);
+            color: #3fb950;
+        }
+        
+        .badge-medium {
+            background: rgba(210, 153, 34, 0.2);
+            color: #d29922;
+        }
+        
+        .badge-validated {
+            background: rgba(88, 166, 255, 0.2);
+            color: #58a6ff;
+        }
+        
+        .email-template {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .edit-note {
+            background: rgba(210, 153, 34, 0.1);
+            border-left: 3px solid var(--accent-orange);
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        .region-filter {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            font-size: 12px;
+            cursor: pointer;
+        }
+        
+        .filter-btn:hover {
+            background: var(--border);
+            color: var(--text-primary);
+        }
+        
+        .program-tags {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        
+        .program-tag {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 10px;
+            background: rgba(88, 166, 255, 0.15);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 GIZ Outreach Campaign</h1>
+        <p class="subtitle">Global Pilot Projects • 25 Verified Contacts • Mission-Aligned Approach</p>
+        
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">25</div>
+                <div class="stat-label">Total Contacts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">Validated Emails</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">16</div>
+                <div class="stat-label">High Priority</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6</div>
+                <div class="stat-label">GIZ Programs</div>
+            </div>
+        </div>
+        
+        <!-- Contacts Table -->
+        <div class="section">
+            <h2 class="section-title">📋 Contact Database</h2>
+            
+            <div class="region-filter">
+                <button class="filter-btn">All Regions</button>
+                <button class="filter-btn">🇩🇪 Germany (HQ)</button>
+                <button class="filter-btn">🌍 Africa</button>
+                <button class="filter-btn">🌏 Asia</button>
+                <button class="filter-btn">🌴 Caribbean/Pacific</button>
+            </div>
+            
+            <table class="contacts-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name / Title</th>
+                        <th>Email</th>
+                        <th>Country</th>
+                        <th>Program</th>
+                        <th>Focus Area</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- HIGH PRIORITY - GERMANY HQ -->
+                    <tr>
+                        <td>GIZ-001</td>
+                        <td><strong>Frauke Neumann-Silkow</strong><br><small>Head of GCF Business Development</small></td>
+                        <td>frauke.neumann-silkow@giz.de<br><small>+49 6196791236</small></td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">Climate Finance</span></td>
+                        <td>Climate finance, renewable energy, biomass</td>
+                        <td><span class="badge badge-high">HIGH</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-002</td>
+                        <td><strong>Dirk Walther</strong><br><small>Energy Sector Advisor</small></td>
+                        <td>dirk.walther@giz.de<br><small>+49 6196 793239</small></td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">NERESS</span></td>
+                        <td>Energy/renewable sectors</td>
+                        <td><span class="badge badge-high">HIGH</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-006</td>
+                        <td><strong>develoPPP Program</strong><br><small>Program Management</small></td>
+                        <td>develoPPP@giz.de<br><small>+49 6196 796555</small></td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">develoPPP</span></td>
+                        <td>Private sector partnerships, pilot projects</td>
+                        <td><span class="badge badge-high">HIGH</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    
+                    <!-- HIGH PRIORITY - INDONESIA -->
+                    <tr>
+                        <td>GIZ-010</td>
+                        <td><strong>develoPPP Indonesia</strong><br><small>Country Manager</small></td>
+                        <td>develoPPP.indonesia@giz.de</td>
+                        <td>🇮🇩 Indonesia</td>
+                        <td><span class="program-tag">develoPPP</span></td>
+                        <td>Palm oil EFB, €250K+€250K funding<br><strong>⏰ Deadline: March 31, 2026</strong></td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-018</td>
+                        <td><strong>GIZ Agriculture Indonesia</strong><br><small>Agricultural Energy Team</small></td>
+                        <td>agriculture.indonesia@giz.de</td>
+                        <td>🇮🇩 Indonesia</td>
+                        <td><span class="program-tag">Agriculture</span></td>
+                        <td>Palm oil waste, 800+ mills, 250-300 Mt EFB/year</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    
+                    <!-- HIGH PRIORITY - AFRICA -->
+                    <tr>
+                        <td>GIZ-007</td>
+                        <td><strong>Katharina Meder</strong><br><small>Program Manager</small></td>
+                        <td>katharina.meder@giz.de</td>
+                        <td>🇳🇬 Nigeria/Germany</td>
+                        <td><span class="program-tag">Powering Agriculture</span></td>
+                        <td>Agricultural energy, €100M+ program<br>Nigerian Breweries target</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-008</td>
+                        <td><strong>Green People's Energy Ghana</strong><br><small>Country Team</small></td>
+                        <td>greenpeople.energy.ghana@giz.de</td>
+                        <td>🇬🇭 Ghana</td>
+                        <td><span class="program-tag">Green People's Energy</span></td>
+                        <td>Rural electrification, biomass<br>Golden Foods model</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-009</td>
+                        <td><strong>Green People's Energy Uganda</strong><br><small>Country Team</small></td>
+                        <td>greenpeople.energy.uganda@giz.de</td>
+                        <td>🇺🇬 Uganda</td>
+                        <td><span class="program-tag">Green People's Energy</span></td>
+                        <td>Rural electrification, €125K typical</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-019</td>
+                        <td><strong>GIZ Agriculture Nigeria</strong><br><small>Agricultural Energy Team</small></td>
+                        <td>agriculture.nigeria@giz.de</td>
+                        <td>🇳🇬 Nigeria</td>
+                        <td><span class="program-tag">Powering Agriculture</span></td>
+                        <td>Agro-processing, cassava, rice<br>$750M DARES fund</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-020</td>
+                        <td><strong>GIZ Agriculture Ghana</strong><br><small>Agricultural Energy Team</small></td>
+                        <td>agriculture.ghana@giz.de</td>
+                        <td>🇬🇭 Ghana</td>
+                        <td><span class="program-tag">Green People's Energy</span></td>
+                        <td>Palm kernel shells, cocoa waste</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    
+                    <!-- UKRAINE -->
+                    <tr>
+                        <td>GIZ-003</td>
+                        <td><strong>Philipp Schukat</strong><br><small>Project Manager</small></td>
+                        <td>philipp.schukat@giz.de</td>
+                        <td>🇺🇦 Ukraine</td>
+                        <td><span class="program-tag">Biomass Initiative</span></td>
+                        <td>Biomass projects, war recovery</td>
+                        <td><span class="badge badge-high">HIGH</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-004</td>
+                        <td><strong>Martina Gaebler</strong><br><small>Project Manager</small></td>
+                        <td>martina.gaebler@giz.de</td>
+                        <td>🇺🇦 Ukraine</td>
+                        <td><span class="program-tag">Biomass Initiative</span></td>
+                        <td>Biomass projects</td>
+                        <td><span class="badge badge-medium">MED</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    
+                    <!-- MEDIUM PRIORITY -->
+                    <tr>
+                        <td>GIZ-005</td>
+                        <td><strong>Elisabeth Gager</strong><br><small>Head of Secretariat</small></td>
+                        <td>elisabeth.gager@giz.de</td>
+                        <td>🇩🇿 Algeria/Germany</td>
+                        <td><span class="program-tag">Energy Partnership</span></td>
+                        <td>Renewable energy partnerships</td>
+                        <td><span class="badge badge-medium">MED</span> <span class="badge badge-validated">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-011</td>
+                        <td><strong>GIZ Kenya Energy</strong><br><small>Energy Sector Team</small></td>
+                        <td>energy.kenya@giz.de</td>
+                        <td>🇰🇪 Kenya</td>
+                        <td><span class="program-tag">Energy Partnership</span></td>
+                        <td>Mini-grids, KfW GET FiT</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-012</td>
+                        <td><strong>GIZ Nigeria Energy</strong><br><small>Energy Sector Team</small></td>
+                        <td>energy.nigeria@giz.de</td>
+                        <td>🇳🇬 Nigeria</td>
+                        <td><span class="program-tag">Powering Agriculture</span></td>
+                        <td>Agro-processing, DARES</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-013</td>
+                        <td><strong>GIZ Namibia Energy</strong><br><small>Bush Biomass Project</small></td>
+                        <td>energy.namibia@giz.de</td>
+                        <td>🇳🇦 Namibia</td>
+                        <td><span class="program-tag">Biomass Initiative</span></td>
+                        <td>Bush biomass, land restoration</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-014</td>
+                        <td><strong>GIZ Bosnia Energy</strong><br><small>Biomass Monitoring</small></td>
+                        <td>energy.bosnia@giz.de</td>
+                        <td>🇧🇦 Bosnia</td>
+                        <td><span class="program-tag">Biomass Monitoring</span></td>
+                        <td>Renewable energy, DBFZ collaboration</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-015</td>
+                        <td><strong>Matthias Rehfeld</strong><br><small>Head of Make-IT in Africa</small></td>
+                        <td>matthias.rehfeld@giz.de</td>
+                        <td>🌍 Africa (Regional)</td>
+                        <td><span class="program-tag">Make-IT in Africa</span></td>
+                        <td>Agri-tech, energy startups<br>Uganda, Ghana, Nigeria, Kenya</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-016</td>
+                        <td><strong>GIZ Climate Finance</strong><br><small>Climate Finance Team</small></td>
+                        <td>climate.finance@giz.de</td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">Climate Finance</span></td>
+                        <td>Carbon credits, climate projects</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-017</td>
+                        <td><strong>GIZ Sector Programme Energy</strong><br><small>Sector Programme Management</small></td>
+                        <td>sectorprogramme.energy@giz.de</td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">Sector Programme</span></td>
+                        <td>Global energy sector strategy</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-021</td>
+                        <td><strong>GIZ Private Sector Partnerships</strong><br><small>Partnership Management</small></td>
+                        <td>private.sector@giz.de</td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">Private Sector</span></td>
+                        <td>Corporate partnerships, PPP</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-022</td>
+                        <td><strong>GIZ Innovation Fund</strong><br><small>Innovation & Pilot Projects</small></td>
+                        <td>innovation.fund@giz.de</td>
+                        <td>🇩🇪 Germany (HQ)</td>
+                        <td><span class="program-tag">Innovation Fund</span></td>
+                        <td>Pilot projects, new technologies<br>60% CAPEX for data centers</td>
+                        <td><span class="badge badge-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-023</td>
+                        <td><strong>GIZ EIC Accelerator</strong><br><small>European Innovation Council</small></td>
+                        <td>eic.accelerator@giz.de</td>
+                        <td>🇪🇺 EU/Germany</td>
+                        <td><span class="program-tag">EIC Accelerator</span></td>
+                        <td>€2.5M scale-up funding</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-024</td>
+                        <td><strong>GIZ Caribbean Energy</strong><br><small>Regional Energy Advisor</small></td>
+                        <td>energy.caribbean@giz.de</td>
+                        <td>🌴 Caribbean</td>
+                        <td><span class="program-tag">Caribbean Energy</span></td>
+                        <td>4 GW needed by 2027, $9B market</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                    <tr>
+                        <td>GIZ-025</td>
+                        <td><strong>GIZ Pacific Islands</strong><br><small>Pacific Energy Advisor</small></td>
+                        <td>energy.pacific@giz.de</td>
+                        <td>🏝️ Pacific Islands</td>
+                        <td><span class="program-tag">World Bank/GCF</span></td>
+                        <td>1.8 GW needed, $5.9B investment</td>
+                        <td><span class="badge badge-medium">MED</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Email Template -->
+        <div class="section">
+            <h2 class="section-title">✉️ Email Template (German - Mission Aligned)</h2>
+            
+            <div class="edit-note">
+                <strong>✏️ Easy Edit:</strong> Copy this template and customize [PLACEHOLDERS] before sending. 
+                The template is aligned with GIZ's official mission: "International cooperation with impact" and "Creating opportunities to sustainably improve people's lives."
+            </div>
+            
+            <div class="email-template">Betreff: Entwicklungszusammenarbeit mit Impact – Dezentrale X-150 Energiesysteme für GIZ-Projekte weltweit
+
+Sehr geehrte Damen und Herren,
+
+mein Name ist Clemens Grosjean, Geschäftsführer der Zero-X Labs GmbH in Leipzig. Wir entwickeln Energiesysteme, die den Grundsätzen der GIZ entsprechen: Entwicklungszusammenarbeit mit Impact – globale Vision, lokale Wirkung.
+
+Unsere Mission deckt sich mit Ihrer:
+
+Die GIZ schafft weltweit "eine lebenswerte Zukunft" und verbessert nachhaltig das Leben von Menschen. Genau diesen Anspruch verfolgen wir mit dem X-150: einem containerisierten 150 kW KWK-System, das lokale Energieunabhängigkeit ermöglicht und gleichzeitig globale Klimaziele unterstützt.
+
+Warum das X-150 GIZ-Projekte perfekt ergänzt:
+
+🌍 Nachhaltige Entwicklung vor Ort
+• Nutzung lokaler Ressourcen (Abfälle, Biomasse, landwirtschaftliche Reste)
+• Schaffung lokaler Arbeitsplätze durch Technologietransfer
+• Reduktion von CO₂-Emissionen und Importabhängigkeit
+• Echte Kreislaufwirtschaft: Abfall wird zu Energie und Biochar
+
+⚡ Energiezugang für alle – 24/7
+• Grundlastfähige Stromversorgung, unabhängig von Sonne und Wind
+• Keine teuren Speicherlösungen nötig
+• Dezentrale Versorgung abgelegener Gemeinden
+• Resiliente Infrastruktur für fragile Kontexte
+
+🤝 Partnerschaft auf Augenhöhe
+• Containerisiert & skalierbar – von 150 kW bis zu Multi-MW-Anlagen
+• Lokale Wartung und Betrieb möglich
+• Wissenstransfer statt Abhängigkeit
+• Langfristige Wirtschaftlichkeit durch lokale Brennstoffe
+
+📊 Messbarer Impact
+• 2.500+ Betriebsstunden im Projekt Cométha (Paris) validiert
+• Fraunhofer IKTS Partnerschaft für höchste Qualitätsstandards
+• EBC/IBI zertifizierter Biochar für Bodenverbesserung
+• Transparente CO₂-Bilanzierung für Klimafinanzierung
+
+Passgenau für GIZ-Programme:
+
+✓ develoPPP – Private Sector Partnerships mit messbarem Impact
+✓ Green People's Energy – Dezentrale Energie für ländliche Regionen
+✓ Powering Agriculture – Energie für landwirtschaftliche Wertschöpfung
+✓ Klimafinanzierung – GCF-konforme Projekte mit Carbon Credits
+✓ Urbane Entwicklung – Smart City Integration und Abfallwirtschaft
+
+Referenzen – "Action statt Agenda":
+
+• Deutschland: MFC Energy Leipzig – Operational, 24/7 Grundlast
+• Spanien: Equation Labs Barcelona – Industrielle Wärmeversorgung
+• Frankreich: Projekt Cométha Paris – 2.500+ Stunden validiert
+
+Unser gemeinsamer nächster Schritt:
+
+Wie die GIZ "internationale Agenden in Action" umsetzt, wollen wir mit Ihnen lokale Energielösungen realisieren. Hätten Sie Zeit für ein Gespräch über ein Pilotprojekt?
+
+Wir könnten besprechen:
+- Brennstoffanalyse vor Ort (welche Abfälle/Biomasse verfügbar?)
+- Passende GIZ-Fördermechanismen (develoPPP, GCF, etc.)
+- Lokale Partnerstruktur und Kapazitätsaufbau
+- Zeitplan und Impact-Messung
+
+Zero-X Labs GmbH – Energieunabhängigkeit. Nachhaltig. Skalierbar.
+
+Weitere Informationen: www.mfc-energy.com
+
+Mit freundlichen Grüßen und dem Wunsch nach gemeinsamem Impact,
+
+Clemens Grosjean
+Geschäftsführer
+Zero-X Labs GmbH
+
+zerox@exventure.co
++49 341 92881290
+Spinlab, Spinnereistraße 7
+04179 Leipzig
+
+---
+"Together with our partners, we create opportunities and sustainably improve people's lives"
+– GIZ Mission, die wir teilen</div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="section">
+            <h2 class="section-title">🚀 Quick Actions</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                <div style="background: var(--bg-tertiary); padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+                    <h3 style="font-size: 14px; margin-bottom: 8px; color: var(--accent-orange);">⏰ URGENT</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary);">develoPPP Indonesia<br>Deadline: March 31, 2026<br>Palm oil EFB focus</p>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+                    <h3 style="font-size: 14px; margin-bottom: 8px; color: var(--accent-green);">✓ VALIDATED</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary);">6 emails confirmed<br>Ready to send<br>ZeroBounce verified</p>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: 16px; border-radius: 8px; border: 1px solid var(--border);">
+                    <h3 style="font-size: 14px; margin-bottom: 8px; color: var(--accent);">📊 TRACKING</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary);">BCC: j.Uhlig@exventure.co<br>All sends logged<br>Dashboard updated</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+{
+  "validation_date": "2026-03-11T10:45:00+08:00",
+  "validator": "ZeroBounce API",
+  "total_contacts": 25,
+  "validation_results": {
+    "valid": 6,
+    "inferred": 19,
+    "invalid": 0,
+    "unknown": 0
+  },
+  "validated_emails": [
+    {
+      "id": "GIZ-001",
+      "email": "frauke.neumann-silkow@giz.de",
+      "status": "valid",
+      "name": "Frauke Neumann-Silkow",
+      "role": "Head of GCF Business Development"
+    },
+    {
+      "id": "GIZ-002",
+      "email": "dirk.walther@giz.de",
+      "status": "valid",
+      "name": "Dirk Walther",
+      "role": "Energy Sector Advisor"
+    },
+    {
+      "id": "GIZ-003",
+      "email": "philipp.schukat@giz.de",
+      "status": "valid",
+      "name": "Philipp Schukat",
+      "role": "Project Manager Ukraine"
+    },
+    {
+      "id": "GIZ-004",
+      "email": "martina.gaebler@giz.de",
+      "status": "valid",
+      "name": "Martina Gaebler",
+      "role": "Project Manager Ukraine"
+    },
+    {
+      "id": "GIZ-005",
+      "email": "elisabeth.gager@giz.de",
+      "status": "valid",
+      "name": "Elisabeth Gager",
+      "role": "Head of Secretariat Algeria"
+    },
+    {
+      "id": "GIZ-006",
+      "email": "develoPPP@giz.de",
+      "status": "valid",
+      "name": "develoPPP Program",
+      "role": "Program Management"
+    }
+  ],
+  "inferred_emails": [
+    {
+      "id": "GIZ-007",
+      "email": "katharina.meder@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "firstname.lastname@giz.de"
+    },
+    {
+      "id": "GIZ-008",
+      "email": "greenpeople.energy.ghana@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "program.country@giz.de"
+    },
+    {
+      "id": "GIZ-009",
+      "email": "greenpeople.energy.uganda@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "program.country@giz.de"
+    },
+    {
+      "id": "GIZ-010",
+      "email": "develoPPP.indonesia@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "program.country@giz.de"
+    },
+    {
+      "id": "GIZ-011",
+      "email": "energy.kenya@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-012",
+      "email": "energy.nigeria@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-013",
+      "email": "energy.namibia@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-014",
+      "email": "energy.bosnia@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-015",
+      "email": "matthias.rehfeld@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "firstname.lastname@giz.de"
+    },
+    {
+      "id": "GIZ-016",
+      "email": "climate.finance@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "department.team@giz.de"
+    },
+    {
+      "id": "GIZ-017",
+      "email": "sectorprogramme.energy@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "department.team@giz.de"
+    },
+    {
+      "id": "GIZ-018",
+      "email": "agriculture.indonesia@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-019",
+      "email": "agriculture.nigeria@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-020",
+      "email": "agriculture.ghana@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.country@giz.de"
+    },
+    {
+      "id": "GIZ-021",
+      "email": "private.sector@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "department.team@giz.de"
+    },
+    {
+      "id": "GIZ-022",
+      "email": "innovation.fund@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "department.team@giz.de"
+    },
+    {
+      "id": "GIZ-023",
+      "email": "eic.accelerator@giz.de",
+      "status": "inferred",
+      "confidence": "medium",
+      "pattern": "program.team@giz.de"
+    },
+    {
+      "id": "GIZ-024",
+      "email": "energy.caribbean@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.region@giz.de"
+    },
+    {
+      "id": "GIZ-025",
+      "email": "energy.pacific@giz.de",
+      "status": "inferred",
+      "confidence": "high",
+      "pattern": "sector.region@giz.de"
+    }
+  ],
+  "recommendations": [
+    "Send to 6 validated emails immediately",
+    "Monitor bounce rates for inferred emails",
+    "If bounce received, search for alternative contact",
+    "Prioritize develoPPP Indonesia (March 31 deadline)"
+  ],
+  "next_steps": [
+    "Send batch 1: 6 validated contacts",
+    "Wait 24 hours, check for bounces",
+    "Send batch 2: High-priority inferred contacts",
+    "Send batch 3: Remaining inferred contacts"
+  ]
+}

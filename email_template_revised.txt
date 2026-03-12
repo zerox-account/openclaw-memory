@@ -1,0 +1,35 @@
+Subject: Research Collaboration – Modular Biomass CHP System X-150
+
+Dear Professor {{NAME}},
+
+I am writing from Zero-X Labs, a technology company developing modular biomass-to-energy systems for decentralized energy supply. We are seeking research partners for collaboration on thermochemical conversion and sustainable energy systems.
+
+Our X-150 system is a 150kW modular CHP unit designed for agricultural processing facilities in Sub-Saharan Africa. The system converts biomass residues (coffee husks, sisal waste, bagasse) into electricity and process heat, addressing energy access gaps in rural Uganda and Kenya.
+
+We are particularly interested in exploring collaboration opportunities in:
+• Thermochemical process optimization for tropical biomass feedstocks
+• Gas cleaning and tar reforming for small-scale gasification
+• System integration with agricultural processing infrastructure
+• Joint research proposals (Horizon Europe, bilateral programs)
+
+Your research at {{INSTITUTION}} in {{FIELD}} aligns closely with our technical direction. We would welcome the opportunity to discuss:
+• Co-development of pilot projects in East Africa
+• Joint research and knowledge exchange
+• Collaborative grant applications
+• Student/researcher exchange programs
+
+We are currently in discussions with DLR Stuttgart on syngas integration and are building a consortium of European and African research partners.
+
+Would you be available for a brief call to explore this further? We are flexible with timing.
+
+Thank you for your consideration.
+
+Best regards,
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290
+
+---
+Note: We seek research partners, not customers.

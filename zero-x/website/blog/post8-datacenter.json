@@ -1,0 +1,12 @@
+{
+  "title": "Data Centers Meet Sustainability: How Waste Heat Powers Cooling",
+  "slug": "data-centers-waste-heat-cooling",
+  "category": "Technology",
+  "tags": ["data center", "cooling", "waste heat", "COOLSTACK", "adsorption", "sustainability"],
+  "author": "Clemens Grosjean",
+  "date": "2026-02-07",
+  "status": "published",
+  "excerpt": "Data centers consume 2% of global electricity, with 40% going to cooling. Our X-150 + adsorption cooling solution turns waste heat into free air conditioning.",
+  "content": "The Energy Paradox\n\nModern data centers are caught in an energy paradox:\n- Servers generate enormous heat\n- Cooling requires massive electricity\n- 40% of data center energy goes to cooling\n- Carbon footprint under increasing scrutiny\n\nIntroducing Project COOLSTACK\n\nZero-X Group's COOLSTACK solution combines X-150 gasification with adsorption cooling technology, creating a virtuous cycle where waste heat powers free cooling.\n\nThe Numbers:\n\nFor a 5MW data center:\n- Traditional cooling: 2MW additional power required\n- COOLSTACK solution: 0MW additional power (waste heat powered)\n- Annual savings: €1.8 million\n- Carbon reduction: 4,200 tonnes CO₂/year\n- Payback period: 7 months\n\nCase Study: Frankfurt Data Center\n\nA colocation facility in Frankfurt, Germany:\n- Server load: 4.2MW\n- Traditional cooling cost: €2.1M/year\n- COOLSTACK implementation: 2x X-150 systems, 2x 300kW adsorption chillers\n- Total project cost: €1.05M\n- Annual savings: €1.68M\n- Payback: 7.5 months\n\nTechnical Architecture:\n\nPhase 1: Power Generation\n- 3x X-150 systems (1.5MW thermal total)\n- Syngas-fueled generators\n- 650kW electrical output\n- 850kW thermal waste heat\n\nPhase 2: Waste Heat Recovery\n- Heat exchangers capture exhaust heat\n- 85% heat recovery efficiency\n- Hot water at 90°C for chillers\n\nPhase 3: Adsorption Cooling\n- Silica gel adsorption chillers\n- Coefficient of Performance: 0.7\n- Cooling output: 600kW\n- No electricity required\n\nCurrent Status:\n\nZero-X is in discussions with three major European data center operators for Q2 2026 deployments. First pilot scheduled for Frankfurt region.\n\nContact: Clemens Grosjean, zerox@exventure.co",
+  "featured_image": "data-center-cooling.png"
+}

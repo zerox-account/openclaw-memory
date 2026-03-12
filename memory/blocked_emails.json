@@ -1,0 +1,76 @@
+{
+  "blocked": [
+    {
+      "timestamp": "2026-02-24T06:00:45Z",
+      "email": "martin.seemann@energy.kth.se",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Chemical Looping & Gasification",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T06:05:03Z",
+      "email": "karel.brabc@fs.cvut.cz",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Energy Systems",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T06:05:30Z",
+      "email": "frans.deschouwer@kuleuven.be",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Collaboration \u2014 Sustainable Process",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T07:04:27Z",
+      "email": "sascha.kersten@utwente.nl",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Thermochemical",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T07:05:09Z",
+      "email": "beatriz.fidalgo@usc.es",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Gasification",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T07:05:44Z",
+      "email": "maria.benavente@csic.es",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Bioenergy",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T08:02:20Z",
+      "email": "anthony.dufour@ensic.inpl-nancy.fr",
+      "status": "invalid",
+      "sub_status": "no_dns_entries",
+      "subject": "Research Partnership \u2014 Pyrolysis",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-02-24T08:05:41Z",
+      "email": "michele.bianchi@polimi.it",
+      "status": "invalid",
+      "sub_status": "mailbox_not_found",
+      "subject": "Research Partnership \u2014 Energy Systems",
+      "blocked": true
+    },
+    {
+      "timestamp": "2026-03-10T04:37:04Z",
+      "email": "andreas.friedrich@dlr.de,remi.costa@dlr.de,monika.baumann@dlr.de",
+      "status": "invalid",
+      "sub_status": "failed_syntax_check",
+      "subject": "Re: Elektrochemische Energietechnologie & Syngas-Integration \u2013 Terminverschiebung",
+      "blocked": true
+    }
+  ]
+}

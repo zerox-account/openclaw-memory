@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents & Projects - Zero-X Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root { --background: #0A0F0A; --card: #121A12; --border: #1F3D1F; --primary: #22C55E; }
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        .glass { background: rgba(18, 26, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+        .nav-item:hover { background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--primary); }
+        .nav-item.active { background: rgba(34, 197, 94, 0.15); border-left: 3px solid var(--primary); }
+        .doc-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; cursor: pointer; }
+        .doc-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .editor { background: #0A0F0A; border: 1px solid var(--border); border-radius: 8px; padding: 16px; font-family: 'SF Mono', monospace; font-size: 13px; line-height: 1.6; min-height: 500px; resize: vertical; width: 100%; color: #F8FAFC; }
+        .editor:focus { outline: none; border-color: var(--primary); }
+        .category-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 500; margin-right: 8px; }
+        .badge-tech { background: rgba(34, 197, 94, 0.2); color: #4ADE80; }
+        .badge-email { background: rgba(6, 182, 212, 0.2); color: #22D3EE; }
+        .badge-appt { background: rgba(245, 158, 11, 0.2); color: #FBBF24; }
+        .badge-proj { background: rgba(168, 85, 247, 0.2); color: #C084FC; }
+        .badge-comp { background: rgba(239, 68, 68, 0.2); color: #F87171; }
+        .search-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; width: 100%; color: #F8FAFC; }
+        .search-box:focus { outline: none; border-color: var(--primary); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        .tab-btn { padding: 8px 16px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; color: #94A3B8; }
+        .tab-btn:hover { background: rgba(34, 197, 94, 0.1); }
+        .tab-btn.active { background: rgba(34, 197, 94, 0.2); border-color: var(--primary); color: var(--primary); }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="layout-dashboard" class="w-5 h-5"></i><span>Dashboard</span></a>
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flame" class="w-5 h-5"></i><span>X-150 System</span></a>
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="factory" class="w-5 h-5"></i><span>CCM Projects</span></a>
+                <a href="rd.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flask-conical" class="w-5 h-5"></i><span>R&D</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="trending-up" class="w-5 h-5"></i><span>Sales Pipeline</span></a>
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="wrench" class="w-5 h-5"></i><span>Installations</span></a>
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="handshake" class="w-5 h-5"></i><span>Partners</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">System</div>
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a><a href="memory.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="brain" class="w-5 h-5"></i><span>Memory System</span></a>
+                <a href="documents.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"><i data-lucide="folder-open" class="w-5 h-5"></i><span>Documents</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="mb-8">
+                <h2 class="text-2xl font-bold">Documents & Projects</h2>
+                <p class="text-gray-400 text-sm mt-1">Central knowledge base - Technical docs, campaigns, appointments, competitive intelligence</p>
+            </header>
+
+            <!-- Document Categories -->
+            <div class="grid grid-cols-5 gap-4 mb-6">
+                <div class="glass rounded-xl p-4 text-center cursor-pointer hover:border-green-500 transition" onclick="filterCategory('all')">
+                    <div class="text-2xl font-bold">All</div>
+                    <div class="text-xs text-gray-400">Documents</div>
+                </div>
+                <div class="glass rounded-xl p-4 text-center cursor-pointer hover:border-green-500 transition" onclick="filterCategory('technical')">
+                    <div class="text-2xl font-bold text-green-400">5</div>
+                    <div class="text-xs text-gray-400">Technical</div>
+                </div>
+                <div class="glass rounded-xl p-4 text-center cursor-pointer hover:border-cyan-500 transition" onclick="filterCategory('email')">
+                    <div class="text-2xl font-bold text-cyan-400">3</div>
+                    <div class="text-xs text-gray-400">Email</div>
+                </div>
+                <div class="glass rounded-xl p-4 text-center cursor-pointer hover:border-amber-500 transition" onclick="filterCategory('projects')">
+                    <div class="text-2xl font-bold text-amber-400">2</div>
+                    <div class="text-xs text-gray-400">Projects</div>
+                </div>
+                <div class="glass rounded-xl p-4 text-center cursor-pointer hover:border-red-500 transition" onclick="filterCategory('competitive')">
+                    <div class="text-2xl font-bold text-red-400">3</div>
+                    <div class="text-xs text-gray-400">Competitive</div>
+                </div>
+            </div>
+
+            <!-- Document Grid -->
+            <div class="grid grid-cols-3 gap-4 mb-8" id="docGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Editor -->
+            <div class="glass rounded-xl overflow-hidden" id="editorSection" style="display: none;">
+                <div class="p-4 border-b border-[#1F3D1F] flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <span class="category-badge" id="editorBadge">Category</span>
+                        <h3 class="font-semibold" id="editorTitle">Select a document</h3>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="closeEditor()" class="px-4 py-2 rounded-lg border border-[#1F3D1F] text-gray-400 hover:bg-[#1F3D1F] transition text-sm">Close</button>
+                        <button onclick="saveDocument()" class="px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition text-sm flex items-center gap-2">
+                            <i data-lucide="save" class="w-4 h-4"></i>Save
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex gap-2 mb-4">
+                        <button class="tab-btn active" onclick="switchTab('edit')">Edit</button>
+                        <button class="tab-btn" onclick="switchTab('preview')">Preview</button>
+                    </div>
+                    <textarea id="editor" class="editor" placeholder="Select a document to edit..."></textarea>
+                    <div id="preview" class="hidden p-4 bg-[#0A0F0A] rounded-lg text-sm whitespace-pre-wrap"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Document database
+        const documents = {
+            'x150-specs': { title: 'X-150 Technical Specifications', category: 'technical', badge: 'badge-tech', 
+                content: `X-150 TECHNICAL SPECIFICATIONS
+
+SYSTEM OVERVIEW:
+- Type: Single-stage fixed bed downdraft gasifier
+- Optimization: High ash content, ash melting mixed fuels
+- Best For: Bio digester sludge
+- Containerized: Yes, 20ft or 40ft ISO container
+
+PERFORMANCE:
+- Throughput: 50-500 kg/h
+- Syngas Output: 100-1000 Nm³/h
+- Cold Gas Efficiency: 75-85%
+- Operating Temperature: 800-1000°C
+- Operating Pressure: -10 to -30 mbar
+
+SYNGAS COMPOSITION:
+- H2: 15-25%
+- CO: 15-25%
+- CH4: 3-8%
+- CO2: 10-15%
+- N2: 40-50%
+- Tar Content: <50 mg/Nm³ (with reforming)
+
+VALIDATION:
+- Cométha Project: 1,000+ hours (Paris)
+- Tested Feedstocks: Bio digester sludge, wood chips, agricultural waste` },
+
+            'x150-operation': { title: 'X-150 Operating Procedures', category: 'technical', badge: 'badge-tech',
+                content: `X-150 OPERATING PROCEDURES
+
+STARTUP (2-3 hours):
+1. Pre-start inspection
+2. Feedstock preparation
+3. Ignition sequence
+4. Temperature ramp-up
+5. Syngas quality check
+6. Load connection
+
+NORMAL OPERATION:
+- Monitor temperature every 30 min
+- Check pressure hourly
+- Record feedstock consumption
+- Log syngas output
+- Monitor emissions
+
+SHUTDOWN (4-6 hours):
+1. Gradual load reduction
+2. Temperature ramp-down
+3. Feedstock purge
+4. System cool-down
+5. Post-operation inspection
+
+SAFETY:
+- Emergency stop locations
+- Fire suppression system
+- Gas detection alarms
+- PPE requirements
+
+TROUBLESHOOTING:
+- High tar: Check temperature, catalyst
+- Low output: Check feedstock, air leaks
+- Pressure issues: Check filters, seals` },
+
+            'email-campaign-march-6': { title: 'Email Campaign - March 6, 2026', category: 'email', badge: 'badge-email',
+                content: `EMAIL CAMPAIGN - MARCH 6, 2026
+
+OVERVIEW:
+- Date: March 6, 2026
+- Objective: Research partnerships (Horizon Europe)
+- Target: Mining Engineering Departments
+- Total Sent: 16 emails
+
+VALIDATION RESULTS:
+- Valid: 20 (27%)
+- Catch-all: 22 (30%)
+- Invalid: 8 (11%)
+- Unknown: 23 (32%)
+
+UNIVERSITIES CONTACTED:
+
+USA (9):
+1. University of Arizona - Dr. Nathalie Risso
+2. University of Kentucky - Dr. Joseph Sottile
+3. University of Alaska - Prof. Sukumar Bandopadhyay
+4. South Dakota Mines - Dr. Ivy Allard
+5. Colorado School of Mines - Prof. Piret Plink-Björklund
+6. Tennessee State - krequist@tnstate.edu
+7. Montana Tech - Dr. Scott Rosenthal
+8. Virginia Tech - Dr. Emily Sarver
+9. Penn State - Dr. Shimin Liu
+
+Canada (3):
+1. Queen's University - Dr. Mahmoud Alzoubi
+2. UBC - Prof. Bern Klein
+3. [Additional pending]
+
+Australia (1):
+1. University of Queensland - Prof. Peter Knights
+
+Germany (1):
+1. TU Freiberg - Prof. Carsten Drebenstedt
+
+Sweden (1):
+1. Luleå University - Prof. Anna Gustafson
+
+Greece (2):
+1. University of Aegean - Dr. Stergios Vakalis
+2. University of Aegean - Prof. Dias Haralambopoulos
+
+FOLLOW-UP:
+- March 11-13: Check responses
+- March 13: Follow-up non-responders
+
+RESULTS:
+- Responses: 0 (as of March 6, 18:00)
+- Meetings: 0
+- Bounces: 0` },
+
+            'appointment-dlr': { title: 'Meeting: DLR Stuttgart - March 4', category: 'appointments', badge: 'badge-appt',
+                content: `MEETING: DLR STUTTGART
+
+DETAILS:
+- Date: March 4, 2026
+- Time: 15:00 CET
+- Duration: 60 minutes
+- Status: CONFIRMED
+
+CONTACTS:
+- Dr. Rémi Costa (Primary)
+- Prof. Andreas Friedrich
+- Institution: German Aerospace Center
+
+TOPIC:
+Electrochemical energy & syngas integration
+
+PREPARATION:
+- [ ] X-150 technical presentation
+- [ ] Review DLR research areas
+- [ ] Collaboration proposal draft
+- [ ] Horizon Europe eligibility check
+- [ ] Test video connection
+
+KEY POINTS:
+1. X-150 syngas quality
+2. Electrochemical conversion
+3. Integration with DLR systems
+4. Funding opportunities
+5. Pilot feasibility
+
+FOLLOW-UP:
+- Thank-you email (24h)
+- Share technical docs
+- Draft collaboration agreement` },
+
+            'project-anaergia': { title: 'Project: Anaergia Africa - Ghana', category: 'projects', badge: 'badge-proj',
+                content: `PROJECT: ANAERGIA AFRICA - GHANA
+
+CLIENT:
+- Company: Anaergia Africa
+- Contact: Alberto Borello
+- Email: Alberto.Borello@anaergia.com
+- Location: Ghana Golden Foods
+
+DEAL:
+- Value: €1.2M
+- Status: Introduction sent
+- Pipeline Stage: Proposal
+
+SCOPE:
+X-150 for waste-to-energy at palm oil facility
+
+TECHNICAL:
+- Feedstock: Palm kernel shells, EFB
+- Throughput: 500 kg/h
+- Application: Process heat & power
+
+TIMELINE:
+- Q2 2026: Contract
+- Q3 2026: Site prep
+- Q4 2026: Delivery
+- Q1 2027: Commissioning
+
+NEXT ACTIONS:
+- [ ] Clemens follow-up (March 10)
+- [ ] Technical proposal
+- [ ] Site visit scheduling
+- [ ] Contract draft
+
+RISKS:
+- Currency fluctuation
+- Import logistics
+- Local regulatory approval` },
+
+            'project-rbi': { title: 'Project: RBI Jena - CCM', category: 'projects', badge: 'badge-proj',
+                content: `PROJECT: RBI JENA - CCM COLLABORATION
+
+PARTNER:
+Robert Boyle Institute (RBI), Jena
+
+STATUS:
+Operational - 85% complete
+
+TECHNICAL:
+- CO2 Source: X-150 #001
+- Capture: Chemical absorption
+- Mineralization: Steel slag
+- Product: Calcium carbonate
+
+PERFORMANCE:
+- CO2 Captured: 342 tons
+- Capture Rate: 90%
+- Efficiency: 85%
+
+ECONOMICS:
+- Cost: €65/ton CO2
+- Revenue: €45/ton (products)
+- Net: €20/ton
+
+NEXT PHASE:
+- Scale to 1,000 tons/year
+- Additional X-150 unit
+- Product market development
+
+PUBLICATIONS:
+- Joint paper in prep
+- Conference scheduled` },
+
+            'competitor-sierra': { title: 'Competitor: Sierra Energy', category: 'competitive', badge: 'badge-comp',
+                content: `COMPETITOR ANALYSIS: SIERRA ENERGY
+
+OVERVIEW:
+- Founded: 2004 (20+ years)
+- HQ: Davis, California
+- Technology: FastOx Gasification
+- Employees: 2-10
+
+TECHNOLOGY:
+- Type: High-temp melt gasification
+- Temperature: ~2,200°C
+- Feedstock: Mixed waste
+- Capacity: 100-500 tons/day
+
+FUNDING:
+- Total: $33M (Series A, 2019)
+- Lead: Breakthrough Energy (Bill Gates)
+- Other: Cox Enterprises ($10M)
+
+STATUS:
+- Demo: Fort Hunter Liggett (10 tons/day)
+- Commercial: None operational
+- Issues: 2nd gen demo being built
+
+COMPARISON:
+| Aspect | Sierra | Zero-X |
+|--------|--------|--------|
+| Scale | 100-500 t/d | 50-500 kW |
+| Status | Demo | Early commercial |
+| Team | 2-10 | [TBD] |
+| Focus | Centralized | Decentralized |
+
+STRATEGIC IMPLICATIONS:
+- NOT direct competitors
+- Zero-X: simpler, modular, faster
+- Different markets
+- Focus on different use cases` },
+
+            'market-mining': { title: 'Market: Remote Mining', category: 'competitive', badge: 'badge-comp',
+                content: `MARKET: REMOTE MINING (Priority 1)
+
+WHY:
+- High diesel costs
+- Waste disposal needs
+- Remote locations
+- Clear ROI
+
+TARGETS:
+- Rio Tinto
+- BHP
+- Vale
+- Glencore
+- Anglo American
+
+VALUE PROPOSITION:
+- Replace diesel generators
+- Reduce logistics costs
+- Waste-to-energy on-site
+- 24/7 power availability
+
+ENTRY STRATEGY:
+- Partner with mining eng. depts
+- Pilot at remote site
+- Demonstrate ROI
+- Scale to multiple sites
+
+CONTACTS MADE:
+- University of Arizona
+- Colorado School of Mines
+- Montana Tech
+- Virginia Tech
+- Penn State
+- Queen's University (Canada)
+- UBC
+- University of Queensland
+
+NEXT STEPS:
+- Follow up on university contacts
+- Identify pilot site opportunities
+- Develop mining-specific proposal` },
+
+            'military-market': { title: 'Military/Defense Market', category: 'competitive', badge: 'badge-comp',
+                content: `MILITARY/DEFENSE MARKET ENTRY
+
+US MARKET:
+
+SBIR Program:
+- Phase I: $300K (concept)
+- Phase II: $1-2M (prototype)
+- Phase III: Commercial
+- Need: US company, <500 employees
+
+DIU:
+- Faster than SBIR
+- Commercial Solutions Opening
+- Innovative commercial tech
+
+xTechSearch:
+- Annual competition
+- Prize money + exposure
+- Army Futures Command
+
+GERMANY:
+
+IDZ:
+- Supports KMU/startups
+- Annual competition
+- Funding for development
+
+UniBw:
+- München: IET (energy)
+- Hamburg: HSU
+- Research partnerships
+
+BAAINBw:
+- Equipment procurement
+- Long sales cycles
+
+INTERNATIONAL:
+
+Sweden - FOI:
+- Energy security research
+- Contact: info@foi.se
+
+UK - Dstl:
+- Waste-to-energy interest
+- enquiries@dstl.gov.uk
+
+NATO:
+- SPS (Science for Peace)
+- DIANA (Innovation Accelerator)
+
+USE CASES:
+- Forward Operating Bases
+- Remote outposts
+- Disaster relief
+- Humanitarian missions` }
+        };
+
+        let currentDoc = null;
+
+        function renderDocs(filter = 'all') {
+            const grid = document.getElementById('docGrid');
+            grid.innerHTML = '';
+            
+            Object.entries(documents).forEach(([key, doc]) => {
+                if (filter !== 'all' && doc.category !== filter) return;
+                
+                const card = document.createElement('div');
+                card.className = 'doc-card p-4';
+                card.onclick = () => selectDoc(key);
+                card.innerHTML = `
+                    <span class="category-badge ${doc.badge}">${doc.category}</span>
+                    <h4 class="font-semibold text-sm mt-2">${doc.title}</h4>
+                    <p class="text-xs text-gray-400 mt-1 line-clamp-2">${doc.content.substring(0, 100)}...</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function selectDoc(key) {
+            currentDoc = key;
+            const doc = documents[key];
+            document.getElementById('editorSection').style.display = 'block';
+            document.getElementById('editorTitle').textContent = doc.title;
+            document.getElementById('editorBadge').className = 'category-badge ' + doc.badge;
+            document.getElementById('editorBadge').textContent = doc.category;
+            document.getElementById('editor').value = doc.content;
+            document.getElementById('preview').textContent = doc.content;
+            window.scrollTo(0, document.getElementById('editorSection').offsetTop);
+        }
+
+        function closeEditor() {
+            document.getElementById('editorSection').style.display = 'none';
+            currentDoc = null;
+        }
+
+        function saveDocument() {
+            if (currentDoc) {
+                documents[currentDoc].content = document.getElementById('editor').value;
+                document.getElementById('preview').textContent = documents[currentDoc].content;
+                alert('Document saved! (In-memory only for demo)');
+            }
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById('editor').classList.toggle('hidden', tab !== 'edit');
+            document.getElementById('preview').classList.toggle('hidden', tab !== 'preview');
+        }
+
+        function filterCategory(cat) {
+            renderDocs(cat);
+        }
+
+        renderDocs();
+    </script>
+</body>
+</html>

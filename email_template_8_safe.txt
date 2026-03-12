@@ -1,0 +1,35 @@
+Subject: Research Collaboration – Modular Biomass CHP System X-150
+
+Dear Professor {{NAME}},
+
+I am reaching out from Zero-X Labs, a technology company developing modular biomass-to-energy systems for emerging markets. We are preparing a proposal for the EU Global Gateway Early-Stage Investment Mechanism and are seeking research partners with expertise in thermochemical conversion and sustainable energy systems.
+
+Our X-150 system is a 150kW modular CHP unit designed specifically for agricultural processing facilities in Sub-Saharan Africa. The system converts biomass residues (coffee husks, sisal waste, bagasse) into electricity and process heat, targeting energy access gaps in rural Uganda and Kenya.
+
+We are particularly interested in exploring collaboration opportunities in:
+• Thermochemical process optimization for tropical biomass feedstocks
+• Gas cleaning and tar reforming for small-scale gasification
+• System integration with existing agricultural processing infrastructure
+• Joint Horizon Europe or bilateral research proposals
+
+Your research at {{INSTITUTION}} in {{FIELD}} aligns closely with our technical needs. We would welcome the opportunity to discuss potential partnership structures, including:
+• Co-development of pilot projects in East Africa
+• Joint research publications and knowledge exchange
+• Student/researcher exchange programs
+• Collaborative grant applications
+
+We have a confirmed meeting with DLR Stuttgart (Institute of Engineering Thermodynamics) in March to discuss syngas integration, and we are looking to build a broader consortium of European and African research partners.
+
+Would you be available for a brief video call in the coming weeks to explore this further? We are flexible with timing and can accommodate your schedule.
+
+Thank you for your time and consideration. I look forward to hearing from you.
+
+Best regards,
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290
+
+---
+Disclaimer: We seek research partners, not customers. This inquiry is part of our academic collaboration outreach.

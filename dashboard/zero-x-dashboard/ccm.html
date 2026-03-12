@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCM Projects - Zero-X Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root { --background: #0A0F0A; --card: #121A12; --border: #1F3D1F; --primary: #22C55E; }
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        .glass { background: rgba(18, 26, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+        .nav-item:hover { background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--primary); }
+        .nav-item.active { background: rgba(34, 197, 94, 0.15); border-left: 3px solid var(--primary); }
+        .empty-state { text-align: center; padding: 64px 24px; color: #64748B; }
+        .empty-icon { width: 80px; height: 80px; margin: 0 auto 20px; background: rgba(31, 61, 31, 0.5); border-radius: 20px; display: flex; align-items: center; justify-content: center; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 100; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .modal-content { background: var(--card); border: 1px solid var(--border); border-radius: 12px; width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; }
+        .form-input { width: 100%; background: var(--background); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: #F8FAFC; font-size: 14px; margin-top: 6px; }
+        .form-input:focus { outline: none; border-color: var(--primary); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="layout-dashboard" class="w-5 h-5"></i><span>Dashboard</span></a>
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flame" class="w-5 h-5"></i><span>X-150 System</span></a>
+                <a href="ccm.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"><i data-lucide="factory" class="w-5 h-5"></i><span>CCM Projects</span></a>
+                <a href="rd.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flask-conical" class="w-5 h-5"></i><span>R&D</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="trending-up" class="w-5 h-5"></i><span>Sales Pipeline</span></a>
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="wrench" class="w-5 h-5"></i><span>Installations</span></a>
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="handshake" class="w-5 h-5"></i><span>Partners</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">System</div>
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a>
+                <a href="memory.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="brain" class="w-5 h-5"></i><span>Memory System</span></a>
+                <a href="documents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="folder-open" class="w-5 h-5"></i><span>Documents</span></a>
+            </nav>
+        </aside>
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold">CCM Projects</h2>
+                    <p class="text-gray-400 text-sm mt-1">Carbon Capture & Mineralization projects</p>
+                </div>
+                <button onclick="openModal()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition"><i data-lucide="plus" class="w-4 h-4"></i><span>New Project</span></button>
+            </header>
+            <div class="glass rounded-xl">
+                <div class="empty-state">
+                    <div class="empty-icon"><i data-lucide="factory" class="w-10 h-10 text-gray-500"></i></div>
+                    <h3 class="text-xl font-semibold mb-3">No CCM Projects</h3>
+                    <p class="text-sm mb-6 max-w-md mx-auto">Track your Carbon Capture & Mineralization projects, CO2 capture metrics, and mineralization progress.</p>
+                    <button onclick="openModal()" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition mx-auto"><i data-lucide="plus" class="w-5 h-5"></i><span>Create First Project</span></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal -->
+    <div id="addProjectModal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-[#1F3D1F] flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Add CCM Project</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <form id="addProjectForm" class="p-6 space-y-4">
+                <div>
+                    <label class="text-sm text-gray-400">Project Name</label>
+                    <input type="text" name="name" class="form-input" placeholder="e.g., RBI Jena CCM" required>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Location</label>
+                    <input type="text" name="location" class="form-input" placeholder="e.g., Jena, Germany" required>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Status</label>
+                    <select name="status" class="form-input">
+                        <option value="planning">Planning</option>
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-sm text-gray-400">CO2 Captured (tons)</label>
+                        <input type="number" name="co2" class="form-input" placeholder="0">
+                    </div>
+                    <div>
+                        <label class="text-sm text-gray-400">Capture Rate (%)</label>
+                        <input type="number" name="rate" class="form-input" placeholder="85">
+                    </div>
+                </div>
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeModal()" class="flex-1 px-4 py-2 rounded-lg border border-[#1F3D1F] text-gray-400 hover:bg-[#1F3D1F] transition">Cancel</button>
+                    <button type="submit" class="flex-1 px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition">Add Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        let projects = JSON.parse(localStorage.getItem('zerox_ccm_projects') || '[]');
+        
+        function openModal() { document.getElementById('addProjectModal').classList.add('active'); }
+        function closeModal() { document.getElementById('addProjectModal').classList.remove('active'); document.getElementById('addProjectForm').reset(); }
+        
+        document.getElementById('addProjectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            projects.push({
+                name: formData.get('name'),
+                location: formData.get('location'),
+                status: formData.get('status'),
+                co2: formData.get('co2'),
+                rate: formData.get('rate')
+            });
+            localStorage.setItem('zerox_ccm_projects', JSON.stringify(projects));
+            closeModal();
+            alert('Project added successfully!');
+        });
+        
+        document.getElementById('addProjectModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+    </script>
+</body>
+</html>

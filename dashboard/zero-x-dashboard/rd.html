@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&D - Zero-X Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --background: #0A0F0A;
+            --card: #121A12;
+            --border: #1F3D1F;
+            --primary: #22C55E;
+        }
+        
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        
+        .glass {
+            background: rgba(18, 26, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+        }
+        
+        .nav-item:hover {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .nav-item.active {
+            background: rgba(34, 197, 94, 0.15);
+            border-left: 3px solid var(--primary);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 64px 24px;
+            color: #64748B;
+        }
+        
+        .empty-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(31, 61, 31, 0.5);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 100; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .modal-content { background: var(--card); border: 1px solid var(--border); border-radius: 12px; width: 90%; max-width: 500px; max-height: 90vh; overflow-y: auto; }
+        .form-input { width: 100%; background: var(--background); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; color: #F8FAFC; font-size: 14px; margin-top: 6px; }
+        .form-input:focus { outline: none; border-color: var(--primary); }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="flame" class="w-5 h-5"></i>
+                    <span>X-150 System</span>
+                </a>
+                
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="factory" class="w-5 h-5"></i>
+                    <span>CCM Projects</span>
+                </a>
+                
+                <a href="rd.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all">
+                    <i data-lucide="flask-conical" class="w-5 h-5"></i>
+                    <span>R&D</span>
+                </a>
+                
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    <span>Sales Pipeline</span>
+                </a>
+                
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="wrench" class="w-5 h-5"></i>
+                    <span>Installations</span>
+                </a>
+                
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all">
+                    <i data-lucide="handshake" class="w-5 h-5"></i>
+                    <span>Partners</span>
+                </a>
+                
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">System</div>
+                
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a>
+                <a href="memory.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="brain" class="w-5 h-5"></i><span>Memory System</span></a>
+                <a href="documents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="folder-open" class="w-5 h-5"></i><span>Documents</span></a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold">Research & Development</h2>
+                    <p class="text-gray-400 text-sm mt-1">Experiments, testing, and innovation</p>
+                </div>
+                <button onclick="openModal()" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition">
+                    <i data-lucide="plus" class="w-4 h-4"></i>
+                    <span>New Experiment</span>
+                </button>
+            </header>
+            
+            <!-- Stats - Empty -->
+            <div class="grid grid-cols-4 gap-6 mb-8">
+                <div class="glass rounded-xl p-6">
+                    <div class="text-sm text-gray-400 mb-2">Active Experiments</div>
+                    <div class="text-3xl font-bold">--</div>
+                </div>
+                <div class="glass rounded-xl p-6">
+                    <div class="text-sm text-gray-400 mb-2">Completed This Month</div>
+                    <div class="text-3xl font-bold">--</div>
+                </div>
+                <div class="glass rounded-xl p-6">
+                    <div class="text-sm text-gray-400 mb-2">Publications</div>
+                    <div class="text-3xl font-bold">--</div>
+                </div>
+                <div class="glass rounded-xl p-6">
+                    <div class="text-sm text-gray-400 mb-2">Patents Filed</div>
+                    <div class="text-3xl font-bold">--</div>
+                </div>
+            </div>
+            
+            <!-- Empty State -->
+            <div class="glass rounded-xl">
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i data-lucide="flask-conical" class="w-10 h-10 text-gray-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">No Experiments Recorded</h3>
+                    <p class="text-sm mb-6 max-w-md mx-auto">Start tracking your R&D activities, feedstock tests, gasification trials, and CCM experiments.</p>
+                    <button onclick="openModal()" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition mx-auto">
+                        <i data-lucide="plus" class="w-5 h-5"></i>
+                        <span>Create First Experiment</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Modal -->
+    <div id="addExperimentModal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-[#1F3D1F] flex justify-between items-center">
+                <h3 class="text-lg font-semibold">Add Experiment</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <form id="addExperimentForm" class="p-6 space-y-4">
+                <div>
+                    <label class="text-sm text-gray-400">Experiment Name</label>
+                    <input type="text" name="name" class="form-input" placeholder="e.g., Sludge Gasification Test #1" required>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Type</label>
+                    <select name="type" class="form-input">
+                        <option value="feedstock">Feedstock Test</option>
+                        <option value="gasification">Gasification</option>
+                        <option value="ccm">CCM</option>
+                        <option value="cooling">Cooling</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Status</label>
+                    <select name="status" class="form-input">
+                        <option value="planned">Planned</option>
+                        <option value="running">Running</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-sm text-gray-400">Notes</label>
+                    <textarea name="notes" class="form-input" rows="3" placeholder="Experiment description..."></textarea>
+                </div>
+                <div class="pt-4 flex gap-3">
+                    <button type="button" onclick="closeModal()" class="flex-1 px-4 py-2 rounded-lg border border-[#1F3D1F] text-gray-400 hover:bg-[#1F3D1F] transition">Cancel</button>
+                    <button type="submit" class="flex-1 px-4 py-2 rounded-lg bg-green-500/20 text-green-400 hover:bg-green-500/30 transition">Add Experiment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        let experiments = JSON.parse(localStorage.getItem('zerox_rd_experiments') || '[]');
+        
+        function openModal() { document.getElementById('addExperimentModal').classList.add('active'); }
+        function closeModal() { document.getElementById('addExperimentModal').classList.remove('active'); document.getElementById('addExperimentForm').reset(); }
+        
+        document.getElementById('addExperimentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            experiments.push({
+                name: formData.get('name'),
+                type: formData.get('type'),
+                status: formData.get('status'),
+                notes: formData.get('notes'),
+                date: new Date().toISOString()
+            });
+            localStorage.setItem('zerox_rd_experiments', JSON.stringify(experiments));
+            closeModal();
+            alert('Experiment added successfully!');
+        });
+        
+        document.getElementById('addExperimentModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+    </script>
+</body>
+</html>

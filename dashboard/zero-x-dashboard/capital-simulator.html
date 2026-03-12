@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-X Labs - Capital Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root { --background: #0A0F0A; --card: #121A12; --border: #1F3D1F; --primary: #22C55E; }
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        .glass { background: rgba(18, 26, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+        .nav-item:hover { background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--primary); }
+        .nav-item.active { background: rgba(34, 197, 94, 0.15); border-left: 3px solid var(--primary); }
+        .gradient-text { background: linear-gradient(135deg, #22C55E 0%, #06B6D4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-primary { background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%); }
+        .input-field { background: rgba(31, 61, 31, 0.5); border: 1px solid rgba(34, 197, 94, 0.3); }
+        .metric-card { background: linear-gradient(135deg, rgba(18, 26, 18, 0.9) 0%, rgba(31, 61, 31, 0.4) 100%); border: 1px solid var(--border); }
+        .score-excellent { background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%); }
+        .score-good { background: linear-gradient(135deg, #84CC16 0%, #65A30D 100%); }
+        .score-acceptable { background: linear-gradient(135deg, #EAB308 0%, #CA8A04 100%); }
+        .score-poor { background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%); }
+        .usp-highlight { background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3); }
+        .slider { -webkit-appearance: none; height: 6px; background: rgba(31, 61, 31, 0.5); border-radius: 3px; }
+        .slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: #22C55E; border-radius: 50%; cursor: pointer; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="layout-dashboard" class="w-5 h-5"></i><span>Dashboard</span></a>
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flame" class="w-5 h-5"></i><span>X-150 System</span></a>
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="factory" class="w-5 h-5"></i><span>CCM Projects</span></a>
+                <a href="capital-simulator.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"><i data-lucide="calculator" class="w-5 h-5"></i><span>Capital Simulator</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="trending-up" class="w-5 h-5"></i><span>Sales Pipeline</span></a>
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="mb-8">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold gradient-text">Capital Simulator</h2>
+                        <p class="text-gray-400 text-sm mt-1">Ultimate project configuration & financial advisor</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button onclick="loadScenario('ghana')" class="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-sm">Ghana Palm</button>
+                        <button onclick="loadScenario('datacenter')" class="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-sm">Data Center</button>
+                        <button onclick="loadScenario('germany')" class="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-sm">German CHP</button>
+                        <button onclick="resetModel()" class="btn-primary px-4 py-2 rounded-lg text-sm">Reset</button>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Top Metrics -->
+            <div class="grid grid-cols-5 gap-4 mb-6">
+                <div class="metric-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Project IRR</div>
+                    <div class="text-2xl font-bold text-green-400" id="metricIRR">28.4%</div>
+                    <div class="text-xs text-gray-500">Target: >15%</div>
+                </div>
+                <div class="metric-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Equity IRR</div>
+                    <div class="text-2xl font-bold text-cyan-400" id="metricEquityIRR">38.2%</div>
+                    <div class="text-xs text-gray-500">Target: >20%</div>
+                </div>
+                <div class="metric-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Payback</div>
+                    <div class="text-2xl font-bold text-yellow-400" id="metricPayback">3.2 yrs</div>
+                    <div class="text-xs text-gray-500">Target: <7 yrs</div>
+                </div>
+                <div class="metric-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">NPV (10%)</div>
+                    <div class="text-2xl font-bold text-purple-400" id="metricNPV">€1.85M</div>
+                    <div class="text-xs text-gray-500">20-year project</div>
+                </div>
+                <div class="metric-card rounded-xl p-4">
+                    <div class="text-sm text-gray-400 mb-1">Investment Score</div>
+                    <div class="flex items-center gap-2">
+                        <div class="text-3xl font-bold" id="metricScore">8</div>
+                        <div class="text-xs px-2 py-1 rounded score-good" id="scoreBadge">/10</div>
+                    </div>
+                    <div class="text-xs text-gray-500" id="scoreLabel">Strong Investment</div>
+                </div>
+            </div>
+            
+            <!-- Configuration & Financial Grid -->
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <!-- Configuration -->
+                <div class="glass rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i data-lucide="settings" class="w-5 h-5 text-green-400"></i>Configuration</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">System Options</h4>
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="optCHP" class="w-5 h-5 rounded bg-gray-700 text-green-500" onchange="updateModel()">
+                                <span class="text-sm">Combined Heat & Power</span>
+                                <span class="text-xs text-gray-500 ml-auto">+€80K</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="optTrigeneration" class="w-5 h-5 rounded bg-gray-700 text-green-500" onchange="updateModel()">
+                                <span class="text-sm">Trigeneration (Cooling)</span>
+                                <span class="text-xs text-gray-500 ml-auto">+€80K</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="optCCM" class="w-5 h-5 rounded bg-gray-700 text-green-500" onchange="updateModel()">
+                                <span class="text-sm">Carbon Capture (CCM)</span>
+                                <span class="text-xs text-gray-500 ml-auto">+€150K</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Fuel Type</h4>
+                        <select id="fuelType" class="w-full input-field rounded-lg px-3 py-2 text-sm" onchange="updateModel()">
+                            <option value="pellets" data-price="220">Wood Pellets (€220/t)</option>
+                            <option value="chips" data-price="120">Wood Chips (€120/t)</option>
+                            <option value="palm" data-price="80">Palm Kernel Shells (€80/t)</option>
+                            <option value="rice" data-price="40">Rice Husks (€40/t)</option>
+                            <option value="bagasse" data-price="25">Bagasse (€25/t)</option>
+                            <option value="rdf" data-price="-10">RDF (-€10/t gate fee)</option>
+                            <option value="sludge" data-price="-30">Sewage Sludge (-€30/t gate fee)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Operating</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span>Hours/Year</span><span id="hoursValue" class="text-green-400">8,300</span></div>
+                                <input type="range" id="operatingHours" min="4000" max="8760" value="8300" class="slider w-full" oninput="updateModel()">
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1"><span>Electricity Price</span><span id="elecPriceValue" class="text-green-400">€0.15/kWh</span></div>
+                                <input type="range" id="elecPrice" min="0.08" max="0.35" step="0.01" value="0.15" class="slider w-full" oninput="updateModel()">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Revenue Streams</h4>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="revBiochar" class="w-4 h-4 rounded bg-gray-700 text-green-500" checked onchange="updateModel()">
+                                <span class="text-sm">Biochar Sales</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="revCarbon" class="w-4 h-4 rounded bg-gray-700 text-green-500" checked onchange="updateModel()">
+                                <span class="text-sm">Carbon Credits</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="revHeat" class="w-4 h-4 rounded bg-gray-700 text-green-500" onchange="updateModel()">
+                                <span class="text-sm">Heat Sales</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="revCooling" class="w-4 h-4 rounded bg-gray-700 text-green-500" onchange="updateModel()">
+                                <span class="text-sm">Cooling Sales</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Financial Summary -->
+                <div class="glass rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i data-lucide="dollar-sign" class="w-5 h-5 text-yellow-400"></i>Financial Summary</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">CAPEX</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-400">X-150 Base Unit</span><span>€500,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Installation</span><span>€100,000</span></div>
+                            <div class="flex justify-between" id="capexCHPRow" style="display:none"><span class="text-gray-400">CHP System</span><span>€80,000</span></div>
+                            <div class="flex justify-between" id="capexTrigRow" style="display:none"><span class="text-gray-400">Absorption Chiller</span><span>€80,000</span></div>
+                            <div class="flex justify-between" id="capexCCMRow" style="display:none"><span class="text-gray-400">CCM Module</span><span>€150,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Grid Connection</span><span>€100,000</span></div>
+                            <div class="flex justify-between border-t border-gray-700 pt-2"><span class="text-gray-400">Subtotal</span><span id="capexSubtotal">€700,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Contingency (10%)</span><span id="capexContingency">€70,000</span></div>
+                            <div class="flex justify-between text-green-400 font-semibold border-t border-gray-700 pt-2"><span>Total CAPEX</span><span id="capexTotal">€770,000</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Annual OPEX</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-400">Fuel</span><span id="opexFuel">€182,600</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Labor</span><span>€35,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Maintenance</span><span>€40,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Insurance</span><span>€11,000</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400">Admin</span><span>€12,000</span></div>
+                            <div class="flex justify-between text-red-400 font-semibold border-t border-gray-700 pt-2"><span>Total OPEX</span><span id="opexTotal">€280,600</span></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Annual Revenue</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-400">Electricity</span><span id="revElec">€180,525</span></div>
+                            <div class="flex justify-between" id="rowHeat" style="display:none"><span class="text-gray-400">Heat</span><span id="revHeat">€0</span></div>
+                            <div class="flex justify-between" id="rowCooling" style="display:none"><span class="text-gray-400">Cooling</span><span id="revCooling">€0</span></div>
+                            <div class="flex justify-between" id="rowBiochar"><span class="text-gray-400">Biochar</span><span id="revBiocharVal">€166,000</span></div>
+                            <div class="flex justify-between" id="rowCarbon"><span class="text-gray-400">Carbon Credits</span><span id="revCarbonVal">€96,280</span></div>
+                            <div class="flex justify-between text-green-400 font-semibold border-t border-gray-700 pt-2"><span>Total Revenue</span><span id="revTotal">€442,805</span></div>
+                            <div class="flex justify-between text-cyan-400 font-semibold border-t border-gray-700 pt-2"><span>Net Cash Flow</span><span id="cashFlow">€162,205</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- USP & Competitors -->
+                <div class="space-y-6">
+                    <div class="usp-highlight rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i data-lucide="star" class="w-5 h-5 text-yellow-400"></i>Zero-X USPs</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i><span><strong>Proven:</strong> 1,000+ hours validated (Cométha)</span></div>
+                            <div class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i><span><strong>Multi-Output:</strong> 5 revenue streams</span></div>
+                            <div class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i><span><strong>Fuel Flex:</strong> Pellets to sewage sludge</span></div>
+                            <div class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i><span><strong>Containerized:</strong> Deploy anywhere</span></div>
+                            <div class="flex gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5"></i><span><strong>Carbon Negative:</strong> CCM + biochar</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="glass rounded-2xl p-6">
+                        <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-cyan-400"></i>Competitors</h3>
+                        <div class="space-y-3 text-xs">
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <div class="flex justify-between mb-1"><span class="font-medium">2G Energy</span><span class="text-gray-500">CHP Leader</span></div>
+                                <p class="text-gray-400">Gas engine, biogas only, elec+heat</p>
+                                <p class="text-green-400 mt-1">Z-X: Fuel flex, biochar, containerized</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <div class="flex justify-between mb-1"><span class="font-medium">Sierra Energy</span><span class="text-gray-500">Gasification</span></div>
+                                <p class="text-gray-400">FastOx 2,200°C, demo phase</p>
+                                <p class="text-green-400 mt-1">Z-X: Simpler, proven, modular</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <div class="flex justify-between mb-1"><span class="font-medium">Pyrolysis</span><span class="text-gray-500">Biochar</span></div>
+                                <p class="text-gray-400">Biochar only, energy wasted</p>
+                                <p class="text-green-400 mt-1">Z-X: Full energy utilization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sales Script Generator -->
+            <div class="glass rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2"><i data-lucide="message-square" class="w-5 h-5 text-purple-400"></i>Sales Advisor - Customer Value Proposition</h3>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Key Talking Points</h4>
+                        <div class="space-y-2 text-sm" id="talkingPoints">
+                            <div class="flex gap-2 items-start"><span class="text-green-400 font-bold">1.</span><span>Payback in <strong id="talkPayback">3.2 years</strong> - faster than solar (6-8 yrs)</span></div>
+                            <div class="flex gap-2 items-start"><span class="text-green-400 font-bold">2.</span><span>Annual savings of <strong id="talkSavings">€162,205</strong> vs grid/diesel</span></div>
+                            <div class="flex gap-2 items-start"><span class="text-green-400 font-bold">3.</span><span>20-year NPV of <strong id="talkNPV">€1.85M</strong> - exceptional returns</span></div>
+                            <div class="flex gap-2 items-start"><span class="text-green-400 font-bold">4.</span><span>Carbon negative with <strong>biochar + CCM</strong></span></div>
+                            <div class="flex gap-2 items-start"><span class="text-green-400 font-bold">5.</span><span>Proven 1,000+ hours - not experimental</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Objection Handling</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <p class="text-gray-400 font-medium">"Too expensive"</p>
+                                <p class="text-green-400">ROI of 28% - pays for itself in 3.2 years. Financing available.</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <p class="text-gray-400 font-medium">"Unproven technology"</p>
+                                <p class="text-green-400">1,000+ hours validated in Paris. Commercial deployments active.</p>
+                            </div>
+                            <div class="bg-gray-800/50 rounded-lg p-3">
+                                <p class="text-gray-400 font-medium">"Fuel supply risk"</p>
+                                <p class="text-green-400">Multiple fuel types accepted. We help secure 5-year contracts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        lucide.createIcons();
+        
+        const fuelData = {
+            pellets: { price: 220, consumption: 0.83, name: 'Wood Pellets' },
+            chips: { price: 120, consumption: 0.83, name: 'Wood Chips' },
+            palm: { price: 80, consumption: 0.83, name: 'Palm Kernel Shells' },
+            rice: { price: 40, consumption: 0.83, name: 'Rice Husks' },
+            bagasse: { price: 25, consumption: 0.83, name: 'Bagasse' },
+            rdf: { price: -10, consumption: 0.83, name: 'RDF' },
+            sludge: { price: -30, consumption: 0.83, name: 'Sewage Sludge' }
+        };
+        
+        function updateModel() {
+            const hours = parseInt(document.getElementById('operatingHours').value);
+            const elecPrice = parseFloat(document.getElementById('elecPrice').value);
+            const fuelType = document.getElementById('fuelType').value;
+            const fuel = fuelData[fuelType];
+            
+            // Update display values
+            document.getElementById('hoursValue').textContent = hours.toLocaleString();
+            document.getElementById('elecPriceValue').textContent = '€' + elecPrice.toFixed(2) + '/kWh';
+            
+            // CAPEX calculation
+            let capex = 700000; // Base + install + grid
+            if (document.getElementById('optCHP').checked) capex += 80000;
+            if (document.getElementById('optTrigeneration').checked) capex += 80000;
+            if (document.getElementById('optCCM').checked) capex += 150000;
+            
+            document.getElementById('capexCHPRow').style.display = document.getElementById('optCHP').checked ? 'flex' : 'none';
+            document.getElementById('capexTrigRow').style.display = document.getElementById('optTrigeneration').checked ? 'flex' : 'none';
+            document.getElementById('capexCCMRow').style.display = document.getElementById('optCCM').checked ? 'flex' : 'none';
+            document.getElementById('capexSubtotal').textContent = '€' + capex.toLocaleString();
+            document.getElementById('capexContingency').textContent = '€' + Math.round(capex * 0.1).toLocaleString();
+            document.getElementById('capexTotal').textContent = '€' + Math.round(capex * 1.1).toLocaleString();
+            
+            // OPEX calculation
+            const annualFuelTons = 830 * (hours / 8300);
+            const fuelCost = fuel.price * annualFuelTons;
+            const opex = fuelCost + 35000 + 40000 + 11000 + 12000;
+            document.getElementById('opexFuel').textContent = '€' + Math.round(fuelCost).toLocaleString();
+            document.getElementById('opexTotal').textContent = '€' + Math.round(opex).toLocaleString();
+            
+            // Revenue calculation
+            const elecRevenue = 150 * hours * elecPrice;
+            let heatRevenue = 0, coolingRevenue = 0;
+            
+            if (document.getElementById('revHeat').checked && document.getElementById('optCHP').checked) {
+                heatRevenue = 350 * hours * 0.06;
+            }
+            if (document.getElementById('revCooling').checked && document.getElementById('optTrigeneration').checked) {
+                coolingRevenue = 250 * hours * 0.08;
+            }
+            
+            const biocharRevenue = document.getElementById('revBiochar').checked ? (200 * annualFuelTons) : 0;
+            const carbonRevenue = document.getElementById('revCarbon').checked ? (0.8 * 150 * hours * 0.08) : 0;
+            
+            const totalRevenue = elecRevenue + heatRevenue + coolingRevenue + biocharRevenue + carbonRevenue;
+            const cashFlow = totalRevenue - opex;
+            
+            document.getElementById('revElec').textContent = '€' + Math.round(elecRevenue).toLocaleString();
+            document.getElementById('rowHeat').style.display = (document.getElementById('revHeat').checked && document.getElementById('optCHP').checked) ? 'flex' : 'none';
+            document.getElementById('revHeat').textContent = '€' + Math.round(heatRevenue).toLocaleString();
+            document.getElementById('rowCooling').style.display = (document.getElementById('revCooling').checked && document.getElementById('optTrigeneration').checked) ? 'flex' : 'none';
+            document.getElementById('revCooling').textContent = '€' + Math.round(coolingRevenue).toLocaleString();
+            document.getElementById('rowBiochar').style.display = document.getElementById('revBiochar').checked ? 'flex' : 'none';
+            document.getElementById('revBiocharVal').textContent = '€' + Math.round(biocharRevenue).toLocaleString();
+            document.getElementById('rowCarbon').style.display = document.getElementById('revCarbon').checked ? 'flex' : 'none';
+            document.getElementById('revCarbonVal').textContent = '€' + Math.round(carbonRevenue).toLocaleString();
+            document.getElementById('revTotal').textContent = '€' + Math.round(totalRevenue).toLocaleString();
+            document.getElementById('cashFlow').textContent = '€' + Math.round(cashFlow).toLocaleString();
+            
+            // Calculate metrics
+            const totalCapex = capex * 1.1;
+            const payback = totalCapex / cashFlow;
+            const irr = calculateIRR(totalCapex, cashFlow, 20);
+            const npv = calculateNPV(totalCapex, cashFlow, 0.10, 20);
+            
+            document.getElementById('metricIRR').textContent = irr.toFixed(1) + '%';
+            document.getElementById('metricEquityIRR').textContent = (irr * 1.35).toFixed(1) + '%';
+            document.getElementById('metricPayback').textContent = payback.toFixed(1) + ' yrs';
+            document.getElementById('metricNPV').textContent = '€' + (npv / 1000000).toFixed(2) + 'M';
+            
+            // Score calculation
+            let score = 5;
+            if (irr > 15) score += 1;
+            if (irr > 25) score += 1;
+            if (payback < 5) score += 1;
+            if (payback < 3) score += 1;
+            if (npv > 1000000) score +== 1;
+            if (fuel.price < 0) score += 1;
+            score = Math.min(10, Math.max(1, score));
+            
+            document.getElementById('metricScore').textContent = score;
+            const badge = document.getElementById('scoreBadge');
+            const label = document.getElementById('scoreLabel');
+            
+            badge.className = 'text-xs px-2 py-1 rounded ' + (score >= 8 ? 'score-excellent' : score >= 6 ? 'score-good' : score >= 4 ? 'score-acceptable' : 'score-poor');
+            label.textContent = score >= 8 ? 'Excellent Investment' : score >= 6 ? 'Strong Investment' : score >= 4 ? 'Acceptable' : 'High Risk';
+            
+            // Update talking points
+            document.getElementById('talkPayback').textContent = payback.toFixed(1) + ' years';
+            document.getElementById('talkSavings').textContent = '€' + Math.round(cashFlow).toLocaleString();
+            document.getElementById('talkNPV').textContent = '€' + (npv / 1000000).toFixed(2) + 'M';
+        }
+        
+        function calculateIRR(initialInvestment, annualCashFlow, years) {
+            let irr = 0.1;
+            for (let i = 0; i < 100; i++) {
+                let npv = -initialInvestment;
+                for (let year = 1; year <= years; year++) {
+                    npv += annualCashFlow / Math.pow(1 + irr, year);
+                }
+                if (Math.abs(npv) < 1000) break;
+                irr += npv > 0 ? 0.01 : -0.01;
+            }
+            return irr * 100;
+        }
+        
+        function calculateNPV(initialInvestment, annualCashFlow, discountRate, years) {
+            let npv = -initialInvestment;
+            for (let year = 1; year <= years; year++) {
+                npv += annualCashFlow / Math.pow(1 + discountRate, year);
+            }
+            return npv;
+        }
+        
+        function loadScenario(scenario) {
+            if (scenario === 'ghana') {
+                document.getElementById('fuelType').value = 'palm';
+                document.getElementById('elecPrice').value = 0.18;
+                document.getElementById('operatingHours').value = 8300;
+                document.getElementById('optCHP').checked = true;
+                document.getElementById('revHeat').checked = true;
+                document.getElementById('revBiochar').checked = true;
+                document.getElementById('revCarbon').checked = true;
+            } else if (scenario === 'datacenter') {
+                document.getElementById('fuelType').value = 'chips';
+                document.getElementById('elecPrice').value = 0.22;
+                document.getElementById('operatingHours').value = 8760;
+                document.getElementById('optTrigeneration').checked = true;
+                document.getElementById('revCooling').checked = true;
+                document.getElementById('revBiochar').checked = true;
+            } else if (scenario === 'germany') {
+                document.getElementById('fuelType').value = 'pellets';
+                document.getElementById('elecPrice').value = 0.20;
+                document.getElementById('operatingHours').value = 7500;
+                document.getElementById('optCHP').checked = true;
+                document.getElementById('revHeat').checked = true;
+                document.getElementById('revBiochar').checked = true;
+                document.getElementById('revCarbon').checked = true;
+            }
+            updateModel();
+        }
+        
+        function resetModel() {
+            document.getElementById('fuelType').value = 'pellets';
+            document.getElementById('elecPrice').value = 0.15;
+            document.getElementById('operatingHours').value = 8300;
+            document.getElementById('optCHP').checked = false;
+            document.getElementById('optTrigeneration').checked = false;
+            document.getElementById('optCCM').checked = false;
+            document.getElementById('revHeat').checked = false;
+            document.getElementById('revCooling').checked = false;
+            document.getElementById('revBiochar').checked = true;
+            document.getElementById('revCarbon').checked = true;
+            updateModel();
+        }
+        
+        // Initialize
+        updateModel();
+    </script>
+</body>
+</html>

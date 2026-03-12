@@ -1,0 +1,31 @@
+{
+  "base44": {
+    "api_key": "8e72cea1a5da495b8a54016a261abbc2",
+    "service": "AI Website/App Builder",
+    "website": "https://base44.com",
+    "docs": "https://docs.base44.com",
+    "sdk_path": "~/.openclaw/workspace/node_modules/@base44/sdk",
+    "test_script": "~/.openclaw/workspace/node_modules/openclaw/scripts/test-base44.js",
+    "status": "active",
+    "troubleshooting_guide": "~/.openclaw/workspace/memory/shared/BASE44_TROUBLESHOOTING.md",
+    "access_level": "all_agents",
+    "use_cases": ["website_building", "app_development", "landing_pages", "dashboards"],
+    "added_date": "2026-02-09",
+    "notes": "Seraph Vision site hosted here. All agents can use for web/app projects."
+  },
+  "dalle": {
+    "provider": "OpenAI",
+    "models": ["dall-e-3", "dall-e-2", "gpt-image-1"],
+    "status": "active",
+    "best_for": ["marketing_materials", "photorealistic", "presentations"],
+    "access_level": "all_agents"
+  },
+  "nano_banana": {
+    "provider": "Google Gemini 3 Pro Image",
+    "status": "active",
+    "best_for": ["image_editing", "multi_image_composition", "iterative_refinements"],
+    "access_level": "all_agents"
+  },
+  "agents_with_access": ["master_agent", "seraph", "zero-x", "axel"],
+  "last_updated": "2026-02-09T05:00:00Z"
+}

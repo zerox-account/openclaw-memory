@@ -1,0 +1,26 @@
+Betreff: Aw: Research Collaboration – Biomass Gasification & Energy Systems
+
+Sehr geehrter Professor Malmquist,
+
+vielen Dank für Ihre Rückmeldung und diese ausgezeichnete Frage.
+
+Sie haben vollkommen recht, auf GoBiGas zu verweisen – es bleibt ein Meilensteinprojekt, das das Verständnis von Biomasse-zu-SNG über Wirbelschichtvergasung maßgeblich vorangebracht hat. Die Betriebserfahrungen und Daten von GoBiGas sind für das gesamte Feld von unschätzbarem Wert.
+
+Anstatt mit der beeindruckenden GoBiGas-Lösung im Großmaßstab zu konkurrieren, erkundet das X-150 einen anderen Innovationspfad für dezentrale Anwendungen:
+
+GoBiGas: Eine wegweisende Demonstration von SNG-Produktion im Industriemaßstab über Doppel-Wirbelschicht-Vergasung. Die Erkenntnisse des Projekts zu Prozessintegration und System-Skalierung sind fundamental für das gesamte Feld.
+
+X-150: Ein kompakter, modularer Ansatz, der auf Deployment-Einfachheit für industrielle KWK setzt, anstelle von netzgebundener SNG. Unsere Innovation liegt in der Systemarchitektur – ein einzelner Festbettreaktor mit direkter Dampf/O₂-Vergasung macht die Doppel-Wirbelschicht-Konfiguration, den separaten Brenner und die komplexen Wärmeübertragungskreisläufe im Demonstrationsmaßstab überflüssig. Diese architektonische Einfachheit zielt darauf ab, sowohl CAPEX als auch Wartungsaufwand für kleinere Anwendungen zu reduzieren.
+
+Beide Ansätze bedienen unterschiedliche Märkte: GoBiGas zielte auf zentrale SNG-Einspeisung, während wir uns auf dezentrale industrielle Wärme und Strom konzentrieren, wo Deploy-Flexibilität zählt.
+
+Ihre Expertise in Vergasungssystemen an der KTH – insbesondere Ihre Einblicke in das, was bei schwedischen Biomasseprojekten funktioniert hat und welche Herausforderungen sich erwiesen haben – wäre für uns wertvoll, während wir diese Design-Abwägungen navigieren.
+
+Wären Sie offen für ein kurzes Gespräch? Wir würden die Gelegenheit begrüßen, von Ihrer Perspektive zu Biomasse-Energiesystemen im schwedischen Kontext zu lernen.
+
+Mit freundlichen Grüßen
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290

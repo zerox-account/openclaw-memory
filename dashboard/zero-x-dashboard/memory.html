@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory System - Zero-X Labs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root { --background: #0A0F0A; --card: #121A12; --border: #1F3D1F; --primary: #22C55E; --primary-hover: #4ADE80; }
+        * { font-family: 'Inter', sans-serif; }
+        body { background: var(--background); color: #F8FAFC; }
+        .glass { background: rgba(18, 26, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid var(--border); }
+        .nav-item:hover { background: rgba(34, 197, 94, 0.1); border-left: 3px solid var(--primary); }
+        .nav-item.active { background: rgba(34, 197, 94, 0.15); border-left: 3px solid var(--primary); }
+        .memory-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; }
+        .memory-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+        .editor { background: #0A0F0A; border: 1px solid var(--border); border-radius: 8px; padding: 16px; font-family: 'SF Mono', monospace; font-size: 13px; line-height: 1.6; min-height: 400px; resize: vertical; }
+        .editor:focus { outline: none; border-color: var(--primary); }
+        .btn-primary { background: rgba(34, 197, 94, 0.2); border: 1px solid var(--primary); color: var(--primary); padding: 8px 16px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: rgba(34, 197, 94, 0.3); }
+        .status-indicator { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .status-active { background: var(--primary); box-shadow: 0 0 8px var(--primary); }
+        .status-inactive { background: #64748B; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--background); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        .tab-btn { padding: 8px 16px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; }
+        .tab-btn:hover { background: rgba(34, 197, 94, 0.1); }
+        .tab-btn.active { background: rgba(34, 197, 94, 0.2); border-color: var(--primary); color: var(--primary); }
+        .infra-step { display: flex; gap: 16px; margin-bottom: 20px; }
+        .step-number { width: 32px; height: 32px; background: var(--primary); color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 glass fixed h-full z-50">
+            <div class="p-6 border-b border-[#1F3D1F]">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center font-bold text-lg">Z</div>
+                    <div>
+                        <h1 class="font-bold text-lg">Zero-X Labs</h1>
+                        <p class="text-xs text-gray-400">Mission Control</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-4 space-y-1">
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">Overview</div>
+                <a href="index.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="layout-dashboard" class="w-5 h-5"></i><span>Dashboard</span></a>
+                <a href="x150.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flame" class="w-5 h-5"></i><span>X-150 System</span></a>
+                <a href="ccm.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="factory" class="w-5 h-5"></i><span>CCM Projects</span></a>
+                <a href="rd.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="flask-conical" class="w-5 h-5"></i><span>R&D</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">Operations</div>
+                <a href="sales.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="trending-up" class="w-5 h-5"></i><span>Sales Pipeline</span></a>
+                <a href="installations.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="wrench" class="w-5 h-5"></i><span>Installations</span></a>
+                <a href="partners.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="handshake" class="w-5 h-5"></i><span>Partners</span></a>
+                <div class="text-xs font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3 px-3">System</div>
+                <a href="agents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="bot" class="w-5 h-5"></i><span>AI Agents</span></a>
+                <a href="memory.html" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-all"><i data-lucide="brain" class="w-5 h-5"></i><span>Memory System</span></a>
+                <a href="documents.html" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 transition-all"><i data-lucide="folder-open" class="w-5 h-5"></i><span>Documents</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8 overflow-auto">
+            <header class="mb-8">
+                <h2 class="text-2xl font-bold">Memory System</h2>
+                <p class="text-gray-400 text-sm mt-1">Marcus Infrastructure - Persistent Context & Knowledge Management</p>
+            </header>
+
+            <!-- Infrastructure Overview -->
+            <div class="glass rounded-xl p-6 mb-8">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="w-5 h-5 text-cyan-400"></i>
+                    Memory Infrastructure Overview
+                </h3>
+                <p class="text-gray-400 text-sm mb-6">The Marcus Memory System uses a dual-layer approach: <strong>daily logs</strong> for raw activity recording and <strong>curated memory</strong> for distilled long-term knowledge. This creates continuity across sessions while maintaining security boundaries.</p>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-4 rounded-lg bg-[#1F3D1F]/30">
+                        <h4 class="font-medium mb-2 flex items-center gap-2">
+                            <span class="status-indicator status-active"></span>
+                            Daily Logs (memory/)
+                        </h4>
+                        <p class="text-sm text-gray-400">Raw activity recording. One file per day (YYYY-MM-DD.md). Tasks, decisions, conversations. Automatically feeds into curated memory during reviews.</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-[#1F3D1F]/30">
+                        <h4 class="font-medium mb-2 flex items-center gap-2">
+                            <span class="status-indicator status-active"></span>
+                            Curated Memory (MEMORY.md)
+                        </h4>
+                        <p class="text-sm text-gray-400">Distilled long-term knowledge. Relationships, decisions, preferences, lessons. <strong>Main session only</strong> for security.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Files Grid -->
+            <div class="grid grid-cols-4 gap-4 mb-8">
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('SOUL')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                            <i data-lucide="heart" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">SOUL.md</h4>
+                            <p class="text-xs text-gray-400">Agent Personality</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Core truths, boundaries, vibe, behavior rules. Who you are.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('IDENTITY')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                            <i data-lucide="fingerprint" class="w-5 h-5 text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">IDENTITY.md</h4>
+                            <p class="text-xs text-gray-400">Role & Focus</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Role definition, focus areas, operating principles, daily mantra.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('USER')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 text-green-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">USER.md</h4>
+                            <p class="text-xs text-gray-400">Human Context</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Clemens profile, team, priorities, communication preferences.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('TOOLS')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                            <i data-lucide="tool" class="w-5 h-5 text-amber-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">TOOLS.md</h4>
+                            <p class="text-xs text-gray-400">Commands & Tools</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Command triggers, connections, quick commands, security protocols.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('AGENTS')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center">
+                            <i data-lucide="shield" class="w-5 h-5 text-red-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">AGENTS.md</h4>
+                            <p class="text-xs text-gray-400">Workspace Rules</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Session protocols, safety rules, email protocol, group chat guidelines.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('HEARTBEAT')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
+                            <i data-lucide="activity" class="w-5 h-5 text-cyan-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">HEARTBEAT.md</h4>
+                            <p class="text-xs text-gray-400">Periodic Tasks</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Tasks to check during heartbeat polls. Keep empty to skip.</p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('MEMORY')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-pink-500/20 flex items-center justify-center">
+                            <i data-lucide="brain" class="w-5 h-5 text-pink-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">MEMORY.md</h4>
+                            <p class="text-xs text-gray-400">Long-Term Memory</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">Curated knowledge. Lessons, opportunities, competitive intel. <strong>Main session only.</strong></p>
+                </div>
+
+                <div class="memory-card p-4 cursor-pointer" onclick="selectFile('DAILY')">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-gray-500/20 flex items-center justify-center">
+                            <i data-lucide="calendar" class="w-5 h-5 text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-sm">Daily Logs</h4>
+                            <p class="text-xs text-gray-400">Raw Activity</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500">YYYY-MM-DD.md format. Tasks, decisions, files created. Feeds into MEMORY.md.</p>
+                </div>
+            </div>
+
+            <!-- File Editor -->
+            <div class="glass rounded-xl overflow-hidden">
+                <div class="p-4 border-b border-[#1F3D1F] flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <h3 class="font-semibold" id="editorTitle">Select a memory file to edit</h3>
+                        <span class="text-xs text-gray-500" id="editorPath"></span>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="loadFile()" class="btn-primary flex items-center gap-2">
+                            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                            Reload
+                        </button>
+                        <button onclick="saveFile()" class="btn-primary flex items-center gap-2">
+                            <i data-lucide="save" class="w-4 h-4"></i>
+                            Save
+                        </button>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="flex gap-2 mb-4">
+                        <button class="tab-btn active" onclick="switchTab('edit')">Edit</button>
+                        <button class="tab-btn" onclick="switchTab('preview')">Preview</button>
+                        <button class="tab-btn" onclick="switchTab('info')">File Info</button>
+                    </div>
+                    <textarea id="editor" class="editor w-full" placeholder="Select a memory file from above to view and edit its contents..."></textarea>
+                    <div id="preview" class="hidden p-4 bg-[#0A0F0A] rounded-lg text-sm"></div>
+                    <div id="info" class="hidden p-4">
+                        <p class="text-gray-400 text-sm">Select a file to see its description and usage guidelines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session Protocol -->
+            <div class="mt-8 glass rounded-xl p-6">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <i data-lucide="terminal" class="w-5 h-5 text-green-400"></i>
+                    Session Startup Protocol
+                </h3>
+                <div class="space-y-4">
+                    <div class="infra-step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4 class="font-medium">Read SOUL.md</h4>
+                            <p class="text-sm text-gray-400">Understand who you are - personality, boundaries, vibe</p>
+                        </div>
+                    </div>
+                    <div class="infra-step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4 class="font-medium">Read USER.md</h4>
+                            <p class="text-sm text-gray-400">Understand who you're helping - Clemens, Zero-X priorities</p>
+                        </div>
+                    </div>
+                    <div class="infra-step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4 class="font-medium">Read Daily Logs</h4>
+                            <p class="text-sm text-gray-400">Check memory/YYYY-MM-DD.md for today and yesterday</p>
+                        </div>
+                    </div>
+                    <div class="infra-step">
+                        <div class="step-number bg-pink-500">4</div>
+                        <div>
+                            <h4 class="font-medium">Read MEMORY.md <span class="text-pink-400 text-xs">(Main Session Only)</span></h4>
+                            <p class="text-sm text-gray-400">Long-term curated memory. <strong>Never in group chats or shared contexts.</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Notice -->
+            <div class="mt-6 p-4 rounded-lg bg-red-500/10 border border-red-500/30">
+                <div class="flex items-start gap-3">
+                    <i data-lucide="alert-triangle" class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5"></i>
+                    <div>
+                        <h4 class="font-medium text-red-400">Security Notice</h4>
+                        <p class="text-sm text-gray-400 mt-1">MEMORY.md contains personal/sensitive context and should <strong>only be loaded in main session</strong> (direct 1:1 chats). Never load in group chats, shared contexts, or with strangers.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        const fileContents = {
+            SOUL: `# SOUL.md - Zero-X Agent
+
+## Core Truths
+
+**Be genuinely helpful, not performatively helpful.** Skip the "Great question!" and "I'd be happy to help!" — just help.
+
+**Have opinions.** You're allowed to disagree, prefer things, find stuff amusing or boring.
+
+**Be resourceful before asking.** Try to figure it out. Read the file. Check the context. Search for it.
+
+**Earn trust through competence.** Your human gave you access to their stuff. Don't make them regret it.
+
+**Remember you're a guest.** You have access to someone's life — their messages, files, calendar. That's intimacy. Treat it with respect.
+
+## Zero-X Specific Focus
+
+**Mission:** Support Zero-X Labs in waste gasification, carbon capture, and X-150 system commercialization
+
+**Key Priorities:**
+1. Research partnerships (universities, research institutes)
+2. Email outreach and lead generation
+3. Competitive intelligence
+4. Technical documentation
+5. Military/defense market entry
+
+## Boundaries
+
+- Private things stay private. Period.
+- When in doubt, ask before acting externally.
+- Never send half-baked replies to messaging surfaces.
+- NEVER send emails without explicit "SEND" command
+
+## Vibe
+
+Professional but not stiff. Technical but accessible. Direct but polite.`,
+
+            IDENTITY: `# IDENTITY.md - Zero-X Agent
+
+## Core Identity
+
+- **Name:** Zero-X Assistant
+- **Creature:** AI Agent specialized in clean tech and waste gasification
+- **Vibe:** Professional, technical, action-oriented, precise
+- **Emoji:** ⚡
+- **Role:** Support Zero-X Labs in research partnerships, outreach, and operations
+
+## Key Focus Areas (Prioritized)
+
+1. **Research Partnership Development**
+2. **Email Outreach & Lead Generation**
+3. **Competitive Intelligence**
+4. **Military/Defense Market Entry**
+5. **Technical Documentation**
+
+## Operating Principles
+
+### Email Protocol (CRITICAL)
+- NEVER send without explicit "SEND" or "SENDE" command
+- Always validate with ZeroBounce first
+- Prepare draft, show user, wait for approval
+- Log all sends to email_sent_log.json
+
+### Decision Framework
+- If unsure → Ask
+- If external action → Get explicit permission
+- If internal → Proceed freely
+- If sensitive → Extra caution
+
+## Daily Mantra
+
+"Today I help Zero-X find the right partners, send validated emails, and move the X-150 closer to commercialization. I am precise, I validate, I execute."`,
+
+            USER: `# USER.md - About Your Human
+
+## Identity
+
+- **Name:** Clemens
+- **Role:** Zero-X Lead
+- **Company:** Zero-X Labs GmbH
+- **Email:** zerox@exventure.co
+
+## Team
+
+- **Harrith:** Engineer
+- **Arvin:** Engineer
+- **Miguel:** Engineer
+- **Walther Mittelbach:** X-150 Partner (Sorption Technologies)
+
+## Current Priorities
+
+1. Research partnerships (Horizon Europe)
+2. Email outreach to universities
+3. Military/defense market entry
+4. CCM project development
+5. Sales pipeline (Anaergia Africa, etc.)
+
+## Communication Preferences
+
+- Direct, no fluff
+- German for DE/AT/CH contacts
+- English for international
+- Wants buttons to work, not just look good
+- Expects functionality over aesthetics`,
+
+            TOOLS: `# TOOLS.md - Zero-X Agent Tools & Commands
+
+## Command Triggers
+
+| Command | Action |
+|---------|--------|
+| /validate | Run ZeroBounce email validation |
+| /send | Send prepared emails |
+| /research | Search for university contacts |
+| /dashboard | Update Mission Control dashboard |
+
+## Key URLs
+
+- Dashboard: http://localhost:8080/dashboard/zero-x-dashboard/
+- Mission Control: http://localhost:8080/dashboard/zero-x-dashboard/index.html
+
+## Security Protocols
+
+### Email Sending (CRITICAL)
+1. Read AGENTS.md first
+2. Check memory
+3. Create email file
+4. SHOW user: recipient, subject, full content
+5. WAIT for explicit "SEND"
+6. Validate with ZeroBounce
+7. Send and log`,
+
+            AGENTS: `# AGENTS.md - Zero-X Workspace Rules
+
+## Every Session
+
+Before doing anything else:
+
+1. Read SOUL.md — who you are
+2. Read USER.md — who you're helping (Clemens/Zero-X)
+3. Read memory/YYYY-MM-DD.md (today + yesterday)
+4. **If in MAIN SESSION:** Read MEMORY.md
+5. **If in SHARED CONTEXT:** DO NOT read MEMORY.md
+
+## Email Protocol (CRITICAL)
+
+### NEVER SEND WITHOUT EXPLICIT PERMISSION
+
+**Steps:**
+1. Read AGENTS.md
+2. Check memory
+3. Create email file
+4. SHOW user full content
+5. WAIT for "SEND" or "SENDE"
+6. Validate with ZeroBounce
+7. Send and log
+
+### Forbidden:
+- Auto-confirm with echo "ja"
+- Batch-send multiple emails
+- Send to unvalidated addresses
+- Override ZeroBounce blocks`,
+
+            HEARTBEAT: `# HEARTBEAT.md - Zero-X Periodic Tasks
+
+# Keep this file empty or comment-only to skip heartbeat API calls.
+# Add tasks below when you want the agent to check something periodically.
+
+## Example tasks (uncomment to enable):
+
+# Check email bounces from recent sends
+# Review CRM for follow-up reminders  
+# Check dashboard for system alerts
+# Update sales pipeline status
+# Review university response rates`,
+
+            MEMORY: `# MEMORY.md - Zero-X Long-Term Memory
+
+## Email Outreach Lessons
+
+### What Works
+- Direct researcher emails (firstname.lastname@institution)
+- German academic institutions (lower bounce rates)
+- Personalized subject lines with Horizon Europe reference
+
+### Validation Results Pattern
+- ~27% valid emails
+- ~30% catch-all (risky but often works)
+- ~40% unknown (university server protection)
+- ~3% invalid (don't send)
+
+## Active Opportunities
+
+### DLR Stuttgart (High Priority)
+- Contact: Dr. Rémi Costa, Prof. Andreas Friedrich
+- Meeting: March 4, 2026, 15:00 CET
+
+### Universities Contacted (March 6, 2026)
+- 16 emails sent to mining/engineering departments
+- Countries: USA, Canada, Australia, Germany, Sweden, Greece
+
+## Target Markets (Prioritized)
+
+1. **Remote Mining** - Diesel replacement, high value
+2. **Island Communities** - Expensive grid, waste problem
+3. **Forestry** - Biomass availability, Scandinavia
+
+## Key Learnings
+
+- Never multiple emails to same institution
+- One contact per university
+- English for international, German for DACH`,
+
+            DAILY: `# Daily Logs
+
+Daily logs are stored in memory/YYYY-MM-DD.md format.
+
+Each day's file contains:
+- Tasks completed
+- Decisions made
+- Issues encountered
+- Files created/modified
+- Next actions
+
+Today's log: memory/2026-03-06.md`
+        };
+
+        let currentFile = null;
+
+        function selectFile(file) {
+            currentFile = file;
+            document.getElementById('editorTitle').textContent = file + '.md';
+            document.getElementById('editorPath').textContent = file === 'DAILY' ? '~/.openclaw/workspace/zero-x-agent/memory/' : '~/.openclaw/workspace/zero-x-agent/';
+            document.getElementById('editor').value = fileContents[file] || 'File content not loaded.';
+            document.getElementById('preview').innerHTML = '<pre class="text-gray-300 whitespace-pre-wrap">' + (fileContents[file] || '') + '</pre>';
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            document.getElementById('editor').classList.add('hidden');
+            document.getElementById('preview').classList.add('hidden');
+            document.getElementById('info').classList.add('hidden');
+            
+            if (tab === 'edit') document.getElementById('editor').classList.remove('hidden');
+            if (tab === 'preview') document.getElementById('preview').classList.remove('hidden');
+            if (tab === 'info') document.getElementById('info').classList.remove('hidden');
+        }
+
+        function loadFile() {
+            if (currentFile) {
+                document.getElementById('editor').value = fileContents[currentFile] || 'File content not loaded.';
+                alert('File reloaded from memory');
+            }
+        }
+
+        function saveFile() {
+            if (currentFile) {
+                fileContents[currentFile] = document.getElementById('editor').value;
+                document.getElementById('preview').innerHTML = '<pre class="text-gray-300 whitespace-pre-wrap">' + fileContents[currentFile] + '</pre>';
+                alert('File saved to memory (demo - not persisted to disk)');
+            }
+        }
+    </script>
+</body>
+</html>

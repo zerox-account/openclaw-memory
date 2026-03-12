@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-X CRM Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .metric-card h3 {
+            color: #667eea;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-card .value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .filters {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .filters label {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .filters select, .filters input {
+            padding: 0.5rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        .filters select:focus, .filters input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .contacts-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        
+        .contact-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        .contact-header {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .contact-info h2 {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-info .organization {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info .location {
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge.priority-high {
+            background: #fee;
+            color: #c33;
+        }
+        
+        .badge.priority-medium {
+            background: #ffeaa7;
+            color: #d68910;
+        }
+        
+        .badge.category-research {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .badge.category-industry {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .badge.category-government {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .badge.status-new {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .contact-body {
+            padding: 1.5rem;
+        }
+        
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .detail {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .detail-label {
+            font-size: 0.75rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.2rem;
+        }
+        
+        .detail-value {
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .detail-value a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .detail-value a:hover {
+            text-decoration: underline;
+        }
+        
+        .notes {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .notes h4 {
+            font-size: 0.85rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .notes ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .notes li {
+            padding: 0.3rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .notes li:before {
+            content: "•";
+            color: #667eea;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .next-action {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        
+        .next-action h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+            opacity: 0.9;
+        }
+        
+        .next-action p {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        .assigned {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .communication-history {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .communication-history h4 {
+            font-size: 0.85rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .no-communication {
+            color: #888;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header {
+                padding: 1.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .metric-card .value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Zero-X CRM Dashboard</h1>
+        <p>Research Outreach & Contact Management</p>
+    </div>
+    
+    <div class="container">
+        <div class="metrics">
+            <div class="metric-card">
+                <h3>Total Contacts</h3>
+                <div class="value">19</div>
+            </div>
+            <div class="metric-card">
+                <h3>High Priority</h3>
+                <div class="value">9</div>
+            </div>
+            <div class="metric-card">
+                <h3>Ready to Contact</h3>
+                <div class="value">19</div>
+            </div>
+            <div class="metric-card">
+                <h3>Last Updated</h3>
+                <div class="value" style="font-size: 1.2rem;">2026-02-13</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <label>Filter by:</label>
+            <select id="categoryFilter" onchange="filterContacts()">
+                <option value="all">All Categories</option>
+                <option value="research">Research</option>
+                <option value="industry">Industry</option>
+                <option value="government">Government</option>
+            </select>
+            <select id="priorityFilter" onchange="filterContacts()">
+                <option value="all">All Priorities</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+            </select>
+            <select id="countryFilter" onchange="filterContacts()">
+                <option value="all">All Countries</option>
+                <option value="greece">Greece</option>
+                <option value="france">France</option>
+                <option value="italy">Italy</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Search contacts..." onkeyup="filterContacts()">
+        </div>
+        
+        <div class="contacts-grid" id="contactsContainer">
+            <!-- Contacts will be inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <script>
+        const contacts = [
+            {
+                name: "Prof. Ange Nzihou",
+                organization: "IMT Mines Albi",
+                role: "Distinguished Professor",
+                email: "ange.nzihou@mines-albi.fr",
+                phone: "+33 5 63 49 33 85",
+                location: "Albi, France",
+                category: "research",
+                priority: "high",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction email about X-150 and tar reforming expertise",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity - real researcher",
+                    "Expertise: Tar reforming, biocarbon catalysis, pyrolysis",
+                    "ERC Advanced Grant laureate",
+                    "Relevant for Zero-X tar cracking technology",
+                    "Part of RAPSODEE-CNRS research center"
+                ]
+            },
+            {
+                name: "Dr. Kyriakos Panopoulos",
+                organization: "CERTH/CPERI",
+                role: "Researcher, Gasification",
+                email: "panopoulos@certh.gr",
+                phone: "+30 211 1069500",
+                location: "Thessaloniki, Greece",
+                category: "research",
+                priority: "high",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Send introduction email about X-150 and SOFC integration",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity - real researcher",
+                    "20+ years experience, chemical engineer",
+                    "Expertise: Biomass gasification, syngas, SOFC integration",
+                    "Multiple EU projects (i3upgrade, NOMAD, Waste4Soil, MUSIC)",
+                    "Relevant for Zero-X syngas quality and fuel cell integration"
+                ]
+            },
+            {
+                name: "Prof. Pier Ugo Foscolo",
+                organization: "University of L'Aquila",
+                role: "Professor",
+                email: "pierugo.foscolo@univaq.it",
+                phone: "",
+                location: "L'Aquila, Italy",
+                category: "research",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about DFB gasification collaboration",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity - leading DFB researcher",
+                    "Expertise: Fluidized bed gasification, DFB technology",
+                    "UNIQUE project: 75% gas yield increase, 92% tar reduction",
+                    "Operates 5 MW DFB plant",
+                    "Key potential partner for Zero-X DFB development"
+                ]
+            },
+            {
+                name: "Prof. Sergio Rapagna",
+                organization: "University of Teramo",
+                role: "Professor",
+                email: "srapagna@unite.it",
+                phone: "",
+                location: "Teramo, Italy",
+                category: "research",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about DFB gasification and CHP",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: DFB gasification, CHP systems",
+                    "Co-author with Foscolo on UNIQUE project",
+                    "Relevant for Zero-X CHP applications"
+                ]
+            },
+            {
+                name: "Prof. Marco Baratieri",
+                organization: "Free University of Bozen",
+                role: "Professor",
+                email: "marco.baratieri@unibz.it",
+                phone: "",
+                location: "Bolzano, Italy",
+                category: "research",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about biomass gasification and tar analysis",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Biomass gasification, CHP, tar analysis/cracking",
+                    "Head of Bioenergy & Biofuels Laboratory",
+                    "μCHP 16 conference organizer",
+                    "Relevant for Zero-X tar cracking and CHP systems"
+                ]
+            },
+            {
+                name: "Dr. Salvatore Freni",
+                organization: "ITAE-CNR Messina",
+                role: "Researcher",
+                email: "salvatore.freni@itae.cnr.it",
+                phone: "",
+                location: "Messina, Italy",
+                category: "research",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about gasification and fuel cells",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Gasification, fuel cells, reforming",
+                    "Director of CNR-ITAE",
+                    "Leading figure in fuel cell research",
+                    "Relevant for Zero-X syngas-to-power via fuel cells"
+                ]
+            },
+            {
+                name: "Dr. Donatella Barisano",
+                organization: "ENEA Trisaia",
+                role: "Researcher",
+                email: "donatella.barisano@enea.it",
+                phone: "",
+                location: "Rotondella (MT), Italy",
+                category: "research",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about biomass gasification collaboration",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Biomass gasification, pyrolysis",
+                    "ENEA Trisaia Research Center - major gasification facility",
+                    "Fixed/fluidized bed gasification, gas cleaning",
+                    "Relevant for Zero-X technology validation"
+                ]
+            },
+            {
+                name: "Madeleine Alphen",
+                organization: "ATEE Pyrogazification Club",
+                role: "General Delegate",
+                email: "m.alphen@atee.fr",
+                phone: "",
+                location: "France",
+                category: "government",
+                priority: "high",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction about Zero-X and French gasification sector",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Coordinates French pyrogazéification/gasification sector",
+                    "Active in policy advocacy and industry development",
+                    "Key connector for French gasification ecosystem",
+                    "May have budget allocation influence"
+                ]
+            },
+            {
+                name: "Valerio Manelfi",
+                organization: "RESET Energy",
+                role: "Founder/Marketing Manager",
+                email: "valerio.manelfi@reset-energy.com",
+                phone: "",
+                location: "Italy",
+                category: "industry",
+                priority: "high",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about SyngaSmart and collaboration",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Company: RESET Energy (SyngaSmart technology)",
+                    "Expertise: Biomass gasification, containerized CHP",
+                    "Carbon-negative heat and power systems",
+                    "Potential partner or competitor for Zero-X"
+                ]
+            },
+            {
+                name: "Dr. Theodoros Damartzis",
+                organization: "Aristotle University",
+                role: "Assistant Professor",
+                email: "damartzis@cheng.auth.gr",
+                phone: "",
+                location: "Thessaloniki, Greece",
+                category: "research",
+                priority: "medium",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Send introduction email about biomass gasification modeling",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Biomass pyrolysis & gasification modeling, Aspen Plus",
+                    "Research on integrated energy systems, renewable energy",
+                    "Relevant for Zero-X process modeling and optimization"
+                ]
+            },
+            {
+                name: "Dr. George Marnellos",
+                organization: "Aristotle University/CERTH",
+                role: "Professor",
+                email: "",
+                phone: "",
+                location: "Thessaloniki, Greece",
+                category: "research",
+                priority: "medium",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Find direct email and send introduction",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Hydrogen production, fuel cells, biomass gasification/pyrolysis",
+                    "Project coordinator at ECOLEFINS",
+                    "Deputy coordinator of Fuel Cells for Greek Ministry of Development"
+                ]
+            },
+            {
+                name: "Prof. Anastasia Zabaniotou",
+                organization: "Aristotle University",
+                role: "Professor",
+                email: "",
+                phone: "",
+                location: "Thessaloniki, Greece",
+                category: "research",
+                priority: "medium",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Find direct email and send introduction",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Pyrolysis, gasification, biochar production",
+                    "Relevant for Zero-X biochar applications and carbon credits"
+                ]
+            },
+            {
+                name: "Dr. Christos Athanasiou",
+                organization: "Democritus University",
+                role: "Researcher",
+                email: "kelmasid@env.duth.gr",
+                phone: "",
+                location: "Xanthi, Greece",
+                category: "research",
+                priority: "medium",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Send introduction email about biomass and SOFC integration",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Biomass potential, 2nd generation biofuels, SOFC integration",
+                    "Relevant for Zero-X high-efficiency power generation"
+                ]
+            },
+            {
+                name: "Dr. Antonios Zorpas",
+                organization: "Open University of Cyprus",
+                role: "Associate Professor",
+                email: "",
+                phone: "",
+                location: "Nicosia, Cyprus",
+                category: "research",
+                priority: "medium",
+                country: "greece",
+                status: "NEW",
+                nextAction: "Find direct email and send introduction",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Waste management, gasification, circular economy",
+                    "Head of Lab of Chemical Engineering & Engineering Sustainability",
+                    "Relevant for Zero-X waste-to-energy applications"
+                ]
+            },
+            {
+                name: "Dr. Maria Gonzalez Martinez",
+                organization: "IMT Mines Albi",
+                role: "Assistant Professor",
+                email: "maria.gonzalez_martinez@mines-albi.fr",
+                phone: "",
+                location: "Albi, France",
+                category: "research",
+                priority: "medium",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction email about green hydrogen and biobased catalysts",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Green hydrogen, biobased catalysts, gasification",
+                    "Part of Ange Nzihou's research team",
+                    "Relevant for Zero-X syngas upgrading and hydrogen production"
+                ]
+            },
+            {
+                name: "Dr. Nathalie Lyczko",
+                organization: "IMT Mines Albi",
+                role: "Researcher",
+                email: "nathalie.lyczko@mines-albi.fr",
+                phone: "",
+                location: "Albi, France",
+                category: "research",
+                priority: "medium",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction email about sorbents and gas cleaning",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Sorbents, composites, waste valorization, gas cleaning",
+                    "Part of Ange Nzihou's research team",
+                    "Relevant for Zero-X syngas cleaning systems"
+                ]
+            },
+            {
+                name: "Dr. Doan Pham Minh",
+                organization: "IMT Mines Albi",
+                role: "Professor",
+                email: "doan.phamminh@mines-albi.fr",
+                phone: "",
+                location: "Albi, France",
+                category: "research",
+                priority: "medium",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction email about solid waste valorization",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Solid waste valorization, heterogeneous catalysis",
+                    "Relevant for Zero-X waste feedstock processing"
+                ]
+            },
+            {
+                name: "Dr. Elsa Weiss",
+                organization: "IMT Mines Albi",
+                role: "Assistant Professor",
+                email: "elsa.weiss@mines-albi.fr",
+                phone: "",
+                location: "Albi, France",
+                category: "research",
+                priority: "medium",
+                country: "france",
+                status: "NEW",
+                nextAction: "Send introduction email about solid residue functionalization",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Solid residue functionalization, composite materials",
+                    "Relevant for Zero-X biochar applications"
+                ]
+            },
+            {
+                name: "Dr. Frederic Vidal",
+                organization: "CEA-Liten",
+                role: "Senior Research Engineer",
+                email: "",
+                phone: "",
+                location: "Grenoble, France",
+                category: "research",
+                priority: "medium",
+                country: "france",
+                status: "NEW",
+                nextAction: "Find direct email and send introduction",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Solar thermal, gasification reactor design",
+                    "Works on solar fuels, syngas, and hydrogen",
+                    "Relevant for Zero-X reactor optimization"
+                ]
+            },
+            {
+                name: "Dr. Maurizio Grigiante",
+                organization: "University of Trento",
+                role: "Associate Professor",
+                email: "maurizio.grigiante@unitn.it",
+                phone: "",
+                location: "Trento, Italy",
+                category: "research",
+                priority: "medium",
+                country: "italy",
+                status: "NEW",
+                nextAction: "Send introduction email about thermochemical conversion",
+                assignedTo: "Clemens",
+                notes: [
+                    "Verified via Perplexity",
+                    "Expertise: Thermochemical conversion, gasification",
+                    "Sustainable Energy Lab at University of Trento",
+                    "Research on biomass gasification pilot plants",
+                    "Relevant for Zero-X research collaboration"
+                ]
+            }
+        ];
+        
+        function renderContacts(contactsToRender) {
+            const container = document.getElementById('contactsContainer');
+            container.innerHTML = '';
+            
+            contactsToRender.forEach(contact => {
+                const card = document.createElement('div');
+                card.className = 'contact-card';
+                card.innerHTML = `
+                    <div class="contact-header">
+                        <div class="contact-info">
+                            <h2>${contact.name}</h2>
+                            <div class="organization">${contact.organization}</div>
+                            <div class="location">${contact.location}</div>
+                        </div>
+                        <div class="badges">
+                            <span class="badge priority-${contact.priority}">${contact.priority}</span>
+                            <span class="badge category-${contact.category}">${contact.category}</span>
+                            <span class="badge status-${contact.status.toLowerCase()}">${contact.status}</span>
+                        </div>
+                    </div>
+                    <div class="contact-body">
+                        <div class="contact-details">
+                            <div class="detail">
+                                <span class="detail-label">Role</span>
+                                <span class="detail-value">${contact.role}</span>
+                            </div>
+                            <div class="detail">
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value">
+                                    ${contact.email ? `<a href="mailto:${contact.email}">${contact.email}</a>` : 'N/A'}
+                                </span>
+                            </div>
+                            ${contact.phone ? `
+                            <div class="detail">
+                                <span class="detail-label">Phone</span>
+                                <span class="detail-value">${contact.phone}</span>
+                            </div>
+                            ` : ''}
+                            <div class="detail">
+                                <span class="detail-label">Assigned To</span>
+                                <span class="detail-value">${contact.assignedTo}</span>
+                            </div>
+                        </div>
+                        <div class="notes">
+                            <h4>Notes</h4>
+                            <ul>
+                                ${contact.notes.map(note => `<li>${note}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="next-action">
+                            <h4>Next Action</h4>
+                            <p>${contact.nextAction}</p>
+                            <span class="assigned">Assigned: ${contact.assignedTo}</span>
+                        </div>
+                        <div class="communication-history">
+                            <h4>Communication History</h4>
+                            <p class="no-communication">No communication recorded yet</p>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        function filterContacts() {
+            const category = document.getElementById('categoryFilter').value;
+            const priority = document.getElementById('priorityFilter').value;
+            const country = document.getElementById('countryFilter').value;
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            
+            let filtered = contacts;
+            
+            if (category !== 'all') {
+                filtered = filtered.filter(c => c.category === category);
+            }
+            
+            if (priority !== 'all') {
+                filtered = filtered.filter(c => c.priority === priority);
+            }
+            
+            if (country !== 'all') {
+                filtered = filtered.filter(c => c.country === country);
+            }
+            
+            if (search) {
+                filtered = filtered.filter(c => 
+                    c.name.toLowerCase().includes(search) ||
+                    c.organization.toLowerCase().includes(search) ||
+                    c.email.toLowerCase().includes(search)
+                );
+            }
+            
+            renderContacts(filtered);
+        }
+        
+        // Initial render
+        renderContacts(contacts);
+    </script>
+</body>
+</html>

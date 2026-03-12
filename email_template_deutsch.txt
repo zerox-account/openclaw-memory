@@ -1,0 +1,33 @@
+Betreff: Kollaborationsmöglichkeit – Modulares Biomasse-KWK System X-150
+
+Sehr geehrter Herr Professor {{NAME}},
+
+ich schreibe Ihnen im Namen von Zero-X Labs, einem Technologieunternehmen im Bereich modulare Biomasse-zu-Energie-Systeme für dezentrale Energieversorgung. Wir suchen Forschungspartner für eine Zusammenarbeit in den Bereichen thermochemische Umwandlung und nachhaltige Energiesysteme.
+
+Unser X-150 System ist eine modulare 150kW-KWK-Anlage, entwickelt für landwirtschaftliche Verarbeitungsbetriebe in Subsahara-Afrika. Das System wandelt Biomasse-Rückstände (Kaffeeschalen, Sisal-Abfälle, Bagasse) in Strom und Prozesswärme um – mit Fokus auf Energiezugang in ländlichen Regionen Ugandas und Kenias.
+
+Unsere Kooperationsinteressen umfassen:
+• Thermochemische Prozessoptimierung für tropische Biomasse
+• Gasreinigung und Teer-Reforming für kleinskalige Vergasung
+• Systemintegration in landwirtschaftliche Infrastruktur
+• Gemeinsame Forschungsanträge (Horizon Europe, bilaterale Programme)
+
+Ihre Forschung an der {{INSTITUTION}} im Bereich {{FIELD}} passt gut zu unserer technischen Ausrichtung. Wir würden gerne besprechen:
+• Co-Entwicklung von Pilotprojekten in Ostafrika
+• Gemeinsame Forschung und Wissensaustausch
+• Kooperative Antragsstellung
+• Studenten-/Forscheraustausch
+
+Wir führen aktuell Gespräche mit dem DLR Stuttgart zur Syngas-Integration und bauen ein Konsortium europäischer und afrikanischer Forschungspartner auf.
+
+Hätten Sie Zeit für ein kurzes Gespräch? Wir sind zeitlich flexibel.
+
+Mit freundlichen Grüßen
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290
+
+---
+Hinweis: Wir suchen Forschungspartner, keine Kunden.

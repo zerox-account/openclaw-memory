@@ -1,0 +1,43 @@
+{
+  "campaign_id": "US_OUTREACH_2026-03-11",
+  "date": "2026-03-11",
+  "time": "09:53 SGT",
+  "agent": "Zero-X v3.0",
+  "target_region": "United States",
+  "emails_sent": 16,
+  "emails_delivered": 16,
+  "bcc_tracking": "j.Uhlig@exventure.co",
+  "subject": "Research Collaboration – Multi-Fuel CHP System X-150 & USDA Grant Opportunities",
+  "method": "AgentMail API",
+  "researchers": [
+    {"name": "Dr. Reinhard Seiser", "institution": "Stanford University", "email": "seiser@stanford.edu", "field": "Combustion/Fuel Design"},
+    {"name": "Dr. Hao Feng", "institution": "University of Illinois", "email": "haofeng@illinois.edu", "field": "Thermochemical Conversion"},
+    {"name": "Dr. Alan C. Hansen", "institution": "University of Illinois", "email": "achansen@illinois.edu", "field": "Biofuels Combustion"},
+    {"name": "Dr. Mark G. Danao", "institution": "University of Illinois", "email": "mgdanao@illinois.edu", "field": "Biomass Handling"},
+    {"name": "Dr. Carl Bernacchi", "institution": "University of Illinois", "email": "bernacch@illinois.edu", "field": "Bioenergy Crops"},
+    {"name": "Dr. Ray Ming", "institution": "University of Illinois", "email": "rayming@illinois.edu", "field": "Genomics of Bioenergy"},
+    {"name": "Dr. Blake Simmons", "institution": "Lawrence Berkeley National Lab", "email": "basimmons@lbl.gov", "field": "Biomass Deconstruction"},
+    {"name": "Dr. Seema Singh", "institution": "Lawrence Berkeley National Lab", "email": "seemasingh@lbl.gov", "field": "Pretreatment"},
+    {"name": "Dr. Michael E. Himmel", "institution": "NREL", "email": "michael.himmel@nrel.gov", "field": "Gasification Enzymes"},
+    {"name": "Dr. James R. Keiser", "institution": "Oak Ridge National Lab", "email": "keiserjr@ornl.gov", "field": "Conversion Microbes"},
+    {"name": "Dr. R. Mark Bricka", "institution": "Texas A&M University", "email": "mark.bricka@tamu.edu", "field": "Gasification Optimization"},
+    {"name": "Dr. J. Richard Hess", "institution": "Idaho National Laboratory", "email": "richard.hess@inl.gov", "field": "Feedstock Logistics"},
+    {"name": "Dr. Thomas D. Wheeler", "institution": "Georgia Tech", "email": "tdw@gatech.edu", "field": "Gasification Reactors"},
+    {"name": "Dr. Jerry P. Murphy", "institution": "University of Illinois", "email": "pjm34@illinois.edu", "field": "Crop Improvement"},
+    {"name": "Dr. Paul Davidson", "institution": "University of Illinois", "email": "pdavidso@illinois.edu", "field": "Supply Chain Modeling"},
+    {"name": "Dr. David Salazar Viveros", "institution": "Stanford University", "email": "dsalazar@stanford.edu", "field": "Implementation/Design"}
+  ],
+  "institutions": {
+    "Stanford University": 2,
+    "University of Illinois": 6,
+    "Lawrence Berkeley National Lab": 2,
+    "NREL": 1,
+    "Oak Ridge National Lab": 1,
+    "Texas A&M University": 1,
+    "Idaho National Laboratory": 1,
+    "Georgia Tech": 1
+  },
+  "status": "completed",
+  "logged_to": "email_sent_log.json",
+  "verified_by": "BCC tracking to j.Uhlig@exventure.co"
+}

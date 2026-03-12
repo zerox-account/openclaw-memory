@@ -1,0 +1,150 @@
+# ZERO-X WEBSITE CONTENT - BASE44 UPDATE PACKAGE
+## Fertig zum Kopieren in Base44
+
+---
+
+## HERO SECTION
+
+TITLE:
+Transforming Waste into Clean Energy
+
+SUBTITLE:
+Zero-X Group: Advanced Modular Gasification Systems. From waste to power in a single container.
+
+CTA PRIMARY:
+Explore Technology
+
+CTA SECONDARY:
+Partner With Us
+
+---
+
+## TECHNOLOGY SECTION
+
+TITLE:
+X-150 Modular Gasification System
+
+CONTENT:
+The X-150 is a containerized, single-stage downdraft gasification system with integrated tar reformer, optimized for high-ash multifuel operations and flexible for CHP operation with air or oxy-steam process.
+
+SPECS:
+• Thermal Output: ~650kW
+• Efficiency: 86%
+• Footprint: Standard 40ft container
+• Feedstock: Wood, sewage sludge, agricultural waste, MSW
+• Validation: 1,000+ operating hours (Cométha Project)
+
+---
+
+## PROJECT COMÉTHA SECTION
+
+TITLE:
+Proven Results: Project Cométha
+
+CONTENT:
+Successfully validated in Paris with Syctom/SIAAP. Fraunhofer-certified performance data from 1,000+ operating hours. Multifuel capability demonstrated with wood, sewage sludge, and municipal waste.
+
+RESULTS:
+• 1,000+ hours continuous operation
+• Fraunhofer Institute validation
+• Syctom/SIAAP funding partnership
+• Multifuel feedstock flexibility
+• Real-world Paris deployment
+
+---
+
+## USE CASES SECTION
+
+TITLE:
+Applications & Markets
+
+PROJECTS:
+
+1. COOLSTACK - Data Centers
+   7-month payback, €56M NPV potential
+   
+2. MINEBASE - Mining Operations
+   Diesel replacement in Africa
+   
+3. DIGEST+ - Biogas Plants
+   Sludge processing optimization
+   
+4. FOODPOWER - Food Processing
+   Uganda brewery pilot (Golden Foods)
+   
+5. BREWPOWER - Breweries
+   Spent grain valorization
+   
+6. RENDERBASE - Meat Processing
+   Rendering waste to energy
+
+---
+
+## ABOUT SECTION
+
+TITLE:
+20 Years of Innovation
+
+CONTENT:
+From Agnion (2007) to Entrade to Zero-X (2026). Our Heatpipe Reformer technology was invented by Prof. Dr. Jürgen Karl at FAU Erlangen.
+
+ACHIEVEMENTS:
+• Red Herring Top 100 Europe (2014)
+• Inc. 5000 Europe #12 (2015)
+• German Industriepreis Top 10 (2015)
+• 1,000+ hours validated operation
+• Fraunhofer certification
+
+TEAM LEGACY:
+Agnion → Entrade → Arensis → Zero-X
+
+---
+
+## CONTACT SECTION
+
+TITLE:
+Partner With Zero-X
+
+CONTENT:
+Join us in transforming waste into clean energy. We're building Horizon Europe consortia and seeking research partners.
+
+EMAIL:
+zerox@exventure.co
+
+LOCATION:
+MFC Energy GmbH
+Spinlab
+Spinnereistraße 7, Halle 14
+04179 Leipzig, Germany
+
+PHONE:
++49 341 92881290
+
+---
+
+## BLOG POSTS (8)
+
+1. The Future of Waste-to-Energy in Europe
+2. Understanding Modular Gasification Systems
+3. Project Cométha: Lessons from 1,000 Hours
+4. Sewage Sludge as a Resource
+5. Data Centers Meet Decentralized Energy
+6. Biogas Plant Optimization with X-150
+7. Brewing a Sustainable Future
+8. 20 Years of Gasification Innovation
+
+---
+
+## COLORS
+
+Primary Blue: #0066CC
+Energy Green: #00AA44
+Innovation Orange: #FF6600
+Dark Navy: #1A1A2E
+Clean White: #FFFFFF
+Light Gray: #F5F5F5
+
+---
+
+App ID: 6989df145d41eebf80a51614
+URL: https://zero-x-speed.base44.app

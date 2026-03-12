@@ -1,0 +1,6 @@
+# AGENTMAIL_API_KEY
+# Internal agent communication API key
+# Use for: zerox@agentmail.com emails to agents and master agent
+# Do NOT use for external customer emails
+
+AGENTMAIL_API_KEY=am_us_328c7c711eb4ad0cf6b7acad7cd9b94377c66bdc71d719963002e9a371884f82

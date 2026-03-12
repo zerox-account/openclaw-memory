@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-X Labs - Mission Control</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .datetime {
+            text-align: right;
+        }
+        
+        .datetime .time {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        
+        .datetime .date {
+            font-size: 1rem;
+            color: #888;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 25px;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        
+        .panel {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .panel h2 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+            color: #00ff88;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 4px solid #00ff88;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .mission-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid;
+        }
+        
+        .mission-item.high { border-left-color: #ff4444; }
+        .mission-item.medium { border-left-color: #ffaa00; }
+        .mission-item.low { border-left-color: #00ff88; }
+        
+        .mission-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .mission-meta {
+            font-size: 0.85rem;
+            color: #888;
+        }
+        
+        .validation-chart {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .chart-bar {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .chart-bar.valid { background: rgba(0, 255, 136, 0.2); border: 1px solid rgba(0, 255, 136, 0.3); }
+        .chart-bar.catchall { background: rgba(255, 170, 0, 0.2); border: 1px solid rgba(255, 170, 0, 0.3); }
+        .chart-bar.invalid { background: rgba(255, 68, 68, 0.2); border: 1px solid rgba(255, 68, 68, 0.3); }
+        
+        .chart-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .chart-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+        
+        .learning-item {
+            background: rgba(0, 204, 255, 0.1);
+            border-left: 4px solid #00ccff;
+            border-radius: 0 10px 10px 0;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .learning-title {
+            font-weight: bold;
+            color: #00ccff;
+            margin-bottom: 5px;
+        }
+        
+        .country-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .country-badge {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 20px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+        }
+        
+        .system-status {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+        
+        .status-icon {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        
+        .status-icon.online { background: #00ff88; }
+        .status-icon.warning { background: #ffaa00; }
+        .status-icon.offline { background: #ff4444; }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>⚡ Zero-X Labs - Mission Control</h1>
+        </div>
+        <div class="datetime">
+            <div class="time" id="clock">16:21:00</div>
+            <div class="date">Friday, March 6, 2026</div>
+        </div>
+        <div class="status-indicator">
+            <div class="status-dot"></div>
+            <span>WORKING</span>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <!-- Active Missions Panel -->
+        <div class="panel">
+            <h2>🎯 Active Missions</h2>
+            <div class="mission-item high">
+                <div class="mission-title">Email Outreach Campaign - Mining Universities</div>
+                <div class="mission-meta">Started: 13:00 | Progress: 100%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="mission-item medium">
+                <div class="mission-title">ZeroBounce Email Validation</div>
+                <div class="mission-meta">Started: 14:46 | Progress: 100%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="mission-item low">
+                <div class="mission-title">Competitive Analysis - Sierra Energy</div>
+                <div class="mission-meta">Started: 11:14 | Progress: 100%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="mission-item low">
+                <div class="mission-title">Military Market Research</div>
+                <div class="mission-meta">Started: 11:42 | Progress: 100%</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email Outreach Tracker -->
+        <div class="panel">
+            <h2>📧 Email Outreach Tracker</h2>
+            <div class="stat-card">
+                <div class="stat-number">16</div>
+                <div class="stat-label">Total Emails Sent Today</div>
+            </div>
+            <div class="validation-chart">
+                <div class="chart-bar valid">
+                    <div class="chart-number" style="color: #00ff88;">20</div>
+                    <div class="chart-label">Valid</div>
+                </div>
+                <div class="chart-bar catchall">
+                    <div class="chart-number" style="color: #ffaa00;">22</div>
+                    <div class="chart-label">Catch-all</div>
+                </div>
+                <div class="chart-bar invalid">
+                    <div class="chart-number" style="color: #ff4444;">8</div>
+                    <div class="chart-label">Invalid</div>
+                </div>
+            </div>
+            <div class="country-list">
+                <div class="country-badge">🇺🇸 USA (9)</div>
+                <div class="country-badge">🇨🇦 Canada (3)</div>
+                <div class="country-badge">🇦🇺 Australia (1)</div>
+                <div class="country-badge">🇩🇪 Germany (1)</div>
+                <div class="country-badge">🇸🇪 Sweden (1)</div>
+                <div class="country-badge">🇬🇷 Greece (2)</div>
+            </div>
+        </div>
+
+        <!-- Research Intelligence -->
+        <div class="panel">
+            <h2>🔬 Research Intelligence</h2>
+            <div class="stat-card">
+                <div class="stat-number">72</div>
+                <div class="stat-label">New Contacts Found Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Universities Contacted</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Pending Validation</div>
+            </div>
+            <div style="margin-top: 15px;">
+                <strong>Top Universities:</strong>
+                <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+                    <li>University of Arizona (19 contacts)</li>
+                    <li>Queen's University (10 contacts)</li>
+                    <li>Montana Tech (5 contacts)</li>
+                    <li>University of Utah (5 contacts)</li>
+                    <li>Penn State (5 contacts)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Learnings & Insights -->
+        <div class="panel">
+            <h2>💡 Learnings & Insights</h2>
+            <div class="learning-item">
+                <div class="learning-title">Military Market Entry</div>
+                <div>SBIR Program, DIU, and xTechSearch are key entry points for U.S. DoD. German Bundeswehr: IDZ and UniBw are better than direct procurement.</div>
+            </div>
+            <div class="learning-item">
+                <div class="learning-title">Competitive Positioning</div>
+                <div>Sierra Energy: 20 years, $33M funding, still in demo phase. Zero-X advantage: simpler, modular, pragmatic approach.</div>
+            </div>
+            <div class="learning-item">
+                <div class="learning-title">Email Strategy</div>
+                <div>Never send multiple emails to same institution. One contact per university only. ZeroBounce validation essential.</div>
+            </div>
+            <div class="learning-item">
+                <div class="learning-title">Target Markets</div>
+                <div>Remote Mining (Priority 1), Island Communities, Forestry (Scandinavia), Remote Agriculture.</div>
+            </div>
+        </div>
+
+        <!-- Next Actions -->
+        <div class="panel">
+            <h2>📋 Next Actions</h2>
+            <div class="mission-item high">
+                <div class="mission-title">Monitor Email Bounces</div>
+                <div class="mission-meta">Check in 24 hours for delivery status</div>
+            </div>
+            <div class="mission-item medium">
+                <div class="mission-title">Follow-up Strategy</div>
+                <div class="mission-meta">Prepare follow-up emails if no response after 1 week</div>
+            </div>
+            <div class="mission-item medium">
+                <div class="mission-title">Expand Research</div>
+                <div class="mission-meta">Target: Bioenergy, Energy Engineering departments</div>
+            </div>
+            <div class="mission-item low">
+                <div class="mission-title">Document Learnings</div>
+                <div class="mission-meta">Update strategy documents with today's insights</div>
+            </div>
+        </div>
+
+        <!-- System Status -->
+        <div class="panel">
+            <h2>⚙️ System Status</h2>
+            <div class="system-status">
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>Browser Control</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>Email System</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>Web Search</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>ZeroBounce API</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>File System</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-icon online"></div>
+                    <span>Memory System</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <strong>Last Backup:</strong> Auto-saved to workspace<br>
+                <strong>Session Duration:</strong> 5h 7m<br>
+                <strong>Tasks Completed:</strong> 4/4
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
