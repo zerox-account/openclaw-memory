@@ -1,2 +1,7 @@
 [12:00 WITA] ERROR: No GitHub remote configured
 [12:00 WITA] Run: git remote add origin <github-repo-url>
+[12:00 WITA] ⚠️ GitHub backup failed — Git remote not configured with credentials
+Details: No GitHub authentication configured. Repository needs to be set up with valid credentials.
+[12:15 WITA] ⚠️ GitHub backup issue — 2026-03-12 12:15
+Details: fatal: could not read Username for 'https://github.com': Device not configured
+[12:15 WITA] Backup cycle complete

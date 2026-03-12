@@ -1,0 +1,54 @@
+# Zero-X GitIgnore
+# Based on Marcus (EX AI) structure
+# Last updated: 2026-03-12
+
+# CRM Database - LOCAL ONLY (not backed up)
+../memory-data/
+memory-data/
+intellibot_memory.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Session transcripts - LOCAL ONLY
+../agents/main/sessions/
+agents/main/sessions/
+*.jsonl
+sessions/
+
+# Runtime state - LOCAL ONLY
+../runtime/
+runtime/
+*.pid
+*.sock
+
+# Credentials - NEVER COMMIT
+../credentials/
+credentials/
+*.env
+.env
+.env.*
+
+# Logs that shouldn't be backed up
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if any)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
