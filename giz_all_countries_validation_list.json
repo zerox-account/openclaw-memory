@@ -1,0 +1,474 @@
+{
+  "total_countries": 117,
+  "validation_date": "2026-03-12",
+  "emails_to_validate": [
+    {
+      "country": "Algeria",
+      "email": "algeria@giz.de"
+    },
+    {
+      "country": "Angola",
+      "email": "angola@giz.de"
+    },
+    {
+      "country": "Benin",
+      "email": "benin@giz.de"
+    },
+    {
+      "country": "Botswana",
+      "email": "botswana@giz.de"
+    },
+    {
+      "country": "Burkina Faso",
+      "email": "burkinafaso@giz.de"
+    },
+    {
+      "country": "Burundi",
+      "email": "burundi@giz.de"
+    },
+    {
+      "country": "Cameroon",
+      "email": "cameroon@giz.de"
+    },
+    {
+      "country": "Cape Verde",
+      "email": "capeverde@giz.de"
+    },
+    {
+      "country": "CAR",
+      "email": "car@giz.de"
+    },
+    {
+      "country": "Chad",
+      "email": "chad@giz.de"
+    },
+    {
+      "country": "C\u00f4te d'Ivoire",
+      "email": "cotedivoire@giz.de"
+    },
+    {
+      "country": "DRC",
+      "email": "drc@giz.de"
+    },
+    {
+      "country": "Djibouti",
+      "email": "djibouti@giz.de"
+    },
+    {
+      "country": "Egypt",
+      "email": "egypt@giz.de"
+    },
+    {
+      "country": "Eritrea",
+      "email": "eritrea@giz.de"
+    },
+    {
+      "country": "Ethiopia",
+      "email": "ethiopia@giz.de"
+    },
+    {
+      "country": "Gambia",
+      "email": "gambia@giz.de"
+    },
+    {
+      "country": "Ghana",
+      "email": "ghana@giz.de"
+    },
+    {
+      "country": "Guinea",
+      "email": "guinea@giz.de"
+    },
+    {
+      "country": "Kenya",
+      "email": "kenya@giz.de"
+    },
+    {
+      "country": "Lesotho",
+      "email": "lesotho@giz.de"
+    },
+    {
+      "country": "Liberia",
+      "email": "liberia@giz.de"
+    },
+    {
+      "country": "Libya",
+      "email": "libya@giz.de"
+    },
+    {
+      "country": "Madagascar",
+      "email": "madagascar@giz.de"
+    },
+    {
+      "country": "Malawi",
+      "email": "malawi@giz.de"
+    },
+    {
+      "country": "Mali",
+      "email": "mali@giz.de"
+    },
+    {
+      "country": "Mauritania",
+      "email": "mauritania@giz.de"
+    },
+    {
+      "country": "Mauritius",
+      "email": "mauritius@giz.de"
+    },
+    {
+      "country": "Morocco",
+      "email": "morocco@giz.de"
+    },
+    {
+      "country": "Mozambique",
+      "email": "mozambique@giz.de"
+    },
+    {
+      "country": "Namibia",
+      "email": "namibia@giz.de"
+    },
+    {
+      "country": "Niger",
+      "email": "niger@giz.de"
+    },
+    {
+      "country": "Nigeria",
+      "email": "nigeria@giz.de"
+    },
+    {
+      "country": "Rwanda",
+      "email": "rwanda@giz.de"
+    },
+    {
+      "country": "Senegal",
+      "email": "senegal@giz.de"
+    },
+    {
+      "country": "Seychelles",
+      "email": "seychelles@giz.de"
+    },
+    {
+      "country": "Sierra Leone",
+      "email": "sierraleone@giz.de"
+    },
+    {
+      "country": "Somalia",
+      "email": "somalia@giz.de"
+    },
+    {
+      "country": "South Africa",
+      "email": "southafrica@giz.de"
+    },
+    {
+      "country": "South Sudan",
+      "email": "southsudan@giz.de"
+    },
+    {
+      "country": "Sudan",
+      "email": "sudan@giz.de"
+    },
+    {
+      "country": "Tanzania",
+      "email": "tanzania@giz.de"
+    },
+    {
+      "country": "Togo",
+      "email": "togo@giz.de"
+    },
+    {
+      "country": "Tunisia",
+      "email": "tunisia@giz.de"
+    },
+    {
+      "country": "Uganda",
+      "email": "uganda@giz.de"
+    },
+    {
+      "country": "Zambia",
+      "email": "zambia@giz.de"
+    },
+    {
+      "country": "Zimbabwe",
+      "email": "zimbabwe@giz.de"
+    },
+    {
+      "country": "Afghanistan",
+      "email": "afghanistan@giz.de"
+    },
+    {
+      "country": "Bangladesh",
+      "email": "bangladesh@giz.de"
+    },
+    {
+      "country": "Cambodia",
+      "email": "cambodia@giz.de"
+    },
+    {
+      "country": "China",
+      "email": "china@giz.de"
+    },
+    {
+      "country": "Fiji",
+      "email": "fiji@giz.de"
+    },
+    {
+      "country": "India",
+      "email": "india@giz.de"
+    },
+    {
+      "country": "Indonesia",
+      "email": "indonesia@giz.de"
+    },
+    {
+      "country": "Iraq",
+      "email": "iraq@giz.de"
+    },
+    {
+      "country": "Jordan",
+      "email": "jordan@giz.de"
+    },
+    {
+      "country": "Kazakhstan",
+      "email": "kazakhstan@giz.de"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "email": "kyrgyzstan@giz.de"
+    },
+    {
+      "country": "Laos",
+      "email": "laos@giz.de"
+    },
+    {
+      "country": "Lebanon",
+      "email": "lebanon@giz.de"
+    },
+    {
+      "country": "Malaysia",
+      "email": "malaysia@giz.de"
+    },
+    {
+      "country": "Maldives",
+      "email": "maldives@giz.de"
+    },
+    {
+      "country": "Marshall Islands",
+      "email": "marshallislands@giz.de"
+    },
+    {
+      "country": "Mongolia",
+      "email": "mongolia@giz.de"
+    },
+    {
+      "country": "Myanmar",
+      "email": "myanmar@giz.de"
+    },
+    {
+      "country": "Nepal",
+      "email": "nepal@giz.de"
+    },
+    {
+      "country": "Pakistan",
+      "email": "pakistan@giz.de"
+    },
+    {
+      "country": "Palestine",
+      "email": "palestine@giz.de"
+    },
+    {
+      "country": "Papua New Guinea",
+      "email": "papuanewguinea@giz.de"
+    },
+    {
+      "country": "Philippines",
+      "email": "philippines@giz.de"
+    },
+    {
+      "country": "Russia",
+      "email": "russia@giz.de"
+    },
+    {
+      "country": "Saudi Arabia",
+      "email": "saudiarabia@giz.de"
+    },
+    {
+      "country": "Sri Lanka",
+      "email": "srilanka@giz.de"
+    },
+    {
+      "country": "Syria",
+      "email": "syria@giz.de"
+    },
+    {
+      "country": "Tajikistan",
+      "email": "tajikistan@giz.de"
+    },
+    {
+      "country": "Thailand",
+      "email": "thailand@giz.de"
+    },
+    {
+      "country": "T\u00fcrkiye",
+      "email": "turkey@giz.de"
+    },
+    {
+      "country": "Turkmenistan",
+      "email": "turkmenistan@giz.de"
+    },
+    {
+      "country": "UAE",
+      "email": "uae@giz.de"
+    },
+    {
+      "country": "Uzbekistan",
+      "email": "uzbekistan@giz.de"
+    },
+    {
+      "country": "Vanuatu",
+      "email": "vanuatu@giz.de"
+    },
+    {
+      "country": "Vietnam",
+      "email": "vietnam@giz.de"
+    },
+    {
+      "country": "Yemen",
+      "email": "yemen@giz.de"
+    },
+    {
+      "country": "Albania",
+      "email": "albania@giz.de"
+    },
+    {
+      "country": "Armenia",
+      "email": "armenia@giz.de"
+    },
+    {
+      "country": "Azerbaijan",
+      "email": "azerbaijan@giz.de"
+    },
+    {
+      "country": "Belgium",
+      "email": "belgium@giz.de"
+    },
+    {
+      "country": "Bosnia",
+      "email": "bosnia@giz.de"
+    },
+    {
+      "country": "Croatia",
+      "email": "croatia@giz.de"
+    },
+    {
+      "country": "Cyprus",
+      "email": "cyprus@giz.de"
+    },
+    {
+      "country": "Georgia",
+      "email": "georgia@giz.de"
+    },
+    {
+      "country": "Greece",
+      "email": "greece@giz.de"
+    },
+    {
+      "country": "Kosovo",
+      "email": "kosovo@giz.de"
+    },
+    {
+      "country": "Moldova",
+      "email": "moldova@giz.de"
+    },
+    {
+      "country": "Montenegro",
+      "email": "montenegro@giz.de"
+    },
+    {
+      "country": "North Macedonia",
+      "email": "northmacedonia@giz.de"
+    },
+    {
+      "country": "Serbia",
+      "email": "serbia@giz.de"
+    },
+    {
+      "country": "Ukraine",
+      "email": "ukraine@giz.de"
+    },
+    {
+      "country": "Argentina",
+      "email": "argentina@giz.de"
+    },
+    {
+      "country": "Bolivia",
+      "email": "bolivia@giz.de"
+    },
+    {
+      "country": "Brazil",
+      "email": "brazil@giz.de"
+    },
+    {
+      "country": "Chile",
+      "email": "chile@giz.de"
+    },
+    {
+      "country": "Colombia",
+      "email": "colombia@giz.de"
+    },
+    {
+      "country": "Costa Rica",
+      "email": "costarica@giz.de"
+    },
+    {
+      "country": "Dominican Republic",
+      "email": "dominicanrepublic@giz.de"
+    },
+    {
+      "country": "Ecuador",
+      "email": "ecuador@giz.de"
+    },
+    {
+      "country": "El Salvador",
+      "email": "elsalvador@giz.de"
+    },
+    {
+      "country": "Guatemala",
+      "email": "guatemala@giz.de"
+    },
+    {
+      "country": "Haiti",
+      "email": "haiti@giz.de"
+    },
+    {
+      "country": "Honduras",
+      "email": "honduras@giz.de"
+    },
+    {
+      "country": "Jamaica",
+      "email": "jamaica@giz.de"
+    },
+    {
+      "country": "Mexico",
+      "email": "mexico@giz.de"
+    },
+    {
+      "country": "Nicaragua",
+      "email": "nicaragua@giz.de"
+    },
+    {
+      "country": "Panama",
+      "email": "panama@giz.de"
+    },
+    {
+      "country": "Paraguay",
+      "email": "paraguay@giz.de"
+    },
+    {
+      "country": "Peru",
+      "email": "peru@giz.de"
+    },
+    {
+      "country": "Uruguay",
+      "email": "uruguay@giz.de"
+    }
+  ]
+}
