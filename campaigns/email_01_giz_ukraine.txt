@@ -1,0 +1,36 @@
+Subject: Decentralized CHP Systems for Ukraine Energy Security - Zero-X Labs
+
+Dear GIZ Ukraine Team,
+
+I am writing to introduce a German-developed energy solution that may support Ukraine's critical infrastructure needs.
+
+Zero-X Labs GmbH (Leipzig, Germany) has developed the X-150, a containerized 150kW electrical / 350kW thermal CHP gasification system. The technology has been validated through 2,500+ hours of continuous operation at Project Cométha in Paris and is supported by Fraunhofer IKTS research partnership.
+
+Technical specifications:
+- Output: 150kW electrical, 350kW thermal
+- Fuel flexibility: biomass, agricultural waste, sewage sludge, coal
+- Island mode capable (no grid connection required)
+- 20-foot container format for rapid deployment
+- Cold gas efficiency: 72%
+- Ni-Ca/Al₂O₃ catalyst for tar reforming
+
+For Ukraine specifically, the system offers:
+1. Decentralized power generation (reduces single-point-of-failure risk)
+2. Local fuel utilization (agricultural residues, wood chips)
+3. Rapid deployment (operational within days, not months)
+4. Grid independence for critical infrastructure
+
+We are seeking implementation partnerships for pilot projects and would welcome the opportunity to discuss how this technology might contribute to Ukraine's energy security.
+
+Would you be available for a brief technical presentation?
+
+Best regards,
+
+Clemens Grosjean
+Zero-X Labs GmbH
+zerox@exventure.co
++49 341 92881290
+www.mfc-energy.com
+
+---
+This email was sent via AgentMail on behalf of Clemens Grosjean.

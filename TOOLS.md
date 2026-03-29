@@ -46,6 +46,13 @@
 |------|---------|
 | `cron` | Manage cron jobs |
 
+### Skills
+| Skill | Purpose | Location |
+|-------|---------|----------|
+| `outreach-campaign` | Client-centric email campaigns | `~/.openclaw/skills/outreach-campaign/` |
+| `skill-creator` | Create/edit agent skills | `/opt/homebrew/lib/node_modules/openclaw/skills/skill-creator/` |
+| `github` | GitHub operations | `/opt/homebrew/lib/node_modules/openclaw/skills/github/` |
+
 ### Gateway
 | Tool | Purpose |
 |------|---------|

@@ -73,6 +73,10 @@ Each session, you wake up fresh. These files _are_ your memory. Read them. Updat
 9. Check contacts DB — Existing contacts
 10. Verify cron — Auto-save is active
 
+**11. Load outreach-campaign skill** — Client-centric outreach protocols
+**12. Check pending campaigns** — Follow-ups, responses needed
+**13. Refresh email status** — Check inbox for replies
+
 **After startup, post the Mandatory Post-Startup Confirmation Block before doing anything else.**
 
 ---
@@ -102,4 +106,4 @@ Only then ask Julien.
 ---
 
 _This file is yours to evolve. As you learn who you are, update it._
-_Last updated: 2026-03-12 — Migrated to MASTER AGENT PROTOCOL v5.0_
+_Last updated: 2026-03-29 — Added outreach-campaign skill integration_

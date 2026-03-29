@@ -1,0 +1,162 @@
+{
+  "validation_date": "2026-03-12",
+  "total_checked": 30,
+  "valid": [
+    {
+      "country": "Angola",
+      "email": "angola@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Benin",
+      "email": "benin@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Botswana",
+      "email": "botswana@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Burundi",
+      "email": "burundi@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Cameroon",
+      "email": "cameroon@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Egypt",
+      "email": "egypt@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Eritrea",
+      "email": "eritrea@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Ethiopia",
+      "email": "ethiopia@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Gambia",
+      "email": "gambia@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Ghana",
+      "email": "ghana@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Guinea",
+      "email": "guinea@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Kenya",
+      "email": "kenya@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Lesotho",
+      "email": "lesotho@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Liberia",
+      "email": "liberia@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Madagascar",
+      "email": "madagascar@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Malawi",
+      "email": "malawi@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Mali",
+      "email": "mali@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Mauritania",
+      "email": "mauritania@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Morocco",
+      "email": "morocco@giz.de",
+      "status": "valid"
+    },
+    {
+      "country": "Mozambique",
+      "email": "mozambique@giz.de",
+      "status": "valid"
+    }
+  ],
+  "invalid": [
+    {
+      "country": "Algeria",
+      "email": "algeria@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Burkina Faso",
+      "email": "burkinafaso@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Cape Verde",
+      "email": "capeverde@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "CAR",
+      "email": "car@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Chad",
+      "email": "chad@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "C\u00f4te d'Ivoire",
+      "email": "cotedivoire@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "DRC",
+      "email": "drc@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Djibouti",
+      "email": "djibouti@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Libya",
+      "email": "libya@giz.de",
+      "status": "invalid"
+    },
+    {
+      "country": "Mauritius",
+      "email": "mauritius@giz.de",
+      "status": "invalid"
+    }
+  ],
+  "catch_all": [],
+  "unknown": [],
+  "do_not_mail": [],
+  "errors": []
+}
